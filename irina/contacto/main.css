@@ -1,0 +1,585 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+
+
+#sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: #151719;
+  left: -200px;
+  transition: all 500ms linear;
+}
+
+#sidebar.active {
+  left: 0px;
+}
+
+#sidebar ul li {
+  color: rgb(207, 207, 207);
+  list-style: none;
+  padding: 15px 10px;
+  border-bottom: 1px solid rgba(100, 100, 100, .3);
+  text-align: center;
+  
+}
+
+.logo {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto; 
+}
+
+#sidebar .toggle-btn {
+  position: relative;
+  left: 230px;
+  top: 20px;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+#sidebar .toggle-btn span {
+  display: block;
+  width: 40px;
+  text-align: center;
+  font-size: 30px;
+  border: 3px solid #000;
+}
+
+input[type="image"]{
+  vertical-align: middle;
+  border-radius: 6px;
+  top: 11px;
+  right: 400px;
+  position: fixed;
+}
+
+
+/*alinear la barra de busquedas*/
+fieldset{
+  padding: 0;
+  border: 1px;
+}
+
+
+input[type="search"]{
+  display: inline-block;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 18px;
+  border: 1px;
+  background-color: white;
+  top: 10px;
+  right: 445px;
+  position: fixed;
+}
+
+
+/*hacer los iconos de registro y busqueda inamovibles*/
+#top3{
+  top: 0px;
+  right: 0px;
+  position: fixed;
+  
+}
+
+#top {
+  top: 10px;
+  right: 10px;
+  position: fixed;
+  border-radius: 6px;
+}
+
+
+/*crear las sombras*/
+#top:hover {
+  top: 10px;
+  right: 10px;
+  position: fixed;
+  border-radius: 6px;
+  box-shadow: 5px 5px 0px 0px #9c6028;
+  background-color: #9c6028;
+}
+
+
+
+#top2{
+  top: 10px;
+  right: 140px;
+  position: fixed;
+  border-radius: 10px;
+}
+
+#top2:hover{
+  top: 10px;
+  right: 140px;
+  position: fixed;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px 0px #9c6028;
+  background-color: #9c6028;
+}
+
+#logo {
+  border: #88001b;
+}
+
+#logo:hover{
+  border: #88001b;
+  box-shadow: 8px 8px 10px 3px #000000;
+}
+
+#contacto{
+  border: 1px;
+}
+
+#contacto:hover{
+  border: 1px;
+  box-shadow: -0px 5px 1px 1px #000000;
+}
+
+#inicio{
+  border: 1px;
+}
+
+#inicio:hover{
+  border: 1px;
+  box-shadow: -0px 5px 1px 1px #000000;
+}
+
+#nosotros{
+  border: 1px;
+}
+
+#nosotros:hover{
+  border: 1px;
+  box-shadow: -0px 5px 1px 1px #000000;
+}
+
+#jirafa {
+  top: 530px;
+  left: 25px;
+  position: absolute;
+  border-radius: 3px;
+}
+
+#jirafa:hover {
+  top: 530px;
+  left: 25px;
+  position: absolute;
+  border-radius: 3px;
+  box-shadow: 5px 5px 1px 3px #adadad;
+}
+
+#batman {
+  top: 530px;
+  right: 25px;
+  position: absolute;
+  border-radius: 3px;
+}
+
+#batman:hover {
+  top: 530px;
+  right: 25px;
+  position: absolute;
+  border-radius: 3px;
+  box-shadow: 5px 5px 1px 3px #adadad;
+}
+
+#coco {
+  top: 900px;
+  left: 25px;
+  position: absolute;
+  border-radius: 3px;
+}
+
+#coco:hover {
+  top: 900px;
+  left: 25px;
+  position: absolute;
+  border-radius: 3px;
+  box-shadow: 5px 5px 1px 3px #adadad;
+}
+
+#iron {
+  top: 900px;
+  right: 25px;
+  position: absolute;
+  border-radius: 3px;
+}
+
+#iron:hover {
+  top: 900px;
+  right: 25px;
+  position: absolute;
+  border-radius: 3px;
+  box-shadow: 5px 5px 1px 3px #adadad;
+}
+
+#paisaje {
+  top: 1270px;
+  left: 25px;
+  position: absolute;
+  border-radius: 3px;
+}
+
+#paisaje:hover {
+  top: 1270px;
+  left: 25px;
+  position: absolute;
+  border-radius: 3px;
+  box-shadow: 5px 5px 1px 3px #adadad;
+}
+
+#arbol {
+  top: 1270px;
+  right: 25px;
+  position: absolute;
+  border-radius: 3px;
+}
+
+#arbol:hover {
+  top: 1270px;
+  right: 25px;
+  position: absolute;
+  border-radius: 3px;
+  box-shadow: 5px 5px 1px 3px #adadad;
+}
+
+
+/*texto del footer*/
+#texto {
+  right: 10px;
+  top: 1940px;
+  position: absolute;
+  background-color: #c0742e;
+}
+
+
+
+#footer{
+  background-color: #c0742e;
+  size: 50px;
+  height: 130px;
+}
+
+
+#temas{
+  right: 480px;
+  top: 1950px;
+  position: absolute;
+  background-color: #c0742e;
+}
+
+#politicas1{
+  right: 580px;
+  top: 1950px;
+  position: absolute;
+  background-color: #c0742e;
+}
+
+#politicas2{
+  right: 745px;
+  top: 1950px;
+  position: absolute;
+  background-color: #c0742e;
+}
+
+
+/*poner sombras al icono de soporte*/
+#img{
+  border-radius: 3px;
+}
+
+#img:hover{
+  border-radius: 3px;
+  box-shadow: 5px 5px 1px 3px #855325;
+}
+
+/*cambiar de color a los link*/
+#p1{
+  color: #000;
+}
+
+#p2{
+  color: #000;
+}
+
+#p3{
+  color: #000;
+}
+
+
+
+#nosotros2{
+  top: 110px;
+  left: 350px;
+  position: absolute;
+}
+
+#contactanos2{
+  top: 250px;
+  left: 380px;
+  position: absolute; 
+}
+
+
+footer{
+	position: static;
+	bottom: 0;
+}
+.footer-distributed{
+	background-color: #98619b;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+ 
+	padding: 55px 50px;
+	margin-top: 80px;
+}
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+ 
+.footer-distributed .footer-left{
+	width: 40%;
+}
+ 
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+ 
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+ 
+ 
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+ 
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+ 
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+ 
+.footer-distributed .footer-center{
+	width: 35%;
+}
+ 
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+ 
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+ 
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+ 
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+ 
+.footer-distributed .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+ 
+.footer-distributed .footer-right{
+	width: 20%;
+}
+ 
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+ 
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+  padding: 6px;
+}
+ 
+
+ 
+@media (max-width: 880px) {
+ 
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	
+	}
+ 
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+	.main {
+		line-height: normal;
+		font-size: auto;
+	}
+ 
+}
+
+
+#contenedor{
+  width: 500px;
+  margin: 30px auto;
+  overflow: hidden;
+  top: 100px;
+  left: 1%;
+  position: static;
+}
+
+#contenedor ul{
+  list-style: none;
+  width: 696px;
+  display: flex;
+
+  animation: slide 40s infinite alternate;
+}
+
+@keyframes slide {
+  0% {margin-left: 0px;}
+  20% {margin-left: 0px;}
+
+  25% {margin-left: -500px;}
+  45% {margin-left: -500px;}
+}
+
+
+
+#yo{
+  top: 170px;
+  left: 40%;
+  position: absolute;
+  
+}
+
+
+h1{
+  display: inline-block;
+  position: relative;
+  top: 120px;
+  left: 45%;
+  color: #c0742e;
+  cursor: pointer;
+}
+
+h1::after,h1::before{
+  content:' ';
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  background-color: currentColor;
+  top: 0.6em;
+  transform: scale(0);
+  transition: all 0.2s ease-in;
+}
+
+h1:hover::before, h1:hover::after {
+  transform: scale(1);
+
+}
+
+
+
+h1::before{
+  left: -130px;
+}
+
+h1::after{
+  right: -130px;
+}
+
+#lineas2{
+  position: relative;
+  top: 320px;
+  left: 33%;
+}
+
+
+
+#yo2{
+  top: 370px;
+  left: 33%;
+  position: absolute;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
