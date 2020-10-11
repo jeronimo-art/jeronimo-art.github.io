@@ -1,332 +1,153 @@
-*{
+:root{
+    --colorTextos: #49454567;
+}
+
+/*
+Web hecha con AlexCG Design, si te sirvió la plantilla por favor entra a AlexCG Design
+		esta plantilla es libre para usar, así como otras plantillas más que tenemos en el canal...
+		->>>> https://www.youtube.com/alexcgdesign <<<<-
+*/
+
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-	background:url(bg.jpg); /* Nuestra imagen de fondo */
-	background-repeat:repeat; /* Indicamos que se repetira */
-	background-size:cover; /* Encajamos la imagen al 100% del ancho */
-	background-attachment: fixed; /* Establecemos una posicion fija para la imagen */
- 
-	font-family:helvetica, arial, sans-serif;
-	line-height:20px;
-}
-
-
-
-
-.main{
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
-    position: absolute;
-    top: 25%;
-    left:5%;
-    
-    
-}
-
-.slides{
+    background: #FC5C7D;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC5C7D);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Poppins', sans-serif;
     width: 100%;
-    position: sticky;
-    box-shadow: 0px 0px 30px 15px #000000;
-}
-
-
-
-.slides img{
-    width: 100%;
-    position: relative;
-}
-
-
-.slidesjs-pagination{
-    background: #424242;
-    list-style: none;
-    overflow: hidden;
-}
-
-.slidesjs-pagination li{
-    float: left;
-}
-
-.slidesjs-pagination li a{
-    display: block;
-    padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
-}
-
-
-.slidesjs-pagination li a:hover{
-    background: #313131;
-    
-}
-
-
-
-.slides .active{
-    background: black;
-
-}
-
-.slidesjs-navigation{
-    background: black;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10.9px 20px;
-    float: left;
-}
-
-.header{
-    background: #691a8e;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 21%;
-    box-shadow: 0px 0px 30px 10px #000000;
-}
-
-#logo{
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    padding: 6px;
-    box-shadow: 0px 0px 10px 4px #000000;
-    top: 10px;
-    left: 10px;
-    position: absolute;
-}
-
-#texto{
-    float: left;
-    position: absolute;
-    top: 59px;
-    right: 535px;
-    float: right;
+    height:650px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 30px;
 }
 
+h1{
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 800;
+}
 
-#texto2{
-    float: left;
+form{
+    background: #fff;
+    width: 30%;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+}
+
+.form{
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo{
+    position: relative;
+    margin: 45px;
+}
+
+input, textarea{
+    background: none;
+    color:#c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid var(--colorTextos);
+    resize: none;
+}
+
+input:focus,textarea:focus{
+    outline: none;
+    color: rgb(94,93,93);
+}
+
+input:focus~label, 
+input:valid~label, 
+textarea:focus~label, textarea:valid~label{
     position: absolute;
-    top: 59px;
-    right: 331px;
-    float: right;
-    align-items: center;  
-    color: white;
-    font-size: 30px;
+    top: -14px;
+    font-size: 12px;
+    color: #2196F3;
 }
 
-#texto3{
-    float: left;
+label{
+    color: var(--colorTextos);
+    font-size: 16px;
     position: absolute;
-    top: 59px;
-    right: 205px;
-    float: right;
-    align-items: center;  
-    color: white;
-    font-size: 30px;
+    left: 5px;
+    top:10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
 }
 
 
-footer{
-	position: absolute;
+input:focus~.barra::before, textarea:focus~.barra::before{
+    width: 100%;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.barra::before{
+    content: '';
+    height: 2px;
+    width: 0%;
     bottom: 0;
-    top: 100%;
+    position: absolute;
+    background: linear-gradient(to right, #6A82FB, #FC5C7D);
+    transition: 0.3s ease all;
     left: 0%;
-    
-    
 }
-.footer-distributed{
-	
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-	box-sizing: border-box;
-	width: 100%;
-	text-align: left;
-	font: bold 16px sans-serif;
- 
-	padding: 55px 50px;
-	margin-top: 80px;
-}
- 
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right{
-	display: inline-block;
-    vertical-align: top;
-    color: #691a8e;
-}
- 
-.footer-distributed .footer-left{
-	width: 40%;
-}
- 
-.footer-distributed h3{
-	color:  #ffffff;
-	font: normal 36px 'Cookie', cursive;
-	margin: 0;
-}
- 
-.footer-distributed h3 span{
-	color:  #5383d3;
-}
- 
- 
-.footer-distributed .footer-links{
-	color:  #ffffff;
-	margin: 20px 0 12px;
-	padding: 0;
-}
- 
-.footer-distributed .footer-links a{
-	display:inline-block;
-	line-height: 1.8;
-	text-decoration: none;
-	color:  inherit;
-}
- 
-.footer-distributed .footer-company-name{
-	color:  #ffffff;
-	font-size: 14px;
-	font-weight: normal;
-	margin: 0;
-}
- 
- 
-.footer-distributed .footer-center{
-	width: 35%;
-}
- 
-.footer-distributed .footer-center i{
-	background-color:  #33383b;
-	color: #ffffff;
-	font-size: 25px;
-	width: 38px;
-	height: 38px;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 42px;
-	margin: 10px 15px;
-	vertical-align: middle;
-}
- 
-.footer-distributed .footer-center i.fa-envelope{
-	font-size: 17px;
-	line-height: 38px;
-}
- 
-.footer-distributed .footer-center p{
-	display: inline-block;
-	color: #ffffff;
-	vertical-align: middle;
-	margin:0;
-}
- 
-.footer-distributed .footer-center p span{
-	display:block;
-	font-weight: normal;
-	font-size:14px;
-	line-height:2;
-}
- 
-.footer-distributed .footer-center p a{
-	color:  #5383d3;
-	text-decoration: none;;
-}
- 
-.footer-distributed .footer-right{
-	width: 20%;
-}
- 
-.footer-distributed .footer-company-about{
-	line-height: 20px;
-	color:  #ffffff;
-	font-size: 13px;
-	font-weight: normal;
-	margin: 0;
-}
- 
-.footer-distributed .footer-company-about span{
-	display: block;
-	color:  #ececec;
-	font-size: 14px;
-	font-weight: bold;
-	margin-bottom: 20px;
-}
- 
-.footer-distributed .footer-icons{
-  margin-top: 25px;
-  padding: 6px;
-}
- 
-
- 
-@media (max-width: 880px) {
- 
-	.footer-distributed{
-		font: bold 14px sans-serif;
-	
-	}
- 
-	.footer-distributed .footer-left,
-	.footer-distributed .footer-center,
-	.footer-distributed .footer-right{
-		display: block;
-		width: 100%;
-		margin-bottom: 40px;
-		text-align: center;
-	}
- 
-	.footer-distributed .footer-center i{
-		margin-left: 0;
-	}
-	.main {
-		line-height: normal;
-		font-size: auto;
-	}
- 
+button{
+    background: #FC5C7D;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC5C7D);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: block;
+    width: 100px;
+    height: 40px;
+    border:none;
+    color:#fff; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
 }
 
-
-.contenedor {
-	width: 90%;
-	max-width:900px;
-	margin:auto;
-}
- 
-article {
-	background:rgba(24,8,33,.9);
-	padding:20px;
-	margin:20px 0;
-	color:#fff;
-	box-shadow:0 5px 5px 3px rgba(0, 0, 0, 0.25);
-}
- 
-
-article hr {
-	background:#F64740;
-	height:5px;
-	border:none;
-}
- 
-article p {
-	line-height: 25px;
-}
- 
-article h2, article p, article hr {
-	margin-bottom: 20px;
+@media screen and (max-width:1100px){
+    form{
+        width: 50%;
+    }
 }
 
+@media screen and (max-width:600px){
+    form{
+        width: 60%;
+    }
+}
 
+@media screen and (max-width:450px){
+    form{
+        width: 80%;
+    }
+}
 
-
+@media screen and (max-width:300px){
+    form{
+        width: 90%;
+    }
+}

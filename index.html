@@ -1,170 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>irina</title>
-        <link rel="stylesheet" href="estilos.css">
-        <link rel="stylesheet" href="fonts.css">
-        <script src="js/jquery-1.9.1.min.js"></script>
-        <script src="main.js"></script>
-        <link rel="icon" href="logo.ico">
-    </head>
-    <body>
-
-      <div class="contenedor">
-        
-          
-          <hr>
-        <div class="main">
-            <div class="slides">
-              <a href="pagina a la que se dirige">
-                <img src="img/1.jpg" alt=""></a>
-                <a href="pagina a la que se dirige">
-                <img src="img/2.jpg" alt=""></a>
-                <a href="pagina a la que se dirige">
-                <img src="img/3.jpg" alt=""></a>
-                <a href="pagina a la que se dirige">
-                <img src="img/4.jpg" alt=""></a>
-                <a href="pagina a la que se dirige">
-                <img src="img/5.png" alt=""></a>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,800,900" rel="stylesheet">
+</head>
+<body>
+<!-- Hola qué tal, te recuerdo que la web es de uso libre -->
+<!-- usala para lo que desees y no olvides suscribirte a AlexCG Design -->
+<!-- Web hecha por AlexCG Design, si te sirvió la plantilla por favor entra a AlexCG Design -->
+<!-- ->>>> https://www.youtube.com/alexcgdesign <<<<- -->
+    <form action="correo.php" method="POST">
+        <div class="form">
+            <h1>Fcontactanos</h1>
+            <div class="grupo">
+                <input type="text" name="nombre" id="" required><span class="barra"></span>
+                <label>Nombre</label>
             </div>
+            <div class="grupo">
+                <input type="email" name="email" id="" required><span class="barra"></span>
+                <label>Email</label>
+            </div>
+            <div class="grupo">
+                <input type="number" name="asunto" id="" required><span class="barra"></span>
+                <label>asunto</label>
+            </div>
+            <div class="grupo">
+                <textarea name="Mensaje" id="" rows="3" required></textarea><span class="barra"></span>
+                <label>Mensaje</label>
+            </div>
+            <button type="submit">enviar</button>
         </div>
-
-
-        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-        <script src="js/jquery.slides.js"></script>
-
-        <script>
-          $(function(){
-            $(".slides").slidesjs({
-              play: {
-                active: true,
-                 // [boolean] Generate the play and stop buttons.
-                  // You cannot use your own buttons. Sorry.
-                effect: "slide",
-                  // [string] Can be either "slide" or "fade".
-                interval: 3000,
-                  // [number] Time spent on each slide in milliseconds.
-                auto: true,
-                  // [boolean] Start playing the slideshow on load.
-                swap: true,
-                  // [boolean] show/hide stop and play buttons
-                pauseOnHover: false,
-                  // [boolean] pause a playing slideshow on hover
-               restartDelay: 2500
-                  // [number] restart delay on inactive slideshow
-              }
-           });
-         });
-        </script>
-
-
-<header id="header" class="header">
-  <div>
-    <a href="https://jeronimo-art.github.io/">
-    <img src="img/logo.png" id="logo"></a>
-  </div>
-  <div id="texto">
-    <p>
-      Inicio - 
-    </p> 
-  </div>
-  <div id="texto2">
-    <p>
-      Acerca de mi -
-    </p>
-  </div>
-  <div id="texto3">
-    <p>
-      Contacto 
-    </p>
-  </div>
-  </header>
-
-
-
-
-
-
-</article>
-</div>
-<div class="main"></div>
-<footer class="footer-distributed">
-
-<div class="footer-left">
-
-<h3>Irina<span>Ponton</span></h3>
-
-<p class="footer-links">
-<a href="#">inicio</a>
-·
-<a href="#">acerca de mi</a>
-·
-<a href="#">contacto</a>
-</p>
-
-<p class="footer-company-name">Irina &copy; 2020</p>
-</div>
-
-<div class="footer-center">
-
-<div>
-<i class="fa fa-map-marker"></i>
-<p><span>calle sin nombre</span> quito ecuador</p>
-</div>
-
-<div>
-<i class="fa fa-phone"></i>
-<p>+593 99373594</p>
-</div>
-
-<div>
-<i class="fa fa-envelope"></i>
-<p><a href="mailto:irinaponton@hotmail.com">irinaponton@hotmail.com</a></p>
-</div>
-
-</div>
-
-<div class="footer-right">
-
-<p class="footer-company-about">
-<span>Acerca de mi</span>
-Certificada en yogas tradicionales y Hatha yoga.
-Bailarina y coreógrafa de danza contemporánea.
-Masaje Ayurvedico y marmas.
-</p>
-
-<div class="footer-icons">
-  <table>
-    <td>
-<a href="https://www.facebook.com/irina.ponton.7">
-  <p><img src="img/facebook.png"></a>
-    </td>
-    <td>
-<a href="https://www.instagram.com/irinaponton/">
-  <p><img src="img/instagram.png"></a>
-    </td>
-    <td>
-<a href="#">
-  <p><img src="img/twitter.png"></a>
-    </td>
-    <td>
-<a href="#">
-  <p><img src="img/yiutu.png"></a>
-    </td>
-  </table>
-
-</div>
-
-</div>
-
-</footer>
-
-
-
-
-
-    </body>
-
-    </html>
-
+    </form>
+</body>
+</html>
