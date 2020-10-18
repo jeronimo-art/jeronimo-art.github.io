@@ -1,0 +1,179 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: Century Gothic;
+}
+
+body {
+	background-image: url(img/9794.png);
+}
+
+div {
+	padding: 30px;
+    background-image: linear-gradient(#ffffff, #ffffff);
+	margin: 40px;
+	border-radius: 50px;
+	height:40px;
+	box-shadow: 0px 0px 50px 2px #000;
+}
+
+input {
+	padding: 9px;
+	font-size: 18px;
+	width: 80%;
+	border: 3px solid #0d2b77;
+	border-radius: 50px;
+	outline: none;
+	transition: all 0.5s;
+}
+
+
+
+
+#hablar:hover{
+	cursor: pointer;
+	background-color: #0d2b77;
+	color: white;
+	transition: all 0.5s;
+}
+
+input:hover {
+	padding: 9px;
+	font-size: 18px;
+	width: 80%;
+	border: 3px solid #0d2b77;
+	background: #d1deff;
+	transition: all 0.5s;
+	background: url(img/9794.png);
+}
+
+input:focus {
+	padding: 9px;
+	font-size: 18px;
+	width: 80%;
+	border: 3px solid #0d2b77;
+	background: url(img/9794.png);
+	color: #fff;
+	transition: all 0.5s;
+}
+
+input::placeholder{
+	color: #000000;
+	transition: all 0.5s;
+}
+
+input:focus::placeholder{
+	color: #ffffff;
+	transition: all 0.5s;
+}
+
+
+input[type="button"] {
+	width: 15%;
+}
+
+
+#testo{
+    color: #0a215a;
+    margin: 20px;
+    text-decoration: none;
+    padding: 5px;
+	top: 10px;
+	float: right;
+	position: relative;
+	border-radius: 50px;
+    background-image: linear-gradient(#ffffff, #ffffff);
+	transition: all 0.5s;
+	box-shadow: 0px 0px 50px 2px #000;
+}
+
+#testo:hover{
+    color: rgb(202, 202, 202);
+    margin: 20px;
+    text-decoration: none;
+    transition: all 0.5s;
+    background-image: linear-gradient(#ffffff, #ffffff);
+	border: none;
+}
+
+#logo{
+	width: 100px;
+	margin: 5px;
+}
+
+
+@media screen and (max-width: 500px) {
+    div{
+        height: 200px;
+    }
+
+    #testo{
+        font-size: 20px;
+        padding: 5px 5px 5px 5px;
+        border: 3px solid #000;
+	}
+	
+	input{
+		width: 118px;
+	}
+
+	input:active{
+		width: 112px;
+		border: 3px solid #0a215a;
+	}
+
+	#hablar{
+		margin: 10px;
+		width: 120px;
+	}
+
+}
+
+
+@media screen and (min-width: 501px) and (max-width: 700px){
+    div{
+        height: 200px;
+    }
+
+    #testo{
+        font-size: 20px;
+        padding: 5px 5px 5px 5px;
+        border: 3px solid #000;
+	}
+	
+	input{
+		width: 320px;
+		margin: 15px;
+	}
+
+	input:active{
+		width: 320px;
+		border: 3px solid #0a215a;
+	}
+
+	input:focus{
+		width: 320px;
+		border: 3px solid #0a215a;
+	}
+
+
+	#hablar{
+		margin: 10px;
+		width: 120px;
+	}
+
+}
+
+
+@media screen and (max-width: 250px){
+	div{
+		width: 115px;
+		margin: 18px;
+	}
+
+	#testo{
+		font-size: 10px;
+	}
+}
+
+
