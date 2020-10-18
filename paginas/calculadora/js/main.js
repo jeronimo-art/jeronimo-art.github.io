@@ -354,7 +354,7 @@ document.addEventListener('keydown', function(evt) {
 });
 
 $(document).on('click', '#memoria', function(){
-    $('.tab').html("<div id='div-memoria'>Não há nada salvo na memória</div>");
+    $('.tab').html("<div id='div-memoria'>nada guardado en la memoria</div>");
     var memoriaLocal =localStorage.getItem("memoria");
     while(memoriaLocal.includes(','))
         memoriaLocal = memoriaLocal.replace(',','<br>')
@@ -364,7 +364,7 @@ $(document).on('click', '#memoria', function(){
 });
 
 $(document).on('click', '#historico', function() {
-    $('.tab').html("<div id='div-historico'>Ainda não há histórico</div>");
+    $('.tab').html("<div id='div-historico'>aun no hay historial</div>");
     var historicoLocal = localStorage.getItem("historico");
     while(historicoLocal.includes(','))
         historicoLocal = historicoLocal.replace(',','<br>');
