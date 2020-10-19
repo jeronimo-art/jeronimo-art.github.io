@@ -1512,7 +1512,7 @@ path#f3-l9 {
     width: 100%;
   }
   .burger-button {
-    display: flex;
+    display: none;
   }
   .redes {
     display: none;
