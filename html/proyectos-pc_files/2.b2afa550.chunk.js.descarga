@@ -1,4 +1,4 @@
-/*! For license information please see 2.b2afa550.chunk.js.LICENSE */
+/*/*! For license information please see 2.b2afa550.chunk.js.LICENSE */
 (this["webpackJsonpjuandagarcia-react"] = this["webpackJsonpjuandagarcia-react"] || []).push([[2], [function (e, t, n) {
     "use strict";
     
@@ -3435,4 +3435,4 @@ return dn.default = dn, dn }(), "undefined" !== typeof this && this.Sweetalert2 
        S(n) } return o } } throw new Error("illegal catch attempt") }, delegateYield: function (e, n, r) { return this.delegate = { iterator: _(e), resultName: n, nextLoc: r }, "next" === this.method && (this.arg = t), m } }, e }(e.exports);
        try { regeneratorRuntime = r } catch (o) { Function("r", "regeneratorRuntime = r")(r) } }]]);
       
-//# sourceMappingURL=2.b2afa550.chunk.js.map
+//# sourceMappingURL=2.b2afa550.chunk.js.map*/
