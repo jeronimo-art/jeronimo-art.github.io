@@ -62,7 +62,7 @@ header li {
   text-transform: uppercase;
 }
 .link-navbar:hover {
-  background: -webkit-linear-gradient(0deg, #11998e, #38ef7d 50%);
+  background: -webkit-linear-gradient(0deg, #b10d0c, #38ef7d 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -132,10 +132,10 @@ a {
     linear,
     left top,
     right top,
-    from(#11998e),
+    from(#b10d0c),
     to(#38ef7d)
   );
-  background: linear-gradient(90deg, #11998e, #38ef7d);
+  background: linear-gradient(90deg, #b10d0c, #38ef7d);
   border: none;
   border-radius: 5px;
   height: 40px;
@@ -154,10 +154,10 @@ a {
     linear,
     left top,
     right top,
-    from(#11998e),
+    from(#b10d0c),
     color-stop(50%, #38ef7d)
   );
-  background: linear-gradient(90deg, #11998e, #38ef7d 50%);
+  background: linear-gradient(90deg, #b10d0c, #38ef7d 50%);
 }
 .icono-social {
   width: 1em;
@@ -1169,10 +1169,10 @@ path#f3-l9 {
     linear,
     right top,
     left top,
-    from(#11998e),
+    from(#b10d0c),
     to(#38ef7d)
   );
-  background: linear-gradient(270deg, #11998e, #38ef7d);
+  background: linear-gradient(270deg, #b10d0c, #38ef7d);
 }
 .info-item {
   width: 50%;
