@@ -1512,28 +1512,16 @@ path#f3-l9 {
     width: 100%;
   }
   .burger-button {
-    display: flex;
+    display: none;
   }
   .redes {
     display: none;
   }
   .menu {
-    position: fixed;
-    background: rgba(33, 33, 33, 0.9);
-    z-index: 2;
-    top: 0;
-    left: -100vw;
-    width: 100vw;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    font-size: 18px;
+    font-size: 5px;
   }
   header ol {
-    display: block;
+    display: flex;
     text-align: center;
   }
   header li {
@@ -1640,16 +1628,24 @@ path#f3-l9 {
     width: 310px;
     height: 200px;
   }
+    .burger-button {
+    display: none;
+  }
+  .redes {
+    display: none;
+  }
+  .menu {
+    font-size: 5px;
+  }
+  header ol {
+    display: flex;
+    text-align: center;
+  }
+  
 }
 @media screen and (max-width: 320px) {
-  .info-404 h1 {
-    font-size: 22px;
-  }
-  .info-hero h1 {
-    font-size: 16px;
-  }
-  .redes-form .icono-social-contacto {
-    margin: 0 5px;
+  .menu{
+    display: none;
   }
 }
 /*# sourceMappingURL=main.b82fecf5.chunk.css.map */
