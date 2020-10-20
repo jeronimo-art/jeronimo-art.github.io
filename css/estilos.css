@@ -1659,6 +1659,8 @@ path#f3-l9 {
 
 
 @media screen and (max-width: 320px) {
-  
+  .img-hero{
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.b82fecf5.chunk.css.map */
