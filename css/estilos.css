@@ -1644,8 +1644,21 @@ path#f3-l9 {
   
 }
 @media screen and (max-width: 320px) {
-  .menu{
-    display: none;
+  .menu {
+    font-size: 3px;
   }
+  header ol {
+    display: flex;
+    text-align: center;
+  }
+  header li {
+    margin: 1em;
+    font-size: 1.5em;
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  
 }
 /*# sourceMappingURL=main.b82fecf5.chunk.css.map */
