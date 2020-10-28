@@ -169,47 +169,47 @@ a {
   height: 25px;
 }
 .app-store {
-  background-image: url(/static/media/app-store.29833e17.svg);
+  background-image: url(app-store.29833e17.svg);
 }
 .app-store,
 .google-play {
   background-repeat: no-repeat;
 }
 .google-play {
-  background-image: url(/static/media/google-play.4df4227a.svg);
+  background-image: url(google-play.4df4227a.svg);
 }
 .link {
-  background-image: url(/static/media/link.81198e0a.svg);
+  background-image: url(link.81198e0a.svg);
 }
 .link,
 .linkedin {
   background-repeat: no-repeat;
 }
 .linkedin {
-  background-image: url(/static/media/linkedin.7ab05450.svg);
+  background-image: url(linkedin.7ab05450.svg);
 }
 .github {
-  background-image: url(/static/media/github.06b7e22f.svg);
+  background-image: url(github.06b7e22f.svg);
 }
 .github,
 .instagram {
   background-repeat: no-repeat;
 }
 .instagram {
-  background-image: url(/contacto_files/email.78745750.svg);
+  background-image: url(instagram.ced8ec57.svg);
 }
 .email {
-  background-image: url(contacto_files/email.78745750.svg);
+  background-image: url(email.78745750.svg);
 }
 .email,
 .whatsapp {
   background-repeat: no-repeat;
 }
 .whatsapp {
-  background-image: url(/static/media/whatsapp.3c3f5e1e.svg);
+  background-image: url(whatsapp.3c3f5e1e.svg);
 }
 .youtube {
-  background-image: url(/static/media/youtube.195d87a9.svg);
+  background-image: url(youtube.195d87a9.svg);
   background-repeat: no-repeat;
   background-position: bottom;
 }
