@@ -467,6 +467,13 @@ body::-webkit-scrollbar-thumb {
   .our-projects .container-project .project-title h2 {
     font-size: 30px;
   }
+  .our-projects .container-project .project-title {
+    border: 2px solid #fff;
+    padding: 10px;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+  }
 }
 
 /** Testimonios **/
