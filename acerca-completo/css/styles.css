@@ -257,33 +257,10 @@ body {
   transition: 0.5s;
 }
 
-.noSelect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
-.btn-primary {
-  background: var(--red); 
-  border: none;
-  border-radius: 50px;
-  height: 40px;
-  width: 130px;
-  font-weight: 800;
-  margin-top: 16px;
-  outline: none;
-  transition: 0.5s;
-  cursor: pointer;
-  color: #fff;
-  vertical-align: middle;
-  text-align: center;
-}
 
-.btn-primary:hover {
+
+.img-header .welcome > button:hover {
   background: var(--blue);
-  transition: 0.5s;
 }
 
 @media only screen and (max-width: 773px) {
@@ -380,6 +357,7 @@ body {
   color: #fff;
   cursor: pointer;
   transition: 0.5s;
+  margin: 20px;
 }
 .acerca-de .info-container .about-more button:hover {
   background: var(--blue);
@@ -694,6 +672,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   cursor: pointer;
   transition: 0.5s;
+
 }
 .footer .formulario-content #formulario button:hover {
   background: var(--blue);
@@ -709,7 +688,7 @@ body::-webkit-scrollbar-thumb {
   line-height: 35px;
 }
 .footer .footer-text {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
