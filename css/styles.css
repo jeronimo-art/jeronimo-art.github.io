@@ -242,20 +242,7 @@ body {
   color: #fff;
   margin-top: 20px;
 }
-.img-header .welcome > button {
-  width: 170px;
-  height: 40px;
-  background: var(--red);
-  border-radius: 24px;
-  border: none;
-  outline: none;
-  font-size: 22px;
-  color: #fff;
-  text-align: center;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: 0.5s;
-}
+
 
 .noSelect {
   -webkit-touch-callout: none;
@@ -290,10 +277,6 @@ body {
   .img-header .welcome h1 {
     font-size: 40px;
   }
-  .img-header .welcome > button {
-    width: 130px;
-    font-size: 20px;
-  }
 
 }
 @media only screen and (max-width: 590px) {
@@ -304,10 +287,6 @@ body {
     width: 100px;
   }
   .img-header .welcome p {
-    font-size: 17px;
-  }
-  .img-header .welcome > button {
-    width: 100px;
     font-size: 17px;
   }
 }
