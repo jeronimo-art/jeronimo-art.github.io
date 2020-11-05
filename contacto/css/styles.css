@@ -134,7 +134,6 @@ body {
   cursor: pointer;
 }
 
-
 @media only screen and (max-width: 1500px) {
   .btn-menu > .fa-bars {
     display: block;
@@ -146,11 +145,11 @@ body {
     transition: 0.5s;
     cursor: pointer;
   }
-  .menu .list-container ul li a{
+  .menu .list-container ul li a {
     color: var(--black);
   }
-  .btn-menu > #header{
-      position: fixed;
+  .btn-menu > #header {
+    position: fixed;
   }
   .btn-menu > .fa-times {
     color: var(--red);
@@ -257,8 +256,6 @@ body {
   transition: 0.5s;
 }
 
-
-
 .img-header .welcome > button:hover {
   background: var(--blue);
 }
@@ -271,7 +268,6 @@ body {
     width: 130px;
     font-size: 20px;
   }
-
 }
 @media only screen and (max-width: 590px) {
   .img-header .welcome h1 {
@@ -337,7 +333,6 @@ body {
   object-fit: cover;
   border-radius: 10px;
   cursor: pointer;
-  
 }
 .acerca-de .info-container .about-more {
   width: 100%;
@@ -362,7 +357,7 @@ body {
   background: var(--blue);
 }
 
-::selection{
+::selection {
   color: var(--red);
   background: transparent;
 }
@@ -459,7 +454,7 @@ body::-webkit-scrollbar-thumb {
     width: 80%;
     margin-bottom: 30px;
   }
-  .menu .list-container ul li a{
+  .menu .list-container ul li a {
     color: #000;
   }
 }
@@ -476,10 +471,10 @@ body::-webkit-scrollbar-thumb {
 }
 .testimonios .testimonios-title {
   border: 2px solid #fff;
-    padding: 10px;
-    text-align: center;
-    width: 50%;
-    margin: auto;
+  padding: 10px;
+  text-align: center;
+  width: 50%;
+  margin: auto;
 }
 .testimonios .testimonios-title h2 {
   font-size: 40px;
@@ -491,7 +486,7 @@ body::-webkit-scrollbar-thumb {
   width: 60%;
   height: 2px;
   margin: auto;
-  background: var(--black)
+  background: var(--black);
 }
 .testimonios .box-testimonio {
   width: 90%;
@@ -617,6 +612,7 @@ body::-webkit-scrollbar-thumb {
   margin: 50px auto;
   background: #fff;
   padding: 30px;
+
   border-radius: 50px;
   border: 1.5px solid var(--red);
 }
@@ -745,10 +741,22 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media only screen and (max-width: 320px) {
-.footer .footer-content .footer-title h2{
+  .footer .footer-content .footer-title h2 {
     font-size: 25px;
-}
-.testimonios .testimonios-title h2{
+  }
+  .testimonios .testimonios-title h2 {
     font-size: 35px;
+  }
 }
+
+@media only screen and (max-height: 1370px) {
+  .footer .formulario-content {
+    width: 65%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    height: 970px;
+    border-radius: 50px;
+    border: 1.5px solid var(--red);
+  }
 }

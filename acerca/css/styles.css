@@ -754,3 +754,11 @@ body::-webkit-scrollbar-thumb {
     font-size: 35px;
 }
 }
+
+
+@media only screen and (max-height: 1370px) {
+  .footer .footer-text {
+    position: relative;
+    margin-top: 100%;
+  }
+}
