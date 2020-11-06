@@ -759,6 +759,6 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (max-height: 1370px) {
   .footer .footer-text {
     position: relative;
-    margin-top: 100%;
+    margin-top: 26%;
   }
 }
