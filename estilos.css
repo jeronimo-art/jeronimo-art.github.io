@@ -144,7 +144,7 @@ h1::after{
 .hamburguer{
     position: fixed;
     top: 30px;
-    right: 30px;
+    left: 30px;
     background: #fff;
     width: 40px;
     height: 40px;
@@ -236,7 +236,6 @@ h1::after{
     background: #000000;
     line-height: 30px;
     text-align: center;
-    border: 1px solid white;
     border-radius: 50%;
     margin-right: 5px;
     width: 30px;
@@ -302,8 +301,8 @@ h1::after{
 
 .close{
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 5px;
+    right: 5px;
     width: 40px;
     cursor: pointer;
 }
@@ -475,13 +474,22 @@ footer{
 
 
 @media screen and (max-width: 500px){
+    .abilidades{
+        color: transparent;
+        background: linear-gradient(to right, var(--color1), #ffc3c6);
+        -webkit-background-clip: text;
+        font-weight: bold;
+        font-family: 'Audiowide', cursive;
+        font-size: 30px;
+    }
     .menu-navegacion{
         width: 65vw;
     }
 
     .hamburguer{
         top: 20px;
-        right: 20px;
+        left: 20px;
+        z-index: 170;
     }
 
     .titulo{
