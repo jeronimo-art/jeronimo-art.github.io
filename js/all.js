@@ -18,3 +18,31 @@ const typed = new Typed('.typed', {
 	cursorChar: '/', // Caracter para el cursor
     contentType: 'html', // 'html' o 'null' para texto sin formato
 });
+
+
+//window.onscroll = function(){
+	//if (document.documentElement.scrollTop > 100) {
+		//document.querySelector('.go-top-cont')
+		//.classList.add('show')
+	//}else{
+		//document.querySelector('.go-top-cont')
+		//.classList.remove('show')
+	//}
+//}
+
+document.querySelector('.go-top-cont')
+.addEventListener('click', () => {
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth'
+	})
+})
+
+
+document.querySelector('.go-down-cont')
+.addEventListener('click', () => {
+	window.scrollTo({
+		top: (700),
+		behavior: 'smooth'
+	})
+})
