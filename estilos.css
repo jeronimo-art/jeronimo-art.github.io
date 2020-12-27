@@ -128,35 +128,6 @@
   z-index: 150;
   font-family: "Luckiest Guy", cursive;
   font-size: 50px;
-  animation: animation 15s linear infinite;
-}
-
-@keyframes animation {
-  0% {
-    color: transparent;
-    background: linear-gradient(to right, var(--color2), #ffffff);
-    -webkit-background-clip: text;
-  }
-  25% {
-    color: transparent;
-    background: linear-gradient(to right, var(--color1), #ffffff);
-    -webkit-background-clip: text;
-  }
-  50% {
-    color: transparent;
-    background: linear-gradient(to right, #ffffff, var(--color2));
-    -webkit-background-clip: text;
-  }
-  75%{
-    color: transparent;
-    background: linear-gradient(to right, #ffffff, var(--color1));
-    -webkit-background-clip: text; 
-  }
-  100% {
-    color: transparent;
-    background: linear-gradient(to right, var(--color2), #ffffff);
-    -webkit-background-clip: text;
-  }
 }
 
 body {
@@ -209,11 +180,7 @@ video {
   height: 100%;
   position: absolute;
   size: 100%;
-
 }
-
-
-
 
 h1 {
   color: #ffffff;
