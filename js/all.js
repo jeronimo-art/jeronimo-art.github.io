@@ -42,7 +42,7 @@ document.querySelector('.go-top-cont')
 document.querySelector('.go-down-cont')
 .addEventListener('click', () => {
 	window.scrollTo({
-		top: (700),
+		top: 700,
 		behavior: 'smooth'
 	})
 })
