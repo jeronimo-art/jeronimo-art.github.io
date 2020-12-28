@@ -20,6 +20,13 @@ body{
     transform: translateX(-50%) translateY(-50%);
 }
 
+img{
+    float: right;
+    margin: 10px;
+    width: 40px;
+}
+
+
 @media screen and (max-width: 800px) {
     .video video{
         width: 95%;
