@@ -7869,7 +7869,7 @@ h2 {
 #header-logo,
 .lead {
   opacity: 0;
-  transition: all 2s ease;
+  transition: all 1s ease;
 }
 
 .navbar-fixed-top {
