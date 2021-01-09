@@ -5386,7 +5386,8 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     color: #444;
     background-color: transparent;
   }
-}
+
+
 .navbar-inverse .navbar-link {
   color: #9d9d9d;
 }
@@ -7956,6 +7957,7 @@ body {
   color: white;
   margin-top: 30%;
   color: white;
+  transition-delay: 1s;
 }
 
 @media screen and (max-width: 768px) {
@@ -7965,7 +7967,8 @@ body {
     text-align: center;
     z-index: 210;
     color: white;
-    margin-top: 55%;
+    margin-top: 75%;
+    transition-delay: 1s;
   }
 }
 
@@ -8483,8 +8486,4 @@ textarea {
   background: ligthen(#fff2e8, 50%);
   /* Otherwise we'll rely on stacked opacities */
   background: rgba(255, 242, 232, 0.75);
-}
-
-.video-js.vjs-default-skin .vjs-big-play-button {
-  display: none;
 }

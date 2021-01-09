@@ -52999,11 +52999,8 @@ if (
   function animateLetters() {
     var $lead = $(".lead");
 
-    var $video = $("#bg-video");
-
     TweenMax.to($lead, 1, { opacity: 1 });
 
-    TweenMax.to($video, 3, { delay: 0, opacity: 0.2 });
 
     $(".xaviro").each(function (i) {
       var letter = $(this);
@@ -53022,33 +53019,6 @@ if (
     });
   }
 
-  //infinite underscore
-
-  function loopUnderscore() {
-    var $underscore = $("#svg-intro-underscore");
-
-    TweenMax.fromTo(
-      $underscore,
-      0.5,
-      { opacity: 1 },
-      {
-        delay: 0,
-        opacity: 0,
-        repeatDelay: 0.2,
-        repeat: -1,
-        yoyo: true,
-        ease: SteppedEase.config(1),
-      }
-    );
-  }
-
-  /*----------  FIXED NAVBAR ON SCROLL  ----------*/
-
-  var windowVar = $(window);
-  var body = $("body");
-
-  var collapsible = $("#collapsible");
-  var scrollFade = $("#scrollFade");
 
   //navbar fixed
   var nav = $("#navbar");
@@ -53432,3 +53402,25 @@ if (
 
   $('[data-toggle="tooltip"]').tooltip();
 })();
+
+
+const typed = new Typed('.typed', {
+  strings: [
+      '<i class="abilidades" id="web">diseñador web</i>', 
+      '<i class="abilidades" id="graf">diseñador grafíco</i>',
+      '<i class="abilidades" id="apps">diseñador de apps</i>',
+      '<i class="abilidades" id="mas">y mucho más!</i>'
+  ],
+  //stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
+typeSpeed: 40, // Velocidad en mlisegundos para poner una letra,
+startDelay: 250, // Tiempo de retraso en iniciar la animacion. Aplica tambien cuando termina y vuelve a iniciar,
+backSpeed: 40, // Velocidad en milisegundos para borrrar una letra,
+smartBackspace: false, // Eliminar solamente las palabras que sean nuevas en una cadena de texto.
+shuffle: false, // Alterar el orden en el que escribe las palabras.
+backDelay: 1500, // Tiempo de espera despues de que termina de escribir una palabra.
+loop: false, // Repetir el array de strings
+loopCount: false, // Cantidad de veces a repetir el array.  false = infinite
+showCursor: true, // Mostrar cursor palpitanto
+cursorChar: '/', // Caracter para el cursor
+  contentType: 'html', // 'html' o 'null' para texto sin formato
+});

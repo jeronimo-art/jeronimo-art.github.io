@@ -13,11 +13,7 @@
 
 .header {
   height: 100vh;
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.85),
-      rgba(0, 0, 0, 0.9)
-    ),
+  background-image: linear-gradient(to top, #525250f1, #525250fa),
     url(../img/html.png);
   background-color: black;
   background-repeat: no-repeat;
@@ -83,25 +79,113 @@
   text-align: center;
 }
 
+.header .animacion1 {
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 120px;
+  animation: animate1 1.4s;
+  z-index: 100;
+}
+
+@keyframes animate1 {
+  0% {
+    content: url(../img/animacion/1.GIF);
+  }
+  5% {
+    content: url(../img/animacion/2.GIF);
+  }
+  10% {
+    content: url(../img/animacion/1.GIF);
+  }
+  15% {
+    content: url(../img/animacion/2.GIF);
+  }
+  20% {
+    content: url(../img/animacion/1.GIF);
+  }
+  25% {
+    content: url(../img/animacion/2.GIF);
+  }
+  25% {
+    content: url(../img/animacion/2.GIF);
+  }
+  30% {
+    content: url(../img/animacion/1.GIF);
+  }
+  35% {
+    content: url(../img/animacion/2.GIF);
+  }
+  45% {
+    content: url(../img/animacion/1.GIF);
+  }
+  50% {
+    content: url(../img/animacion/2.GIF);
+  }
+  55% {
+    content: url(../img/animacion/1.GIF);
+  }
+  65% {
+    content: url(../img/animacion/2.GIF);
+  }
+  75% {
+    content: url(../img/animacion/1.GIF);
+  }
+  85% {
+    content: url(../img/animacion/2.GIF);
+  }
+  95% {
+    content: url(../img/animacion/1.GIF);
+  }
+  100% {
+    content: url(../img/animacion/2.GIF);
+  }
+}
+
 .header .animacion {
   border-radius: 50%;
   position: absolute;
   top: 15%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 100px;
-  animation: animate 1s infinite;
+  animation: animate 1.5s infinite;
+  z-index: 90;
 }
 
 @keyframes animate {
   0% {
     content: url(../img/animacion/animacion1.GIF);
+    width: 120px;
   }
   50% {
     content: url(../img/animacion/animacion2.GIF);
+    width: 120px;
   }
   100% {
     content: url(../img/animacion/animacion1.GIF);
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  @keyframes animate {
+    0% {
+      content: url(../img/animacion/animacion1.GIF);
+      width: 60px;
+    }
+    50% {
+      content: url(../img/animacion/animacion2.GIF);
+      width: 60px;
+    }
+    100% {
+      content: url(../img/animacion/animacion1.GIF);
+      width: 60px;
+    }
+  }
+  .header .animacion1 {
+    width: 60px;
   }
 }
 
@@ -179,3 +263,118 @@
   top: 94%;
   left: 2%;
 }
+
+#der img {
+  position: absolute;
+}
+
+#izq img {
+  position: absolute;
+}
+#imgd-1 {
+  top: 10%;
+  right: 15%;
+  width: 28px;
+  transform: translateX(50%) translateY(50%);
+  animation: anidg 2s ease-out;
+}
+#imgd-2 {
+  top: 8%;
+  opacity: 0;
+  width: 20px;
+  transform: translateX(50%) translateY(50%);
+  animation: anid 4s linear;
+}
+#imgd-3 {
+  top: 13.5%;
+  opacity: 0;
+  width: 20px;
+  transform: translateX(50%) translateY(50%);
+  animation: anid 4s linear;
+}
+
+#imgi-1 {
+  top: 10%;
+  left: 15%;
+  width: 28px;
+  transform: translateX(-50%) translateY(50%);
+  animation: aniig 2s ease-out;
+}
+#imgi-2 {
+  top: 8%;
+  opacity: 0;
+  width: 20px;
+  transform: translateX(50%) translateY(50%);
+  animation: anii 4s linear;
+}
+#imgi-3 {
+  top: 13.5%;
+  opacity: 0;
+  width: 20px;
+  transform: translateX(50%) translateY(50%);
+  animation: anii 4s linear;
+}
+
+@keyframes anii {
+  0%{
+    opacity: 0;
+  }
+  49%{
+    opacity: 0;
+  }
+  50% {
+    left: 22%;
+    opacity: 1;
+  }
+  100% {
+    left: 0%;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes anid {
+  0%{
+    opacity: 0;
+  }
+  49%{
+    opacity: 0;
+  }
+  50% {
+    right: 22%;
+    opacity: 1;
+  }
+  100% {
+    right: 0%;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes anidg {
+  0% {
+    right: 28%;
+    width: 25px;
+  }
+  80%{
+    right: 32%;
+  }
+  100% {
+    right: 15%;
+    width: 28px;
+  }
+} 
+
+@keyframes aniig {
+  0% {
+    left: 28%;
+    width: 25px;
+  }
+  80%{
+    left: 32%;
+  }
+  100% {
+    left: 15%;
+    width: 28px;
+  }
+} 
