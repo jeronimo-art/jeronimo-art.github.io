@@ -7957,7 +7957,7 @@ body {
   color: white;
   margin-top: 30%;
   color: white;
-  transition-delay: 1s;
+  font-size: 50px;
 }
 
 @media screen and (max-width: 768px) {
@@ -7969,6 +7969,7 @@ body {
     color: white;
     margin-top: 75%;
     transition-delay: 1s;
+    font-size: 30px;
   }
 }
 
