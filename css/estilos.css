@@ -254,6 +254,18 @@
     width: 92%;
     display: flex;
   }
+  .header {
+    height: 90vh;
+    background-image: linear-gradient(to top, #525250f1, #525250fa),
+      url(../img/html.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: #fff fixed 50% 50%;
+    position: relative;
+    overflow: hidden;
+  }
 }
 
 .img-circle {
