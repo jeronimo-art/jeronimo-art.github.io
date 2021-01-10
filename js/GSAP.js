@@ -1,71 +1,20 @@
-/*----------  LIBRARIES  ----------*/
-
-/*!
-
- * jQuery JavaScript Library v3.1.1
-
- * https://jquery.com/
-
- *
-
- * Includes Sizzle.js
-
- * https://sizzlejs.com/
-
- *
-
- * Copyright jQuery Foundation and other contributors
-
- * Released under the MIT license
-
- * https://jquery.org/license
-
- *
-
- * Date: 2016-09-22T22:30Z
-
- */
-
 (function (global, factory) {
   "use strict";
 
   if (typeof module === "object" && typeof module.exports === "object") {
-    // For CommonJS and CommonJS-like environments where a proper `window`
-
-    // is present, execute the factory and get jQuery.
-
-    // For environments that do not have a `window` with a `document`
-
-    // (such as Node.js), expose a factory as module.exports.
-
-    // This accentuates the need for the creation of a real `window`.
-
-    // e.g. var jQuery = require("jquery")(window);
-
-    // See ticket #14549 for more info.
-
     module.exports = global.document
       ? factory(global, true)
       : function (w) {
           if (!w.document) {
             throw new Error("jQuery requires a window with a document");
           }
-
           return factory(w);
         };
   } else {
     factory(global);
   }
 
-  // Pass this if window is not defined yet
 })(typeof window !== "undefined" ? window : this, function (window, noGlobal) {
-  // Edge <= 12 - 13+, Firefox <=18 - 45+, IE 10 - 11, Safari 5.1 - 9+, iOS 6 - 9.1
-
-  // throw exceptions when non-strict code (e.g., ASP.NET 4.5) accesses strict mode
-
-  // arguments.callee.caller (trac-13335). But as of jQuery 3.0 (2016), strict mode should be common
-
-  // enough that all such attempts are guarded in a try block.
 
   "use strict";
 
@@ -105,14 +54,7 @@
     doc.head.appendChild(script).parentNode.removeChild(script);
   }
 
-  /* global Symbol */
-
-  // Defining this global in .eslintrc.json would create a danger of using the global
-
-  // unguarded in another place, it seems safer to define global only for this module
-
   var version = "3.1.1",
-    // Define a local copy of jQuery
 
     jQuery = function (selector, context) {
       // The jQuery object is actually just the init constructor 'enhanced'
@@ -520,11 +462,6 @@
         i = 0,
         length = elems.length,
         callbackExpect = !invert;
-
-      // Go through the array, only saving the items
-
-      // that pass the validator function
-
       for (; i < length; i++) {
         callbackInverse = !callback(elems[i], i);
 
@@ -18739,7 +18676,7 @@ var _gsScope =
               var b = a.charAt(0).toUpperCase() + a.substr(1) + "Plugin";
               xa(a, {
                 parser: function (a, c, d, e, f, g, j) {
-                  var k = h.com.greensock.plugins[b];
+
                   return k
                     ? (k._cssRegister(), i[d].parse(a, c, d, e, f, g, j))
                     : (V("Error: " + b + " js file not loaded."), f);
@@ -53056,371 +52993,7 @@ if (
     }
   });
 
-  /*----------  ANCHOR LINKS ANIMATION  ----------*/
-
-  var sections = ["portfolio", "skillset", "experience", "contact"];
-
-  $.each(sections, function (i, val) {
-    $("#btn-" + val).click(function (event) {
-      event.preventDefault();
-      TweenMax.to(window, 1, { scrollTo: { y: "#" + val, offsetY: 0 } });
-    });
-  });
-
-  //data
-
-  var portfolioData = [
-    {
-      title: "Nintendo Disney Art Academy",
-      subtitle: "Promo website for Nintendo's 3DS game",
-      description:
-        'Nintendo Disney Art Academy is a website designed by <a href="http://enterthestudio.com/">Enter the Studio</a> for Nintendo\'s 3DS game. It was developed using technologies like GSAP, CSS3, slick.js, and JQuery. It was also customized and tested on many modern devices including the 3DS console.',
-      code: "disney",
-      buttons: [false, false, false, "http://artacademy.nintendo.com/disney/"],
-    },
-    {
-      title: "Fridge Binge",
-      subtitle: "Website for a retro games startup",
-      description:
-        "Fridge Binge was developed and designed as a gaming site using AngularJS, Node.js, MongoDB, Express, Handlebars, Passport, Bcrypt, and RESTful APIs. It's Auth sytem was later migrated to Angular 2 and Firebase as a future proof upgrade.",
-      code: "fridgebinge",
-      buttons: ["desktop", false, false, "http://www.fridgebinge.com"],
-    },
-    {
-      title: "Arizona Department of Environmental Quality",
-      subtitle: "ADEQ Interactive Microsite",
-      description:
-        'ADEQ Interactive Microsite is a website designed by <a href="http://http://killerinfographics.com/.com/">Killer Infographics</a> and developed using GSAP, JQuery, Illustrator, and responsive design principles. It uses SVG animations for a more elaborate level of interactivity.',
-      code: "adeq",
-      buttons: [false, false, false, "http://kiadeq3.surge.sh"],
-    },
-    {
-      title: "Class Appraisal",
-      subtitle: "Appraisal Data Interactive Infographics",
-      description:
-        'Class Appraisal is a collection of infographics designed by <a href="http://http://killerinfographics.com/.com/">Killer Infographics</a>. Their architechture allow continuos graphic and data updates without coding knowledge. It was developed using D3.js, topojson.js, ArcGIS, AJAX, and many other web technologies.',
-      code: "classappraisal",
-      buttons: [
-        false,
-        false,
-        false,
-        "https://www.classappraisal.com/interactive-dashboard",
-      ],
-    },
-    {
-      title: "Harmony Styles",
-      subtitle: "Stylist Business Website",
-      description:
-        "Harmony Styles is a responsive business website designed by Tyler Warren. It was developed using CSS3, JQuery, and many other web technologies.",
-      code: "harmonystyles",
-      buttons: [false, false, false, "http://harmonystyles.net"],
-    },
-    {
-      title: "Car Crash",
-      subtitle: "Retro web game",
-      description:
-        'Car Crash is a web game that connects with <a href="http://fridgebinge.com/">FridgeBinge.com</a> through Restful API calls to create, update, delete (CRUD) user\'s data. It was designed with the help of Tyler Warren and developed using Phaser, Browserify, AJAX, RESTful APIs, and Photoshop.',
-      code: "carcrash",
-      buttons: [
-        false,
-        false,
-        false,
-        "http://www.fridgebinge.com/games/carcrash",
-      ],
-    },
-    {
-      title: "Rosie",
-      subtitle: "MIDI Generator Desktop App for macOS",
-      description:
-        "Rosie is a MIDI Generator Desktop App for macOS. It creates a collection of midi files that randomly generate rythmic patterns, melodies, chords, tracks and full songs. It's object oriented design is based on the MIDI Specification and Jazz music theory. It can be used for musical brainstorming and was developed using Node.js and Electron.",
-      code: "rosie",
-      buttons: ["desktop", false, false, false],
-    },
-    {
-      title: "Risk Visualizer",
-      subtitle: "Responsive web app to visualize health risk",
-      description:
-        "The Risk Visualizer was a project developed for Kindra C., a nurse practitioner in need of a visual feedback for her patients. It was designed and developed using HTML, AngularJS, Bootstrap, and responsive design principles.",
-      code: "riskvisualizer",
-      buttons: [false, false, false, "http://riskvisualizer.xaviro.com/"],
-    },
-    {
-      title: "HDR Photography",
-      subtitle: "Web galery showcasing HDR photos of National Parks",
-      description:
-        "This is a personal gallery showcasing HDR photos of US National Parks.",
-      code: "hdrgallery",
-      buttons: [false, false, false, "http://photogallery.xaviro.com/"],
-    },
-  ];
-
-  /*----------  MODAL CLICKS  ----------*/
-
-  var currentProjectIndex = 0;
-
-  var $portfolioModal = $("#portfolio-modal"),
-    $portfolioBtn = $(".btn-portfolio");
-
-  //portfolio click
-  $portfolioBtn.click(function () {
-    var index = $portfolioBtn.index(this);
-    currentProjectIndex = index;
-
-    changeProject(currentProjectIndex);
-
-    //open modal
-    $portfolioModal.modal();
-  });
-
-  /*----------  LEFT AND RIGHT ARROWS  ----------*/
-
-  //portfolio modal is already open
-  var $arrowLeft = $("#arrow-left"),
-    $arrowRight = $("#arrow-right");
-
-  $arrowLeft.click(function () {
-    currentProjectIndex =
-      currentProjectIndex === 0
-        ? portfolioData.length - 1
-        : (currentProjectIndex -= 1);
-    changeProject(currentProjectIndex);
-  });
-
-  $arrowRight.click(function () {
-    currentProjectIndex =
-      currentProjectIndex === portfolioData.length - 1
-        ? (currentProjectIndex = 0)
-        : (currentProjectIndex += 1);
-    changeProject(currentProjectIndex);
-  });
-
-  var $title = $("#portfolio-project-title"),
-    $subtitle = $("#portfolio-project-subtitle"),
-    $description = $("#portfolio-project-description"),
-    $video = $("#portfolio-video"),
-    $devices = $(".btn-device");
-
-  function changeProject(index) {
-    //fill data
-    $title.text(portfolioData[index].title);
-    $subtitle.text(portfolioData[index].subtitle);
-    $description.html(portfolioData[index].description);
-    //updates buttons
-    var buttons = portfolioData[index].buttons;
-    for (var i = 0; i < buttons.length; i++) {
-      if (buttons[i] === false) {
-        $($devices[i]).addClass("hide");
-      } else {
-        $($devices[i]).removeClass("hide");
-      }
-    }
-    //resets video playback (stops) and changes poster
-    resetVideo(index);
-  }
-
-  /*----------  VIDEO BUTTONS  ----------*/
-
-  var $btnDesktop = $("#btn-video-desktop");
-  var $btnIpad = $("#btn-video-ipad");
-  var $btnMobile = $("#btn-video-mobile");
-  var $btnLink = $("#btn-web-link");
-
-  $btnDesktop.click(function () {
-    changeVideo(currentProjectIndex, "-desktop");
-  });
-
-  $btnIpad.click(function () {
-    changeVideo(currentProjectIndex, "-ipad");
-  });
-
-  $btnMobile.click(function () {
-    changeVideo(currentProjectIndex, "-mobile");
-  });
-
-  $btnLink.click(function () {
-    window.open(portfolioData[currentProjectIndex].buttons[3]);
-  });
-
-  var videoPlayer = videojs("portfolio-video");
-
-  //changes poster, video sources, and plays video
-  function changeVideo(index, string) {
-    videoPlayer.src([
-      {
-        type: "video/mp4",
-        src:
-          "./assets/res/video/" + portfolioData[index].code + string + ".mp4",
-      },
-      {
-        type: "video/webm",
-        src:
-          "./assets/res/video/" + portfolioData[index].code + string + ".webm",
-      },
-      {
-        type: "video/ogg",
-        src:
-          "./assets/res/video/" + portfolioData[index].code + string + ".ogg",
-      },
-    ]);
-
-    videoPlayer.play();
-    videoPlayer.controls(true); //show controls manually since they are hidden on reset
-  }
-
-  //resets player to show new poster
-  function resetVideo(index) {
-    videoPlayer.reset();
-    videoPlayer.controls(false); //hide controls manually since they show by default
-    videoPlayer.poster(
-      "./assets/img/portfolio/" + portfolioData[index].code + ".png"
-    );
-  }
-
-  /*----------  EXPERIENCE MODAL  ----------*/
-
-  $(".btn-resume").click(function () {
-    $("#resume-modal").modal();
-  });
-
-  /*----------  CONTACT FORM ERRORS AND SEND EMAIL  ----------*/
-
-  $("#contact-form input, #contact-form textarea").keypress(function () {
-    $(this).attr("placeholder", "");
-    $(this).prev().css("opacity", "1");
-  });
-
-  //ajax for contact form
-  function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  }
-
-  function generateCaptcha(x) {
-    var captcha = [randomNumber(1, 100), "+", randomNumber(1, 200), "="].join(
-      " "
-    );
-    $("#captcha-gen").html(captcha);
-    if (x === "x") {
-      $("#form-captcha").attr("placeholder", captcha);
-    }
-  }
-
-  generateCaptcha("x");
-
-  $("#contact-form")
-    .formValidation({
-      framework: "bootstrap",
-      icon: {
-        valid: "glyphicon glyphicon-ok",
-        invalid: "glyphicon glyphicon-remove",
-        validating: "glyphicon glyphicon-refresh",
-      },
-      fields: {
-        name: {
-          validators: {
-            notEmpty: {
-              message: "The first name is required",
-            },
-          },
-        },
-        phone: {
-          validators: {
-            notEmpty: {
-              message: "The phone number is required",
-            },
-            regexp: {
-              message:
-                "The phone number can only contain the digits, spaces, -, (, ), + and .",
-              regexp: /^[0-9\s\-()+\.]+$/,
-            },
-          },
-        },
-        email: {
-          validators: {
-            notEmpty: {
-              message: "The email address is required",
-            },
-            emailAddress: {
-              message: "The input is not a valid email address",
-            },
-          },
-        },
-        message: {
-          validators: {
-            notEmpty: {
-              message: "The message is required",
-            },
-            stringLength: {
-              max: 700,
-              message: "The message must be less than 700 characters long",
-            },
-          },
-        },
-        captcha: {
-          validators: {
-            callback: {
-              message: "Wrong answer",
-              callback: function (value, validator, $field) {
-                var items = $("#captcha-gen").html().split(" "),
-                  sum = parseInt(items[0]) + parseInt(items[2]);
-                return value == sum;
-              },
-            },
-          },
-        },
-      },
-    })
-    .on("err.form.fv", function (e) {
-      // Regenerate the captcha
-      generateCaptcha();
-    })
-    .on("success.form.fv", function (e) {
-      //e.isDefaultPrevented();
-      e.preventDefault();
-
-      var formData = $(e.target);
-
-      $.ajax({
-        url: "https://formspree.io/xareyesochoa@gmail.com",
-        type: "POST",
-        data: formData.serialize(),
-        dataType: "json",
-      })
-        .done(function (response) {
-          formData.formValidation("resetForm", true);
-          generateCaptcha();
-
-          $("#success").html("Message sent!");
-        })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-          $("#success").html(
-            "Sorry, there was a server error. Try again soon or use my email."
-          );
-        });
-    });
-
   /*----------  BOOTSTRAP TOOLTIP  ----------*/
 
   $('[data-toggle="tooltip"]').tooltip();
 })();
-
-
-const typed = new Typed('.typed', {
-  strings: [
-      '<i class="abilidades" id="web">diseñador web</i>', 
-      '<i class="abilidades" id="graf">diseñador grafíco</i>',
-      '<i class="abilidades" id="apps">diseñador de apps</i>',
-      '<i class="abilidades" id="mas">y mucho más!</i>'
-  ],
-  //stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
-typeSpeed: 40, // Velocidad en mlisegundos para poner una letra,
-startDelay: 250, // Tiempo de retraso en iniciar la animacion. Aplica tambien cuando termina y vuelve a iniciar,
-backSpeed: 40, // Velocidad en milisegundos para borrrar una letra,
-smartBackspace: false, // Eliminar solamente las palabras que sean nuevas en una cadena de texto.
-shuffle: false, // Alterar el orden en el que escribe las palabras.
-backDelay: 1500, // Tiempo de espera despues de que termina de escribir una palabra.
-loop: false, // Repetir el array de strings
-loopCount: false, // Cantidad de veces a repetir el array.  false = infinite
-showCursor: true, // Mostrar cursor palpitanto
-cursorChar: '/', // Caracter para el cursor
-  contentType: 'html', // 'html' o 'null' para texto sin formato
-});

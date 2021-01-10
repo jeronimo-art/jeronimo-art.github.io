@@ -82,6 +82,71 @@
   text-align: center;
 }
 
+/* .header .animacion2 {
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 120px;
+  animation: animate2 1s;
+  z-index: 110;
+}
+
+@keyframes animate2 {
+  0% {
+    content: url(../img/animacion/apa/1.GIF);
+  }
+  6.2% {
+    content: url(../img/animacion/apa/2.GIF);
+  }
+  12.5% {
+    content: url(../img/animacion/apa/3.GIF);
+  }
+  18.7% {
+    content: url(../img/animacion/apa/4.GIF);
+  }
+  25% {
+    content: url(../img/animacion/apa/5.GIF);
+  }
+  31.2% {
+    content: url(../img/animacion/apa/6.GIF);
+  }
+  37.5% {
+    content: url(../img/animacion/apa/7.GIF);
+  }
+  43.7% {
+    content: url(../img/animacion/apa/8.GIF);
+  }
+  50% {
+    content: url(../img/animacion/apa/9.GIF);
+  }
+  56.2% {
+    content: url(../img/animacion/apa/10.GIF);
+  }
+  62.5% {
+    content: url(../img/animacion/apa/11.GIF);
+  }
+  68.7% {
+    content: url(../img/animacion/apa/12.GIF);
+  }
+  75% {
+    content: url(../img/animacion/apa/13.GIF);
+  }
+  81.2% {
+    content: url(../img/animacion/apa/14.GIF);
+  }
+  87.5% {
+    content: url(../img/animacion/apa/15.GIF);
+  }
+  93.7% {
+    content: url(../img/animacion/apa/15.GIF);
+  }
+  100% {
+    content: url(../img/animacion/apa/16.GIF);
+  }
+} */
+
 .header .animacion1 {
   border-radius: 50%;
   position: absolute;
@@ -89,7 +154,7 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   width: 120px;
-  animation: animate1 1.4s;
+  animation: animate1 2s;
   z-index: 100;
 }
 
