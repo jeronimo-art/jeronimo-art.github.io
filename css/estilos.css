@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  background: #525250f1;
 }
 
 :root {
@@ -11,11 +12,21 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar{
+  width: 12px;
+  background:  #464644f1;
+}
+
+::-webkit-scrollbar-thumb{
+  background: rgba(197, 197, 194, 0.541);
+  border-radius: 10px;
+  border: 1px solid #6988a7;
+}
+
 .header {
   height: 100vh;
-  background-image: linear-gradient(to top, #525250f1, #525250fa),
+  background-image: #525250f1,
     url(../img/html.png);
-  background-color: black;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -91,6 +102,7 @@
   width: 120px;
   animation: animate1 2s;
   z-index: 100;
+  animation-delay: 0.1s;
 }
 
 @keyframes animate1 {
@@ -155,6 +167,7 @@
   transform: translateX(-50%) translateY(-50%);
   animation: animate 1.5s infinite;
   z-index: 90;
+  animation-delay: 0.1s;
 }
 
 @keyframes animate {
@@ -249,6 +262,7 @@
 .portafolio {
   width: 100%;
   height: 100%;
+  background: #525250f1;
 }
 
 .contenedor-galeria {
@@ -271,6 +285,7 @@
 .contenedor h1 {
   padding: 10px;
   text-align: center;
+  color: white;
 }
 
 @media screen and (max-width: 800px) {
@@ -283,7 +298,7 @@
   }
   .header {
     height: 90vh;
-    background-image: linear-gradient(to top, #525250f1, #525250fa),
+    background-image: linear-gradient(to top, #525250f1, #525250f1),
       url(../img/html.png);
     background-color: black;
     background-repeat: no-repeat;

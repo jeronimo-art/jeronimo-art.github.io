@@ -7,7 +7,7 @@
 }
 
 #contenedor-carga{
-    background-color: rgb(255, 240, 245);
+    background-color: dashed #525250f1;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -15,8 +15,8 @@
     z-index: 10000;
 }
 #carga{
-    border: 15px solid #ccc;
-    border-top-color: #f4266a;
+    border: 15px solid #ffffff;
+    border-top-color: #42bdd6;
     border-top-style: groove;
     height: 100px;
     width: 100px;
