@@ -12,16 +12,18 @@
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 12px;
-  background:  #464644f1;
+  background: #464644f1;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: rgba(197, 197, 194, 0.541);
   border-radius: 10px;
   border: 1px solid #6988a7;
 }
+
+/*========= VIDEO DEL LOGO =========*/
 
 .portafolio #video-header {
   width: 100%;
@@ -30,13 +32,15 @@
   z-index: 2000;
 }
 
-#header-video{
+#header-video {
   width: 10%;
   position: absolute;
   opacity: 0.5;
   top: 1%;
   left: 1%;
 }
+
+/*========= HEADER =========*/
 
 .header {
   background: #525250f1;
@@ -72,8 +76,6 @@
   background: #eeeeee;
   transition: all 0.5s;
 }
-
-
 
 .menu-navegacion {
   position: fixed;
@@ -120,6 +122,19 @@
   z-index: 100;
   animation-delay: 0.1s;
 }
+
+/*========= BOTON DE RELOAD =========*/
+
+.img-circle {
+  width: 25px;
+  z-index: 401;
+  position: absolute;
+  top: 94%;
+  left: 2%;
+  background: transparent;
+}
+
+/*========= ANIMACION DEL HEADER =========*/
 
 @keyframes animate1 {
   0% {
@@ -253,84 +268,7 @@
   color: white;
 }
 
-.go-down i {
-  color: white;
-  position: absolute;
-  top: 92%;
-  left: 50%;
-  background: transparent;
-  font-size: 35px;
-  transform: translateX(-50%) translateY(-50%);
-  animation: go-down 1s infinite;
-}
-
-@keyframes go-down {
-  0% {
-    transform: translateY(13px) translateX(-50%) translateY(-50%);
-  }
-  50% {
-    transform: translateY(0px) translateX(-50%) translateY(-50%);
-  }
-  100% {
-    transform: translateY(13px) translateX(-50%) translateY(-50%);
-  }
-}
-
-.portafolio {
-  width: 100%;
-  height: 100%;
-}
-
-.contenedor-galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 30px;
-}
-
-.contenedor-galeria img {
-  width: 30%;
-  display: block;
-  margin-bottom: 15px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  border: 1px solid #000000;
-  border-radius: 1%;
-}
-
-.contenedor h1 {
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-@media screen and (max-width: 800px) {
-  .menu-navegacion {
-    width: 50vw;
-  }
-  .contenedor-galeria img {
-    width: 92%;
-    display: flex;
-  }
-  .header {
-    height: 90vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: #fff fixed 50% 50%;
-    position: relative;
-    overflow: hidden;
-  }
-}
-
-.img-circle {
-  width: 25px;
-  z-index: 401;
-  position: absolute;
-  top: 94%;
-  left: 2%;
-  background: transparent;
-}
+/*========= ANIMACION DE LAS SKILLS =========*/
 
 @media screen and (max-width: 800px) {
   .img-circle {
@@ -494,7 +432,7 @@
     animation: anid 4s linear;
     z-index: 99;
   }
-  
+
   #imgi-1 {
     top: 20%;
     left: 15%;
@@ -519,5 +457,78 @@
     animation: anii 4s linear;
     z-index: 99;
   }
-  
+}
+
+/*========= BOTON PARA BAJAR =========*/
+
+.go-down i {
+  color: white;
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  background: transparent;
+  font-size: 35px;
+  transform: translateX(-50%) translateY(-50%);
+  animation: go-down 1s infinite;
+}
+
+@keyframes go-down {
+  0% {
+    transform: translateY(13px) translateX(-50%) translateY(-50%);
+  }
+  50% {
+    transform: translateY(0px) translateX(-50%) translateY(-50%);
+  }
+  100% {
+    transform: translateY(13px) translateX(-50%) translateY(-50%);
+  }
+}
+
+/*============== PORTAFOLIO ==============*/
+
+.portafolio {
+  width: 100%;
+  height: 100%;
+}
+
+.contenedor-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.contenedor-galeria img {
+  width: 30%;
+  display: block;
+  margin-bottom: 15px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  border: 1px solid #000000;
+  border-radius: 1%;
+}
+
+.contenedor h1 {
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 800px) {
+  .menu-navegacion {
+    width: 50vw;
+  }
+  .contenedor-galeria img {
+    width: 92%;
+    display: flex;
+  }
+  .header {
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: #fff fixed 50% 50%;
+    position: relative;
+    overflow: hidden;
+  }
 }

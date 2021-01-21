@@ -9,3 +9,4 @@
     <h1>error 404</h1>
 </body>
 </html>
+<!-- ===== ERROR NOT FOUND (404) ===== -->
