@@ -1,0 +1,594 @@
+* {
+  margin: 0;
+  padding: 0;
+  background: #525250f1;
+}
+
+:root {
+  /*===== Variables =====*/
+  --color1: #541661;
+  --color2: #d62246;
+  --color3: #784f41;
+  --color4: #00f0b5;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: #464644f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(197, 197, 194, 0.541);
+  border-radius: 10px;
+  border: 1px solid #6988a7;
+}
+
+/*========= VIDEO DEL LOGO =========*/
+
+.portafolio #video-header {
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  z-index: 2000;
+}
+
+#header-video {
+  width: 10%;
+  position: absolute;
+  opacity: 0.5;
+  top: 1%;
+  left: 1%;
+}
+
+/*========= HEADER =========*/
+
+.header {
+  background: #525250f1;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: #fff fixed 50% 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hamburguer {
+  content: url(../svg/hamburguesa.svg);
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background: #fff;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  padding: 3px;
+  transition: all 0.5s;
+  z-index: 301;
+}
+
+.hamburguer:hover {
+  background: #eeeeee;
+  transition: all 0.5s;
+}
+
+.menu-navegacion {
+  position: fixed;
+  top: 0;
+  width: 30vw;
+  height: 100%;
+  background-image: linear-gradient(
+    135deg,
+    var(--color1) 0%,
+    var(--color2) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  right: 0;
+  transform: translateX(110%);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 6px rgba(131, 131, 131, 0.5);
+  z-index: 300;
+}
+
+.spread {
+  transform: translateX(0);
+}
+
+.menu-navegacion a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.align-animation {
+  text-align: center;
+}
+
+.header .animacion1 {
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 120px;
+  animation: animate1 2s;
+  z-index: 100;
+  animation-delay: 0.1s;
+}
+
+/*========= BOTON DE RELOAD =========*/
+
+.img-circle {
+  width: 25px;
+  z-index: 401;
+  position: absolute;
+  top: 94%;
+  left: 2%;
+  background: transparent;
+}
+
+/*========= ANIMACION DEL HEADER =========*/
+
+@keyframes animate1 {
+  0% {
+    content: url(../img/animacion/1.GIF);
+  }
+  5% {
+    content: url(../img/animacion/2.GIF);
+  }
+  10% {
+    content: url(../img/animacion/1.GIF);
+  }
+  15% {
+    content: url(../img/animacion/2.GIF);
+  }
+  20% {
+    content: url(../img/animacion/1.GIF);
+  }
+  25% {
+    content: url(../img/animacion/2.GIF);
+  }
+  25% {
+    content: url(../img/animacion/2.GIF);
+  }
+  30% {
+    content: url(../img/animacion/1.GIF);
+  }
+  35% {
+    content: url(../img/animacion/2.GIF);
+  }
+  45% {
+    content: url(../img/animacion/1.GIF);
+  }
+  50% {
+    content: url(../img/animacion/2.GIF);
+  }
+  55% {
+    content: url(../img/animacion/1.GIF);
+  }
+  65% {
+    content: url(../img/animacion/2.GIF);
+  }
+  75% {
+    content: url(../img/animacion/1.GIF);
+  }
+  85% {
+    content: url(../img/animacion/2.GIF);
+  }
+  95% {
+    content: url(../img/animacion/1.GIF);
+  }
+  100% {
+    content: url(../img/animacion/2.GIF);
+  }
+}
+
+.header .animacion {
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  animation: animate 1.5s infinite;
+  z-index: 90;
+  animation-delay: 0.1s;
+}
+
+@keyframes animate {
+  0% {
+    content: url(../img/animacion/animacion1.GIF);
+    width: 120px;
+  }
+  50% {
+    content: url(../img/animacion/animacion2.GIF);
+    width: 120px;
+  }
+  100% {
+    content: url(../img/animacion/animacion1.GIF);
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  @keyframes animate {
+    0% {
+      content: url(../img/animacion/animacion1.GIF);
+      width: 60px;
+    }
+    50% {
+      content: url(../img/animacion/animacion2.GIF);
+      width: 60px;
+    }
+    100% {
+      content: url(../img/animacion/animacion1.GIF);
+      width: 60px;
+    }
+  }
+  .header .animacion1 {
+    width: 60px;
+  }
+  .hamburguer {
+    content: url(../svg/hamburguesa.svg);
+    position: fixed;
+    top: 15px;
+    right: 15px;
+  }
+  .header .animacion1 {
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: animate1 1.4s;
+    z-index: 100;
+  }
+  .header .animacion {
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: animate 1.5s infinite;
+    z-index: 90;
+  }
+}
+
+.text-animation {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+}
+
+/*========= ANIMACION DE LAS SKILLS =========*/
+
+@media screen and (max-width: 800px) {
+  .img-circle {
+    width: 25px;
+    z-index: 401;
+    position: absolute;
+    top: 91%;
+    left: 2%;
+  }
+}
+
+#der img {
+  position: absolute;
+}
+
+#izq img {
+  position: absolute;
+}
+#imgd-1 {
+  top: 10%;
+  right: 15%;
+  width: 28px;
+  transform: translateX(50%) translateY(50%);
+  animation: anidg 2s ease-out;
+  z-index: 100;
+  background: transparent;
+}
+#imgd-2 {
+  top: 8%;
+  opacity: 0;
+  width: 20px;
+  transform: translateX(50%) translateY(50%);
+  animation: anid 4s linear;
+  z-index: 99;
+  background: transparent;
+}
+#imgd-3 {
+  top: 13.5%;
+  opacity: 0;
+  width: 20px;
+  transform: translateX(50%) translateY(50%);
+  animation: anid 4s linear;
+  z-index: 99;
+  background: transparent;
+}
+
+#imgi-1 {
+  top: 10%;
+  left: 15%;
+  width: 28px;
+  transform: translateX(-50%) translateY(50%);
+  animation: aniig 2s ease-out;
+  z-index: 100;
+  background: transparent;
+}
+#imgi-2 {
+  top: 8%;
+  opacity: 0;
+  width: 20px;
+  transform: translateX(50%) translateY(50%);
+  animation: anii 4s linear;
+  z-index: 99;
+  background: transparent;
+}
+#imgi-3 {
+  top: 13.5%;
+  opacity: 0;
+  width: 20px;
+  transform: translateX(50%) translateY(50%);
+  animation: anii 4s linear;
+  z-index: 99;
+  background: transparent;
+}
+
+@keyframes anii {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    left: 22%;
+    opacity: 1;
+  }
+  100% {
+    left: 0%;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes anid {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    right: 22%;
+    opacity: 1;
+  }
+  100% {
+    right: 0%;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes anidg {
+  0% {
+    right: 28%;
+    width: 25px;
+  }
+  80% {
+    right: 32%;
+  }
+  100% {
+    right: 15%;
+    width: 28px;
+  }
+}
+
+@keyframes aniig {
+  0% {
+    left: 28%;
+    width: 25px;
+  }
+  80% {
+    left: 32%;
+  }
+  100% {
+    left: 15%;
+    width: 28px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #imgd-1 {
+    top: 20%;
+    right: 15%;
+    width: 28px;
+    transform: translateX(50%) translateY(50%);
+    animation: anidg 2s ease-out;
+    z-index: 100;
+  }
+  #imgd-2 {
+    top: 18%;
+    opacity: 0;
+    width: 20px;
+    transform: translateX(50%) translateY(50%);
+    animation: anid 4s linear;
+    z-index: 99;
+  }
+  #imgd-3 {
+    top: 23.5%;
+    opacity: 0;
+    width: 20px;
+    transform: translateX(50%) translateY(50%);
+    animation: anid 4s linear;
+    z-index: 99;
+  }
+
+  #imgi-1 {
+    top: 20%;
+    left: 15%;
+    width: 28px;
+    transform: translateX(-50%) translateY(50%);
+    animation: aniig 2s ease-out;
+    z-index: 100;
+  }
+  #imgi-2 {
+    top: 18%;
+    opacity: 0;
+    width: 20px;
+    transform: translateX(50%) translateY(50%);
+    animation: anii 4s linear;
+    z-index: 99;
+  }
+  #imgi-3 {
+    top: 23.5%;
+    opacity: 0;
+    width: 20px;
+    transform: translateX(50%) translateY(50%);
+    animation: anii 4s linear;
+    z-index: 99;
+  }
+}
+
+/*========= BOTON PARA BAJAR =========*/
+
+.go-down i {
+  color: white;
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  background: transparent;
+  font-size: 35px;
+  transform: translateX(-50%) translateY(-50%);
+  animation: go-down 1s infinite;
+}
+
+@keyframes go-down {
+  0% {
+    transform: translateY(13px) translateX(-50%) translateY(-50%);
+  }
+  50% {
+    transform: translateY(0px) translateX(-50%) translateY(-50%);
+  }
+  100% {
+    transform: translateY(13px) translateX(-50%) translateY(-50%);
+  }
+}
+
+/*============== PORTAFOLIO ==============*/
+
+.portafolio {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.contenedor h1 {
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/*============== AÑADIR IMAGEN ==============*/
+
+.gallery {
+  background: #000000;
+}
+
+.contenedor-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.img-galeria {
+  width: 30%;
+  display: block;
+  margin-bottom: 15px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  border: 1px solid #000000;
+  border-radius: 1%;
+}
+
+.img-galeria:hover {
+  border: 1px solid #ffffffa6;
+  box-shadow: 0px 0px 10px 5px #ffffff63;
+}
+
+.imagen-light {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.534);
+  transform: translate(100%);
+  transition: transform 0.2s ease-in-out;
+  z-index: 800;
+}
+
+.agregar-imagen {
+  width: 60%;
+  transform: scale(0);
+  border-radius: 10px;
+  transition: transform 0.3s 0.2s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.showImage {
+  transform: scale(1);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.show {
+  transform: translate(0);
+}
+
+.close {
+  position: absolute;
+  width: 40px;
+  cursor: pointer;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .menu-navegacion {
+    width: 50vw;
+  }
+  .contenedor-galeria img {
+    width: 92%;
+    display: flex;
+  }
+  .header {
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: #fff fixed 50% 50%;
+    position: relative;
+    overflow: hidden;
+  }
+}
