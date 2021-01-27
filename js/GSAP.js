@@ -13139,19 +13139,8 @@ if (typeof jQuery === "undefined") {
   });
 })(jQuery);
 
-/* ========================================================================
- * Bootstrap: alert.js v3.3.7
- * http://getbootstrap.com/javascript/#alerts
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-
 +(function ($) {
   "use strict";
-
-  // ALERT CLASS DEFINITION
-  // ======================
 
   var dismiss = '[data-dismiss="alert"]';
   var Alert = function (el) {

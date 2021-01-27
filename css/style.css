@@ -5707,13 +5707,7 @@ a.thumbnail.active {
 .alert-dismissible {
   padding-right: 35px;
 }
-.alert-dismissable .close,
-.alert-dismissible .close {
-  position: relative;
-  top: -2px;
-  right: -21px;
-  color: inherit;
-}
+
 
 .alert-success {
   background-color: #dff0d8;
@@ -6793,32 +6787,7 @@ button.list-group-item-danger.active:focus {
   border-radius: 3px;
 }
 
-.close {
-  float: right;
-  font-size: 21px;
-  font-weight: bold;
-  line-height: 1;
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
-  opacity: 0.2;
-  filter: alpha(opacity=20);
-}
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-}
 
-button.close {
-  padding: 0;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  -webkit-appearance: none;
-}
 
 .modal-open {
   overflow: hidden;
