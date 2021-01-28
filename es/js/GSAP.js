@@ -13139,19 +13139,8 @@ if (typeof jQuery === "undefined") {
   });
 })(jQuery);
 
-/* ========================================================================
- * Bootstrap: alert.js v3.3.7
- * http://getbootstrap.com/javascript/#alerts
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-
 +(function ($) {
   "use strict";
-
-  // ALERT CLASS DEFINITION
-  // ======================
 
   var dismiss = '[data-dismiss="alert"]';
   var Alert = function (el) {
@@ -15679,20 +15668,6 @@ if (typeof jQuery === "undefined") {
     });
   });
 })(jQuery);
-
-/*!
- * VERSION: 1.19.0
- * DATE: 2016-07-14
- * UPDATES AND DOCS AT: http://greensock.com
- *
- * Includes all of the following: TweenLite, TweenMax, TimelineLite, TimelineMax, EasePack, CSSPlugin, RoundPropsPlugin, BezierPlugin, AttrPlugin, DirectionalRotationPlugin
- *
- * @license Copyright (c) 2008-2016, GreenSock. All rights reserved.
- * This work is subject to the terms at http://greensock.com/standard-license or for
- * Club GreenSock members, the software agreement that was issued with your membership.
- *
- * @author: Jack Doyle, jack@greensock.com
- **/
 var _gsScope =
   "undefined" != typeof module && module.exports && "undefined" != typeof global
     ? global
@@ -20661,8 +20636,6 @@ var _gsScope =
         var b,
           c,
           d,
-          e = _gsScope.GreenSockGlobals || _gsScope,
-          f = e.com.greensock,
           g = 2 * Math.PI,
           h = Math.PI / 2,
           i = f._class,
@@ -21019,7 +20992,6 @@ var _gsScope =
           for (b = 0; b < c.length; b++) e[c[b]] = e = e[c[b]] || {};
           return e;
         },
-        k = j("com.greensock"),
         l = 1e-10,
         m = function (a) {
           var b,
@@ -22623,17 +22595,6 @@ var _gsScope =
       : this || window,
     "TweenMax"
   );
-/*!
- * VERSION: 1.8.0
- * DATE: 2016-07-09
- * UPDATES AND DOCS AT: http://greensock.com
- *
- * @license Copyright (c) 2008-2016, GreenSock. All rights reserved.
- * This work is subject to the terms at http://greensock.com/standard-license or for
- * Club GreenSock members, the software agreement that was issued with your membership.
- *
- * @author: Jack Doyle, jack@greensock.com
- **/
 var _gsScope =
   "undefined" != typeof module && module.exports && "undefined" != typeof global
     ? global
@@ -26157,51 +26118,21 @@ var _gsScope =
                * @return {Component}
                * @private
                * @method unlockShowing
-               */
-              /**
-               * Set or get the width of the component (CSS values)
-               * Setting the video tag dimension values only works with values in pixels.
-               * Percent values will not work.
-               * Some percents can be used, but width()/height() will return the number + %,
-               * not the actual computed width/height.
-               *
                * @param  {Number|String=} num   Optional width number
                * @param  {Boolean} skipListeners Skip the 'resize' event trigger
                * @return {Component} This component, when setting the width
                * @return {Number|String} The width, when getting
                * @method width
-               */
-              /**
-               * Get or set the height of the component (CSS values)
-               * Setting the video tag dimension values only works with values in pixels.
-               * Percent values will not work.
-               * Some percents can be used, but width()/height() will return the number + %,
-               * not the actual computed width/height.
-               *
                * @param  {Number|String=} num     New component height
                * @param  {Boolean=} skipListeners Skip the resize event trigger
                * @return {Component} This component, when setting the height
                * @return {Number|String} The height, when getting
                * @method height
-               */
-              /**
-               * Set both width and height at the same time
-               *
                * @param  {Number|String} width Width of player
                * @param  {Number|String} height Height of player
                * @return {Component} The component
                * @method dimensions
-               */
-              /**
-               * Get or set width or height
-               * This is the shared code for the width() and height() methods.
-               * All for an integer, integer + 'px' or integer + '%';
-               * Known issue: Hidden elements officially have a width of 0. We're defaulting
-               * to the style.width value and falling back to computedStyle which has the
-               * hidden element issue. Info, but probably not an efficient fix:
-               * http://www.foliotek.com/devblog/getting-the-width-of-a-hidden-element-with-jquery-using-width/
-               *
-               * @param  {String} widthOrHeight  'width' or 'height'
+                 @param  {String} widthOrHeight  'width' or 'height'
                * @param  {Number|String=} num     New dimension
                * @param  {Boolean=} skipListeners Skip resize event trigger
                * @return {Component} The component if a dimension was set
@@ -26229,36 +26160,8 @@ var _gsScope =
                * Get height of computed style
                * @return {Integer}
                * @method currentHeight
-               */
-              /**
-               * Emit 'tap' events when touch events are supported
-               * This is used to support toggling the controls through a tap on the video.
-               * We're requiring them to be enabled because otherwise every component would
-               * have this extra overhead unnecessarily, on mobile devices where extra
-               * overhead is especially bad.
-               *
                * @private
                * @method emitTapEvents
-               */
-              /**
-               * Report user touch activity when touch events occur
-               * User activity is used to determine when controls should show/hide. It's
-               * relatively simple when it comes to mouse events, because any mouse event
-               * should show the controls. So we capture mouse events that bubble up to the
-               * player and report activity when that happens.
-               * With touch events it isn't as easy. We can't rely on touch events at the
-               * player level, because a tap (touchstart + touchend) on the video itself on
-               * mobile devices is meant to turn controls off (and on). User activity is
-               * checked asynchronously, so what could happen is a tap event on the video
-               * turns the controls off, then the touchend event bubbles up to the player,
-               * which if it reported user activity, would turn the controls right back on.
-               * (We also don't want to completely block touch events from bubbling up)
-               * Also a touchmove, touch+hold, and anything other than a tap is not supposed
-               * to turn the controls back on on a mobile device.
-               * Here we're setting the default component behavior to report user activity
-               * whenever touch events happen, and this can be turned off by components that
-               * want touch events to act differently.
-               *
                * @method enableTouchActivity
                */
               /**
@@ -28467,10 +28370,7 @@ var _gsScope =
                  * Update ARIA accessibility attributes
                  *
                  * @method updateARIAAttributes
-                 */
-                /**
-                 * Get percentage of video played
-                 *
+
                  * @return {Number} Percentage played
                  * @method getPercent
                  */
@@ -32367,10 +32267,6 @@ var _gsScope =
                     // Set ARIA label and region role depending on player type
                     this.el_.setAttribute("role", "region"),
                     this.isAudio()
-                      ? this.el_.setAttribute("aria-label", "audio player")
-                      : this.el_.setAttribute("aria-label", "video player"),
-                    this.isAudio() && this.addClass("vjs-audio"),
-                    this.flexNotSupported_() && this.addClass("vjs-no-flex"),
                     // TODO: Make this smarter. Toggle user state between touching/mousing
                     // using events, since devices can have both touch and mouse events.
                     // if (browser.TOUCH_ENABLED) {
@@ -32388,13 +32284,7 @@ var _gsScope =
                     this.on("fullscreenchange", this.handleFullscreenChange_),
                     this.on("stageclick", this.handleStageClick_);
                 }
-                /*
-                 * Global player list
-                 *
-                 * @type {Object}
-                 */
                 /**
-                 * Destroys the video player and does any necessary cleanup
                  * ```js
                  *     myPlayer.dispose();
                  * ```
@@ -32476,23 +32366,6 @@ var _gsScope =
                  * @method tech
                  */
                 /**
-                 * Set up click and touch listeners for the playback element
-                 *
-                 * On desktops, a click on the video itself will toggle playback,
-                 * on a mobile device a click on the video toggles controls.
-                 * (toggling controls is done by toggling the user state between active and
-                 * inactive)
-                 * A tap can signal that a user has become active, or has become inactive
-                 * e.g. a quick tap on an iPhone movie should reveal the controls. Another
-                 * quick tap should hide them again (signaling the user is in an inactive
-                 * viewing state)
-                 * In addition to this, we still want the user to be considered inactive after
-                 * a few seconds of inactivity.
-                 * Note: the only part of iOS interaction we can't mimic with this setup
-                 * is a touch and hold on the video element counting as activity in order to
-                 * keep the controls showing, but that shouldn't be an issue. A touch and hold
-                 * on any controls will still keep the user active
-                 *
                  * @private
                  * @method addTechControlsListeners_
                  */
@@ -32569,10 +32442,6 @@ var _gsScope =
                  * @method handleTechSeeked_
                  */
                 /**
-                 * Fired the first time a video is played
-                 * Not part of the HLS spec, and we're not sure if this is the best
-                 * implementation yet, so use sparingly. If you don't have a reason to
-                 * prevent playback, use `myPlayer.one('play');` instead.
                  *
                  * @private
                  * @method handleTechFirstPlay_
@@ -32665,7 +32534,6 @@ var _gsScope =
                  * @method handleTechSuspend_
                  */
                 /**
-                 * Fires when the loading of an audio/video is aborted
                  *
                  * @private
                  * @method handleTechAbort_
@@ -32792,14 +32660,6 @@ var _gsScope =
                  * @method currentTime
                  */
                 /**
-                 * Normally gets the length in time of the video in seconds;
-                 * in all but the rarest use cases an argument will NOT be passed to the method
-                 * ```js
-                 *     var lengthOfVideo = myPlayer.duration();
-                 * ```
-                 * **NOTE**: The video must have started loading before the duration can be
-                 * known, and in the case of Flash, may not be known until the video starts
-                 * playing.
                  *
                  * @param {Number} seconds Duration when setting
                  * @return {Number} The duration of the video in seconds when getting
@@ -32817,20 +32677,7 @@ var _gsScope =
                  */
                 // http://dev.w3.org/html5/spec/video.html#dom-media-buffered
                 // Buffered returns a timerange object.
-                // Kind of like an array of portions of the video that have been downloaded.
                 /**
-                 * Get a TimeRange object with the times of the video that have been downloaded
-                 * If you just want the percent of the video that's been downloaded,
-                 * use bufferedPercent.
-                 * ```js
-                 *     // Number of different ranges of time have been buffered. Usually 1.
-                 *     numberOfRanges = bufferedTimeRange.length,
-                 *     // Time in seconds when the first range starts. Usually 0.
-                 *     firstRangeStart = bufferedTimeRange.start(0),
-                 *     // Time in seconds when the first range ends
-                 *     firstRangeEnd = bufferedTimeRange.end(0),
-                 *     // Length in seconds of the first time range
-                 *     firstRangeLength = firstRangeEnd - firstRangeStart;
                  * ```
                  *
                  * @return {Object} A mock TimeRange object (following HTML spec)
@@ -36981,7 +36828,6 @@ var _gsScope =
                   try {
                     this.el_.currentTime = a;
                   } catch (b) {
-                    u["default"](b, "Video is not ready. (Video.js)");
                   }
                 }),
                 (b.prototype.duration = function () {
@@ -37317,7 +37163,7 @@ var _gsScope =
              */ (K.supportsNativeVideoTracks = function () {
               var a = !!K.TEST_VID.videoTracks;
               return a;
-            }),
+            })
             /*
              * Check to see if native audio tracks are supported by this browser/device
              *
