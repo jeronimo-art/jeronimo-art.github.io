@@ -122,17 +122,20 @@ body {
 .close{
   position: absolute;
   top: 0px;
-  right: -35px;
-  font-size: 35px;
+  right: -55px;
+  font-size: 40px;
   display: inline-block;
-  width: 35px;
-  height: 35px;
   background: transparent;
-  color: #ff0000;
+  color: #b74d45;
   line-height: 25px;
   cursor: pointer;
-  border-radius: 50%;
 }
+
+.close:hover{
+  content: url(../img/close-hover.png);
+  color: #e85648;
+}
+
 
 @media screen and (max-width: 800px){
   .modal{
