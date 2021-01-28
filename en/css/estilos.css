@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+.header .top-bar p {
+  display: inline;
+}
+
+.header .top-bar {
+  height: 50px;
+  background: #00000f;
+  box-shadow: #ffffffda 0px 0px 8px 2px;
+}
+
+.header .top-bar img {
+  width: 50px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.header .top-bar p {
+  color: white;
+  font-family: barlow-extralight, barlow, sans-serif;
+  vertical-align: middle;
+  position: absolute;
+  font-size: 15px;
+  top: 17.5px;
+  margin-left: 10px;
+}
+
+.header .top-bar ul {
+  list-style: none;
+  position: absolute;
+  top: 17.5px;
+  right: 15px;
+  float: right;
+  background: transparent;
+}
+
+.header .top-bar li {
+  display: inline;
+  margin-left: 25px;
+  float: right;
+  font-size: 15px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header .top-bar #e {
+  color: #ffffff;
+}
+
+.header .top-bar #a {
+  color: #cccccc;
+}
+
+.header .top-bar #b {
+  color: #cccccc;
+}
+
+.header .top-bar #c {
+  color: #cccccc;
+}
+
+.header .top-bar #d {
+  color: #cccccc;
+}
+
+.header .top-bar #e:hover {
+  color: #a200ff;
+}
+
+.header .top-bar #a:hover {
+  color: #a200ff;
+}
+
+.header .top-bar #b:hover {
+  color: #a200ff;
+}
+
+.header .top-bar #c:hover {
+  color: #a200ff;
+}
+
+.header .top-bar #d:hover {
+  color: #a200ff;
+}
+
+header {
+  height: 100vh;
+}
+
+.header .soy h1 {
+  color: white;
+  background: transparent;
+  font-family: arial black, arial-w01-black, arial-w02-black, arial-w10 black,
+    sans-serif;
+  position: absolute;
+  top: 195px;
+  left: 10px;
+}
+
+.header .soy h2 {
+  color: white;
+  background: transparent;
+  float: right;
+  font-size: 80px;
+  position: absolute;
+  top: 75px;
+  left: 150px;
+}
+
+.header .soy #face {
+  border-radius: 50px;
+  height: 100px;
+  display: inline;
+  margin-top: .4rem;
+  background: transparent;
+}
+
+.soy {
+  width: 100%;
+  height: 30%;
+  background: transparent;
+}
+
+.header .soy h4 {
+  color: white;
+}
+
+.header p {
+  color: white;
+}
+
+.class-p {
+  width: 600px;
+}
+
+
+@media screen and (max-width: 700px) {
+  .menu-navegacion {
+    position: fixed;
+    top: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(
+      135deg,
+      var(--color1) 0%,
+      var(--color2) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    right: 0;
+    transform: translateX(110%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 6px rgba(131, 131, 131, 0.5);
+    z-index: 300;
+  }
+  .class-p {
+    margin-top: 100px;
+    width: 300px;
+  }
+
+}

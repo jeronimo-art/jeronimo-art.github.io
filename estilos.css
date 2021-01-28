@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+h1{
+  color: white;
+}
+
+
+p{
+  color: white;
+}
+
+.align-h1{
+  text-align: center;
+}
+
+#content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.align-p{
+  text-align: center;
+}
+
+input{
+  width: 30px;
+  height: 30px;
+  border-radius: 0px;
+  outline: none;
+  margin: 10px;
+}
+
+.no-soy{
+  margin-top: 20px;
+  background: white;
+  border: 2px solid #4e4e4e;
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align{
+  text-align: center;
+  vertical-align: middle;
+  width: 150px;
+  margin-left: 50px;
+  position: absolute;
+}
+
+#p{
+  color: #3b3b3b;
+  vertical-align: middle;
+  padding: 0;
+  font-size: 20px;
+  position: absolute;
+  top: 12px;
+}
+
+[type="checkbox"]{
+  display:none;
+}
+
+label{
+  position :relative;
+  width: 30px;
+  height: 30px;
+}
+
+label:before{
+  content: ' ';
+  border:solid 2px #616161;
+  border-radius:3px;
+  width: 30px;
+  height: 30px;
+  position:absolute;
+  margin-top: 8px;
+  margin-left: 5px;
+}
+
+[type="checkbox"]:checked + label:before{
+  border-color: transparent;
+  color: #00e676;
+  content:'✔';
+  margin-top: 2px;
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+#link{
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  p {
+    font-size: 10px;
+  }
+  h1{
+    font-size: 20px;
+  }
+}
+
+/* .no {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 40px;
+}
+
+#submit {
+  display: none;
+}
+
+#boton {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100px;
+  height: 40px;
+  color: white;
+  background: black;
+  border: none;
+  outline: none;
+}
+
+.p{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  .no {
+    font-size: 20px;
+  }
+} */
