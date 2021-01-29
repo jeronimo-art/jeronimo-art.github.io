@@ -4,9 +4,7 @@
 }
 
 body {
-  background-image: url("https://webstatic-sea.mihoyo.com/upload/event/2020/12/17/ca3b51c9f519bf444e7a29cd4667d647_3770162778656332703.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: #252525;
 }
 
 .header{
@@ -44,7 +42,6 @@ body {
 }
 
 #menu {
-  margin-top: 20px;
   margin-left: 0;
   margin-right: auto;
   position: fixed;
