@@ -3,10 +3,16 @@
   padding: 0;
 }
 
-body {
-  background: #252525;
+body,
+html {
+  min-height: 100%;
 }
 
+body {
+  background-image: url("https://webstatic-sea.mihoyo.com/upload/event/2020/12/17/ca3b51c9f519bf444e7a29cd4667d647_3770162778656332703.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .header{
   width: 100%;
   height: 100vh;
