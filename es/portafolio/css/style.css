@@ -53,14 +53,7 @@
   animation: animate 0.5s linear;
 }
 
-#nombre {
-  color: #ffffffc2;
-  font-size: 40px;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-}
+
 @keyframes animate {
   0% {
     transform: rotate(0deg);
@@ -70,36 +63,27 @@
   }
 }
 
-
-#video{
-  position: absolute;
-  top: 10%;
-  left: 10%;
-
+#video {
+  margin-top: 66px;
+  width: 100%;
 }
 
-#video:hover{
-  content: url(../img/video-h.png);
+#video:hover {
+  width: 100%;
 }
 
-#video-2{
-  position: absolute;
-  top: 10%;
-  left: 20%;
-
+#video-2 {
+  width: 100%;
 }
 
-#video-2:hover{
-  content: url(../img/video-h.png);
+#video-2:hover {
+  width: 100%;
 }
 
-#video-3{
-  position: absolute;
-  top: 10%;
-  left: 30%;
-
+#video-3 {
+  width: 100%;
 }
 
-#video-3:hover{
-  content: url(../img/video-h.png);
+#video-3:hover {
+  width: 100%;
 }
