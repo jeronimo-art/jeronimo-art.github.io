@@ -152,3 +152,14 @@ body {
     transform: rotate(300deg);
   }
 }
+
+
+@media screen and (max-width: 800px) {
+  .modal {
+    width: 100%;
+    height: 28%;
+  }
+  .close {
+    opacity: 0;
+  }
+}
