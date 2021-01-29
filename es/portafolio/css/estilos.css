@@ -51,6 +51,7 @@ html {
   color: white;
   font-size: 20px;
   margin-left: 20px;
+  text-decoration: underline;
 }
 
 .menu:hover {

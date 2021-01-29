@@ -44,6 +44,7 @@ body {
 }
 
 #menu {
+  margin-top: 20px;
   margin-left: 0;
   margin-right: auto;
   position: fixed;
@@ -56,6 +57,7 @@ body {
   color: white;
   font-size: 20px;
   margin-left: 20px;
+  text-decoration: underline;
 }
 
 .menu:hover {
