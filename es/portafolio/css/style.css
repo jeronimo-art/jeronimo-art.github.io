@@ -73,11 +73,33 @@
 
 #video{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  top: 10%;
+  left: 10%;
+
 }
 
 #video:hover{
+  content: url(../img/video-h.png);
+}
+
+#video-2{
+  position: absolute;
+  top: 10%;
+  left: 20%;
+
+}
+
+#video-2:hover{
+  content: url(../img/video-h.png);
+}
+
+#video-3{
+  position: absolute;
+  top: 10%;
+  left: 30%;
+
+}
+
+#video-3:hover{
   content: url(../img/video-h.png);
 }
