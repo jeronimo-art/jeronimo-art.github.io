@@ -53,7 +53,6 @@
   animation: animate 0.5s linear;
 }
 
-
 @keyframes animate {
   0% {
     transform: rotate(0deg);
@@ -65,25 +64,41 @@
 
 #video {
   margin-top: 66px;
-  width: 100%;
+  width: 20%;
 }
 
 #video:hover {
-  width: 100%;
+  margin-top: 66px;
+  width: 20%;
 }
 
 #video-2 {
-  width: 100%;
+  margin-top: 66px;
+  width: 20%;
 }
 
 #video-2:hover {
-  width: 100%;
+  margin-top: 66px;
+  width: 20%;
 }
 
 #video-3 {
-  width: 100%;
+  margin-top: 66px;
+  width: 20%;
 }
 
 #video-3:hover {
-  width: 100%;
+  margin-top: 66px;
+  width: 20%;
+}
+
+
+#video-4 {
+  margin-top: 66px;
+  width: 20%;
+}
+
+#video-4:hover {
+  margin-top: 66px;
+  width: 20%;
 }
