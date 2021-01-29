@@ -102,3 +102,21 @@
   margin-top: 66px;
   width: 20%;
 }
+
+
+.flex{
+  margin: 20px auto;
+  display: inline;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border: red 12px solid;
+}
+
+.imagen-port {
+  width: 24%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+}
