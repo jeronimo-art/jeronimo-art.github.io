@@ -1,0 +1,79 @@
+#video {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#video:hover {
+  content: url(../img/video-h.png);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.modal-container {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 70%;
+  height: 55%;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  transition: transform 1s;
+  transform: translateY(0%);
+}
+
+.modal-close {
+  transform: translateY(-200%);
+  text-align: center;
+}
+
+.modal > video {
+  height: 50%;
+}
+
+.close {
+  position: absolute;
+  top: 0px;
+  right: -55px;
+  font-size: 40px;
+  background: transparent;
+  line-height: 25px;
+  cursor: pointer;
+  transform: rotate(0deg);
+}
+
+.close:hover {
+  content: url(../img/close-hover.png);
+  transform: translateX(180deg);
+  animation: animate 0.5s linear;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(300deg);
+  }
+}

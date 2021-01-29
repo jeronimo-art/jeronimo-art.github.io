@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  min-height: 100%;
+}
+
+
+.header-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  min-width: 1280px;
+  height: 66px;
+  background-color: rgba(17, 17, 18, 0.75);
+  box-shadow: 0 3px 7px 0 rgb(0 0 0 / 35%);
+}
+
+#logo {
+  position: fixed;
+  height: 62px;
+  margin-left: 30px;
+  top: 2px;
+}
+
+#lang {
+  right: 0;
+  height: 21px;
+  top: 22.5px;
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+  position: fixed;
+}
+
+#menu {
+  margin-top: 20px;
+  margin-left: 0;
+  margin-right: auto;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu {
+  display: inline;
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.menu:hover {
+  text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.proyecto-1{
+  width: 100%;
+  height: 100vh;
+}
+
+.proyecto-1 img{
+  width: 100%;
+  height: 100%;
+}
+
+.proyecto-2{
+  width: 100%;
+  height: 100vh;
+}
+
+.proyecto-2 img{
+  width: 100%;
+  height: 100%;
+}
+
+.proyecto-3{
+  width: 100%;
+  height: 100vh;
+}
+
+.proyecto-3 img{
+  width: 100%;
+  height: 100%;
+}
+.proyecto-4{
+  width: 100%;
+  height: 100vh;
+}
+
+.proyecto-4 img{
+  width: 100%;
+  height: 100%;
+}
+
+.modal-container{
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal{
+  width: 70%;
+  height: 55%;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  transition: transform 1s;
+  transform: translateY(0%);
+}
+
+.modal-close{
+  transform: translateY(-200%);
+  text-align: center;
+}
+
+.modal > video{
+  height: 50%;
+}
+
+.close{
+  position: absolute;
+  top: 0px;
+  right: -55px;
+  font-size: 40px;
+  display: inline-block;
+  background: transparent;
+  color: #b74d45;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+.close:hover{
+  content: url(../img/close-hover.png);
+  color: #e85648;
+  animation: animate 0.5s linear;
+}
+
+#nombre {
+  color: #ffffffc2;
+  font-size: 40px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(300deg);
+  }
+}
