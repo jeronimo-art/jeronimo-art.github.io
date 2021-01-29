@@ -2,6 +2,9 @@ let cerrar = document.querySelectorAll(".close")[0];
 let abrir = document.querySelectorAll(".cta")[0];
 let abrir2 = document.querySelectorAll(".cta-2")[0];
 let abrir3 = document.querySelectorAll(".cta-3")[0];
+let abrir4 = document.querySelectorAll(".cta-4")[0];
+let abrir5 = document.querySelectorAll(".cta-5")[0];
+let abrir6 = document.querySelectorAll(".cta-6")[0];
 let modal = document.querySelectorAll(".modal")[0];
 let modalC = document.querySelectorAll(".modal-container")[0];
 
@@ -25,6 +28,28 @@ abrir3.addEventListener("click", function (e) {
   modalC.style.visibility = "visible";
   modal.classList.toggle("modal-close");
 });
+
+abrir4.addEventListener("click", function (e) {
+  e.preventDefault();
+  modalC.style.opacity = "1";
+  modalC.style.visibility = "visible";
+  modal.classList.toggle("modal-close");
+});
+
+abrir5.addEventListener("click", function (e) {
+  e.preventDefault();
+  modalC.style.opacity = "1";
+  modalC.style.visibility = "visible";
+  modal.classList.toggle("modal-close");
+});
+
+abrir6.addEventListener("click", function (e) {
+  e.preventDefault();
+  modalC.style.opacity = "1";
+  modalC.style.visibility = "visible";
+  modal.classList.toggle("modal-close");
+});
+
 
 cerrar.addEventListener("click", function () {
   modal.classList.toggle("modal-close");
