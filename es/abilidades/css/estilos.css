@@ -168,16 +168,18 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 70px;
+  background: rgba(42, 185, 221, 0.75);
 }
+
 
 .img-abilidades {
   width: 8%;
   display: block;
   margin-bottom: 15px;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 1%;
   margin: 40px;
-  box-shadow: 0px 5px 5px 2px rgba(17, 17, 18, 0.75);
+  box-shadow: -8px 8px 5px 2px rgba(17, 17, 18, 0.336);
 }
 
 
@@ -195,5 +197,6 @@ body {
     cursor: pointer;
     border-radius: 1%;
     margin: 5px;
+    box-shadow: -6px 6px 5px 2px rgba(17, 17, 18, 0.336);
   }
 }

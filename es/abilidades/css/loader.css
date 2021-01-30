@@ -48,6 +48,15 @@
     z-index: 160;
   }
 
+  .menu {
+    display: block;
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    text-decoration: underline;
+  }
+  
+
   .spread {
     transform: translateX(0);
   }
@@ -55,7 +64,7 @@
   .menu-navegacion a {
     color: #fff;
     text-decoration: none;
-    font-family: "Audiowide", cursive;
+    margin-top: 70px;
   }
 }
 
