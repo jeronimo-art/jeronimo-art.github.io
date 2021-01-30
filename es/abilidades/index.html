@@ -5,47 +5,322 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/styles.css">
     <title>Abilidades / Jerónimo Robalino</title>
   </head>
   <body>
+
     <!-- =============== HEADER =============== -->
 
     <header>
       <div class="header-bar">
         <img src="videos/f-logo/28.png" id="logo" alt="" />
-        <ol id="menu">
-          <a href="../"><li id="menu-1" class="menu">Inicio</li></a>
-          <a href="../portafolio/"><li id="menu-2" class="menu">Portafolio</li></a>
-          <a href=""><li id="menu-3" class="menu">Abilidades</li></a>
-          <a href="../contacto/"><li id="menu-4" class="menu">Contacto</li></a>
-        </ol>
+        <img class="hamburguer" src="img/hamburguesa.svg" alt="" />
+        <nav class="menu-navegacion">
+          <ol id="menu">
+            <a href="../"><li id="menu-1" class="menu">Inicio</li></a>
+            <a href="../portafolio/"
+              ><li id="menu-2" class="menu">Portafolio</li></a
+            >
+            <a href=""><li id="menu-3" class="menu">Abilidades</li></a>
+            <a href="../contacto/"
+              ><li id="menu-4" class="menu">Contacto</li></a
+            >
+          </ol>
+        </nav>
         <a href="../../en/skills/" id="lang">Inglish</a>
-      </div>
-      <p id="nombre">Jerónimo Robalino Pontón</p>
-      <a href="#"><img src="img/video.png" id="video" class="cta" alt="" /></a>
-      <div class="modal-container">
-        <div class="modal modal-close">
-          <p class="close"><img src="img/close.png" alt="" /></p>
-          <!-- <video src="videos/logo.mp4" controls></video> -->
-          <iframe
-            style="width: 100%; height: 500px"
-            src="https://www.youtube.com/embed/c3MbFWr-NT4"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
       </div>
     </header>
 
-    <!-- =============== PORTAFOLIO =============== -->
+    <!-- =============== Abilidades =============== -->
 
-    <section class="portafolio" id="portafolio"></section>
+    <section id="skillset" class="even section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Skillset</h2>
+            <hr class="section-hr" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="img/abilidades/html.png"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="HTML5"
+              data-original-title="HTML5"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="img/abilidades/css.png"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="CSS3"
+              data-original-title="CSS3"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="img/abilidades/javascript.png"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="JavaScript (ES6)"
+              data-original-title="JavaScript (ES6)"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="img/abilidades/jquery.png"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="JQuery"
+              data-original-title="JQuery"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="Angular 1 &amp; 2"
+              data-original-title="Angular 1 &amp; 2"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="img/abilidades/typescript.png"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="Typescript"
+              data-original-title="Typescript"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/bootstrap.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="Bootstrap"
+              data-original-title="Bootstrap"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/sass.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="Sass"
+              data-original-title="Sass"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/git.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="Git, GitHub, Source Tree, &amp; Bitbucket"
+              data-original-title="Git, GitHub, Source Tree, &amp; Bitbucket"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/node.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="Node.js &amp; Express"
+              data-original-title="Node.js &amp; Express"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/gulp.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="Gulp &amp; Grunt"
+              data-original-title="Gulp &amp; Grunt"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/mongo.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="MongoDB &amp; Mongoose"
+              data-original-title="MongoDB &amp; Mongoose"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/npm.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="npm, Bower &amp; yarn"
+              data-original-title="npm, Bower &amp; yarn"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/d3.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="D3.js"
+              data-original-title="D3.js"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/gsap.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="GSAP"
+              data-original-title="GSAP"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/jasmine.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="Jasmine"
+              data-original-title="Jasmine"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/svg.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="SVG Graphics"
+              data-original-title="SVG Graphics"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/firebase.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="Firebase"
+              data-original-title="Firebase"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/bash.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="Bash"
+              data-original-title="Bash"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/sublime.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="Sublime &amp; Package Control"
+              data-original-title="Sublime &amp; Package Control"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/phaser.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="Phaser"
+              data-original-title="Phaser"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/react.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="React"
+              data-original-title="React"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/illustrator.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="Illustrator"
+              data-original-title="Illustrator"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-4 image-container">
+            <img
+              class="svg-skill"
+              src="./Xavier Reyes Ochoa - Developer_files/photoshop.svg"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              alt="Photoshop"
+              data-original-title="Photoshop"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <table>
+      <tr></tr>
+    </table>
 
     <script
       src="https://kit.fontawesome.com/b979663c31.js"
       crossorigin="anonymous"
     ></script>
     <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
