@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta name="theme-color" content="#000000" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/estilos.css" />
-    <title>Skills / Jerónimo Robalino</title>
+    <link rel="stylesheet" href="css/loader.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <title>skills / Jerónimo Robalino</title>
   </head>
   <body>
     <!-- =============== HEADER =============== -->
@@ -13,39 +20,256 @@
     <header>
       <div class="header-bar">
         <img src="videos/f-logo/28.png" id="logo" alt="" />
-        <ol id="menu">
-          <a href="../"><li id="menu-1" class="menu">Home</li></a>
-          <a href="../briefcase/"><li id="menu-2" class="menu">Briefcase</li></a>
-          <a href=""><li id="menu-3" class="menu">Skills</li></a>
-          <a href="../contact/"><li id="menu-4" class="menu">Contact</li></a>
-        </ol>
+        <img class="hamburguer" src="img/hamburguesa.svg" alt="" />
+        <nav class="menu-navegacion">
+          <ol id="menu">
+            <a href="../"><li id="menu-1" class="menu">Home</li></a>
+            <a href="../portafolio/"
+              ><li id="menu-2" class="menu">Biefcase</li></a
+            >
+            <a href=""><li id="menu-3" class="menu">Skills</li></a>
+            <a href="../contacto/"
+              ><li id="menu-4" class="menu">Contact</li></a
+            >
+          </ol>
+        </nav>
         <a href="../../es/abilidades/" id="lang">Español</a>
-      </div>
-      <p id="nombre">Jerónimo Robalino Pontón</p>
-      <a href="#"><img src="img/video.png" id="video" class="cta" alt="" /></a>
-      <div class="modal-container">
-        <div class="modal modal-close">
-          <p class="close"><img src="img/close.png" alt="" /></p>
-          <!-- <video src="videos/logo.mp4" controls></video> -->
-          <iframe
-            style="width: 100%; height: 500px"
-            src="https://www.youtube.com/embed/c3MbFWr-NT4"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
       </div>
     </header>
 
-    <!-- =============== PORTAFOLIO =============== -->
+    <!-- =============== Abilidades =============== -->
 
-    <section class="portafolio" id="portafolio"></section>
+    <section id="abilidades">
+      <div class="abilidades">
+        <img
+          class="img-abilidades"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="html"
+          id="html"
+          src="img/abilidades/html.png"
+          alt=""
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/css.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="css"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/javascript.png"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="javascript"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/jquery.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="jquery"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/angular.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="angular"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/typescript.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="typescript"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/boostrap.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="boostrap"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/sass.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="sass"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/git.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="git"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/node-js.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="node js"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/gulp.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="gulp"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/mongo.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="mongoDB"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/npm.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="npm"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/d3.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="D3 js"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/gsap.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="gsap"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/jasmin.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="jasmine"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/svg.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="svg graphics"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/firebase.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="firebase"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/bash.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="bash"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/sublime.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="sublime"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/phaser.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="phaser"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/react native.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="react"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/adobe ilustraitor.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="ilustraitor"
+        />
+        <img
+          class="img-abilidades"
+          src="img/abilidades/photoshop.png"
+          alt=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="photoshop"
+        />
+      </div>
+    </section>
 
     <script
       src="https://kit.fontawesome.com/b979663c31.js"
       crossorigin="anonymous"
     ></script>
     <script src="js/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
   </body>
 </html>

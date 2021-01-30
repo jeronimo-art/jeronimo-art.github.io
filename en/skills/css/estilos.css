@@ -57,6 +57,7 @@ body {
   color: white;
   font-size: 20px;
   margin-left: 20px;
+  text-decoration: underline;
 }
 
 .menu:hover {
@@ -65,14 +66,14 @@ body {
   cursor: pointer;
 }
 
-#video{
+#video {
   position: absolute;
   top: 60%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
 
-#video:hover{
+#video:hover {
   content: url(../img/video-h.png);
   position: absolute;
   top: 60%;
@@ -82,7 +83,7 @@ body {
   cursor: pointer;
 }
 
-.modal-container{
+.modal-container {
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -91,13 +92,13 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.modal{
+.modal {
   width: 70%;
   height: 55%;
   background: #fff;
@@ -110,16 +111,16 @@ body {
   transform: translateY(0%);
 }
 
-.modal-close{
+.modal-close {
   transform: translateY(-200%);
   text-align: center;
 }
 
-.modal > video{
+.modal > video {
   height: 50%;
 }
 
-.close{
+.close {
   position: absolute;
   top: 0px;
   right: -55px;
@@ -131,7 +132,7 @@ body {
   cursor: pointer;
 }
 
-.close:hover{
+.close:hover {
   content: url(../img/close-hover.png);
   color: #e85648;
   animation: animate 0.5s linear;
@@ -151,5 +152,51 @@ body {
   }
   100% {
     transform: rotate(300deg);
+  }
+}
+
+.contenedor-abilidades {
+  width: 100%;
+  margin-top: 66px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.abilidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 70px;
+  background: rgba(42, 185, 221, 0.75);
+}
+
+
+.img-abilidades {
+  width: 8%;
+  display: block;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 1%;
+  margin: 40px;
+  box-shadow: -8px 8px 5px 2px rgba(17, 17, 18, 0.336);
+}
+
+
+@media screen and (max-width: 800px) {
+  .contenedor-abilidades img {
+    width: 70px;
+    height: 70px;
+    margin: 20px;
+  }
+
+  .img-abilidades {
+    width: 25%;
+    display: block;
+    margin-top: 45px;
+    cursor: pointer;
+    border-radius: 1%;
+    margin: 5px;
+    box-shadow: -6px 6px 5px 2px rgba(17, 17, 18, 0.336);
   }
 }
