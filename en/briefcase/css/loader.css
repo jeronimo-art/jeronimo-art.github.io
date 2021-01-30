@@ -7,15 +7,15 @@
 }
 
 .hamburguer {
-  display: none;
-}
+    display: none;
+  }
 
 @media screen and (max-width: 800px) {
   .hamburguer {
     position: fixed;
     top: 10px;
-    display: block;
     left: 50%;
+    display: block;
     transform: translateX(-50%);
     background: #fff;
     width: 40px;
