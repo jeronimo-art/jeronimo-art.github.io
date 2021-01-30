@@ -60,7 +60,12 @@ html {
   cursor: pointer;
 }
 
-.modal-container {
+.modal-container,
+.modal-container-2,
+.modal-container-3,
+.modal-container-4,
+.modal-container-5,
+.modal-container-6 {
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -75,7 +80,18 @@ html {
   align-items: center;
 }
 
-.modal {
+.text-modal {
+  margin-top: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.modal,
+.modal-2,
+.modal-3,
+.modal-4,
+.modal-5,
+.modal-6 {
   width: 70%;
   height: 55%;
   background: #fff;
@@ -86,6 +102,9 @@ html {
   position: relative;
   transition: transform 1s;
   transform: translateY(0%);
+  overflow-y: scroll;
+  overflow-x: hidden;
+
 }
 
 .modal-close {
@@ -98,20 +117,14 @@ html {
 }
 
 .close {
-  position: absolute;
-  top: 0px;
-  right: -55px;
   font-size: 40px;
   display: inline-block;
   background: transparent;
-  color: #b74d45;
   line-height: 25px;
   cursor: pointer;
 }
 
 .close:hover {
-  content: url(../img/close-hover.png);
-  color: #e85648;
   animation: animate 0.5s linear;
 }
 
@@ -194,7 +207,7 @@ html {
   display: none;
 }
 
-.please-rotate{
+.please-rotate {
   display: none;
 }
 
@@ -253,7 +266,7 @@ html {
     display: none;
   }
 
-  .please-rotate{
+  .please-rotate {
     display: block;
     color: white;
     z-index: 1000001;
@@ -261,7 +274,6 @@ html {
     top: 80%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-
   }
   .fon-animation {
     z-index: 1000001;
@@ -281,17 +293,17 @@ html {
   }
 
   @keyframes fon {
-    0%{
+    0% {
       transform: rotateZ(0deg);
       display: block;
       margin: 0 auto;
     }
-    50%{
+    50% {
       transform: rotateZ(-90deg);
       display: block;
       margin: 0 auto;
     }
-    100%{
+    100% {
       transform: rotateZ(0deg);
       display: block;
       margin: 0 auto;
