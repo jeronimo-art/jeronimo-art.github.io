@@ -11,12 +11,4 @@ window.addEventListener('click', e =>{
         console.log('cerrar')
         menu.classList.toggle("spread")
     }
-})
-
-
-
-document.getElementById("html").addEventListener("mouseover", function(){
-  document.getElementById("p-html").style.display = "block";
 });
-
-

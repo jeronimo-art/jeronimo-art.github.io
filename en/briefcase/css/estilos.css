@@ -49,8 +49,8 @@ html {
 .menu {
   display: inline;
   color: white;
-  font-size: 20px;
   margin-left: 20px;
+  font-size: 20px;
   text-decoration: underline;
 }
 
