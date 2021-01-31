@@ -116,10 +116,19 @@ html {
   height: 50%;
 }
 
-.close {
+.close,
+.close-2,
+.close-3,
+.close-4,
+.close-5,
+.close-6 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   font-size: 40px;
   display: inline-block;
   background: transparent;
+  color: #b74d45;
   line-height: 25px;
   cursor: pointer;
 }
@@ -135,6 +144,26 @@ html {
   100% {
     transform: rotate(300deg);
   }
+}
+
+.close-2:hover {
+  animation: animate 0.5s linear;
+}
+
+.close-3:hover {
+  animation: animate 0.5s linear;
+}
+
+.close-4:hover {
+  animation: animate 0.5s linear;
+}
+
+.close-5:hover {
+  animation: animate 0.5s linear;
+}
+
+.close-6:hover {
+  animation: animate 0.5s linear;
 }
 
 .titulo {

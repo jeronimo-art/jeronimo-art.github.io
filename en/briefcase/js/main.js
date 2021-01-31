@@ -33,6 +33,7 @@ window.addEventListener("click", function (e) {
 });
 
 //=============== modal #2 ===============
+let cerrar2 = document.querySelectorAll(".close-2")[0];
 let abrir2 = document.querySelectorAll(".cta-2")[0];
 let modal2 = document.querySelectorAll(".modal-2")[0];
 let modalC2 = document.querySelectorAll(".modal-container-2")[0];
@@ -44,7 +45,7 @@ abrir2.addEventListener("click", function (e) {
   modal2.classList.toggle("modal-close");
 });
 
-cerrar.addEventListener("click", function () {
+cerrar2.addEventListener("click", function () {
   modal2.classList.toggle("modal-close");
 
   setTimeout(function () {
@@ -66,7 +67,7 @@ window.addEventListener("click", function (e) {
 });
 
 //=============== modal #3 ===============
-
+let cerrar3 = document.querySelectorAll(".close-3")[0];
 let abrir3 = document.querySelectorAll(".cta-3")[0];
 let modal3 = document.querySelectorAll(".modal-3")[0];
 let modalC3 = document.querySelectorAll(".modal-container-3")[0];
@@ -78,7 +79,7 @@ abrir3.addEventListener("click", function (e) {
   modal3.classList.toggle("modal-close");
 });
 
-cerrar.addEventListener("click", function () {
+cerrar3.addEventListener("click", function () {
   modal3.classList.toggle("modal-close");
 
   setTimeout(function () {
@@ -100,7 +101,7 @@ window.addEventListener("click", function (e) {
 });
 
 //=============== modal #4 ===============
-
+let cerrar4 = document.querySelectorAll(".close-4")[0];
 let abrir4 = document.querySelectorAll(".cta-4")[0];
 let modal4 = document.querySelectorAll(".modal-4")[0];
 let modalC4 = document.querySelectorAll(".modal-container-4")[0];
@@ -112,7 +113,7 @@ abrir4.addEventListener("click", function (e) {
   modal4.classList.toggle("modal-close");
 });
 
-cerrar.addEventListener("click", function () {
+cerrar4.addEventListener("click", function () {
   modal4.classList.toggle("modal-close");
 
   setTimeout(function () {
@@ -134,7 +135,7 @@ window.addEventListener("click", function (e) {
 });
 
 //=============== modal #5 ===============
-
+let cerrar5 = document.querySelectorAll(".close-5")[0];
 let abrir5 = document.querySelectorAll(".cta-5")[0];
 let modal5 = document.querySelectorAll(".modal-5")[0];
 let modalC5 = document.querySelectorAll(".modal-container-5")[0];
@@ -146,7 +147,7 @@ abrir5.addEventListener("click", function (e) {
   modal5.classList.toggle("modal-close");
 });
 
-cerrar.addEventListener("click", function () {
+cerrar5.addEventListener("click", function () {
   modal5.classList.toggle("modal-close");
 
   setTimeout(function () {
@@ -168,7 +169,7 @@ window.addEventListener("click", function (e) {
 });
 
 //=============== modal #6 ===============
-
+let cerrar6 = document.querySelectorAll(".close-6")[0];
 let abrir6 = document.querySelectorAll(".cta-6")[0];
 let modal6 = document.querySelectorAll(".modal-6")[0];
 let modalC6 = document.querySelectorAll(".modal-container-6")[0];
@@ -180,7 +181,7 @@ abrir6.addEventListener("click", function (e) {
   modal6.classList.toggle("modal-close");
 });
 
-cerrar.addEventListener("click", function () {
+cerrar6.addEventListener("click", function () {
   modal6.classList.toggle("modal-close");
 
   setTimeout(function () {

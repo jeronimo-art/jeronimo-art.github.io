@@ -35,23 +35,7 @@
   height: 50%;
 }
 
-.close {
-  position: absolute;
-  top: 0px;
-  right: -55px;
-  font-size: 40px;
-  display: inline-block;
-  background: transparent;
-  color: #b74d45;
-  line-height: 25px;
-  cursor: pointer;
-}
 
-.close:hover {
-  content: url(../img/close-hover.png);
-  color: #e85648;
-  animation: animate 0.5s linear;
-}
 
 @keyframes animate {
   0% {
