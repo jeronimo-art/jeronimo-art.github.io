@@ -47,6 +47,4 @@ window.addEventListener('click', e =>{
         console.log('cerrar')
         menu.classList.toggle("spread")
     }
-})
-
-
+});

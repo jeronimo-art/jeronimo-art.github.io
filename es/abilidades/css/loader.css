@@ -46,6 +46,7 @@
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 0 6px rgba(131, 131, 131, 0.5);
     z-index: 160;
+    text-align: center;
   }
 
   .menu {
@@ -53,6 +54,7 @@
     color: white;
     font-size: 20px;
     text-decoration: underline;
+    margin-top: 80px;
   }
 
   .spread {
