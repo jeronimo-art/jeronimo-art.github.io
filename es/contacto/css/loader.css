@@ -61,15 +61,7 @@
     display: block;
     color: white;
     font-size: 20px;
-    margin-left: 20px;
-    text-decoration: underline;
-  }
-}
 
-@media screen and (max-width: 800px) {
-  #nombre {
-    font-size: 25px;
-    width: 100%;
-    text-align: center;
+    text-decoration: underline;
   }
 }
