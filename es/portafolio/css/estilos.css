@@ -115,8 +115,8 @@ html {
 
 #img-modal {
   margin-top: 300px;
-  height: 258px;
-  width: 413px;
+  height: 300px;
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -145,7 +145,7 @@ html {
   }
   #img-modal {
     margin-top: 300px;
-    height: 188px;
+    height: 300px;
     width: 300px;
     margin-left: auto;
     margin-right: auto;
