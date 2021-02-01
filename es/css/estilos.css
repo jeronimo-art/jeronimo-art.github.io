@@ -61,6 +61,31 @@ body {
   min-height: 100%;
 }
 
+
+
+
+.front{
+  transition: all 0.5s;
+  animation: front 5.8s linear;
+  opacity: 1;
+}
+
+@keyframes front{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  90%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
 @media screen and (max-width: 800px) {
   #v-b video {
     min-width: 100%;
