@@ -251,7 +251,8 @@ body {
 .social-bar {
   position: fixed;
   right: 0;
-  top: 35%;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
