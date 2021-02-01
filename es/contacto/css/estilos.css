@@ -3,11 +3,6 @@
   padding: 0;
 }
 
-body,
-html {
-  min-height: 100%;
-}
-
 body {
   background-image: url("https://webstatic-sea.mihoyo.com/upload/event/2020/12/17/ca3b51c9f519bf444e7a29cd4667d647_3770162778656332703.png");
   background-size: cover;
@@ -41,6 +36,7 @@ body {
   color: white;
   text-decoration: none;
   position: fixed;
+  z-index: 10000;
 }
 
 #menu {
@@ -66,14 +62,14 @@ body {
   cursor: pointer;
 }
 
-#video{
+#video {
   position: absolute;
   top: 60%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
 
-#video:hover{
+#video:hover {
   content: url(../img/video-h.png);
   position: absolute;
   top: 60%;
@@ -83,7 +79,7 @@ body {
   cursor: pointer;
 }
 
-.modal-container{
+.modal-container {
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -92,13 +88,13 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.modal{
+.modal {
   width: 70%;
   height: 55%;
   background: #fff;
@@ -111,16 +107,16 @@ body {
   transform: translateY(0%);
 }
 
-.modal-close{
+.modal-close {
   transform: translateY(-200%);
   text-align: center;
 }
 
-.modal > video{
+.modal > video {
   height: 50%;
 }
 
-.close{
+.close {
   position: absolute;
   top: 0px;
   right: -55px;
@@ -132,12 +128,11 @@ body {
   cursor: pointer;
 }
 
-.close:hover{
+.close:hover {
   content: url(../img/close-hover.png);
   color: #e85648;
   animation: animate 0.5s linear;
 }
-
 
 @keyframes animate {
   0% {
@@ -147,7 +142,6 @@ body {
     transform: rotate(300deg);
   }
 }
-
 
 .not-display {
   display: none;
@@ -252,4 +246,65 @@ body {
       margin: 0 auto;
     }
   }
+}
+
+.social-bar {
+  position: fixed;
+  right: 0;
+  top: 35%;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 100;
+}
+
+.icon {
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem;
+  display: flex;
+  transition: all 0.5s;
+  margin-top: 10px;
+  border-radius: 1.5rem 0 0 1.5rem;
+}
+
+.icon-facebook {
+  background: #000000;
+}
+.icon-facebook:hover {
+  background: #2d88ff;
+  transition: all 0.2s;
+}
+
+.icon-twitter {
+  background: #000000;
+}
+
+.icon-twitter:hover {
+  background: #1da1f2;
+  transition: all 0.2s;
+}
+
+.fa-github {
+  background: #000000;
+}
+
+.fa-github:hover {
+  background: #fe0000;
+  transition: all 0.2s;
+}
+
+.icon-instagram {
+  background: #000000;
+}
+
+.icon-instagram:hover {
+  background: #d82667;
+  transition: all 0.2s;
+}
+
+.icon:hover {
+  padding-right: 7rem;
+  border-radius: 1.5rem 0 0 1.5rem;
 }
