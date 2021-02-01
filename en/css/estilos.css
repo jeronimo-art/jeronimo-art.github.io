@@ -3,19 +3,9 @@
   padding: 0;
 }
 
-body,
-html {
-  min-height: 100%;
-}
-
 body {
-  background-image: url("https://webstatic-sea.mihoyo.com/upload/event/2020/12/17/ca3b51c9f519bf444e7a29cd4667d647_3770162778656332703.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.header {
-  width: 100%;
-  height: 100vh;
+  background: black;
+  overflow-x: hidden;
 }
 
 .header-bar {
@@ -45,6 +35,7 @@ body {
   color: white;
   text-decoration: none;
   position: fixed;
+  z-index: 1000;
 }
 
 #menu {
@@ -56,11 +47,61 @@ body {
   transform: translateX(-50%);
 }
 
+#v-b {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#v-b video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+
+
+.front{
+  transition: all 0.5s;
+  animation: front 5.8s linear;
+  opacity: 1;
+}
+
+@keyframes front{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  90%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  #v-b video {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: -200px;
+    left: -500px;
+  }
+}
+
 .menu {
   display: inline;
   color: white;
-  font-size: 20px;
   margin-left: 20px;
+  font-size: 20px;
   text-decoration: underline;
 }
 
@@ -129,25 +170,17 @@ body {
   top: 0px;
   right: -55px;
   font-size: 40px;
+  display: inline-block;
   background: transparent;
+  color: #b74d45;
   line-height: 25px;
   cursor: pointer;
-  transform: rotate(0deg);
 }
 
 .close:hover {
   content: url(../img/close-hover.png);
-  transform: translateX(180deg);
+  color: #e85648;
   animation: animate 0.5s linear;
-}
-
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(300deg);
-  }
 }
 
 #nombre {
@@ -158,18 +191,13 @@ body {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-
-.portafolio {
-  height: 100vh;
-  width: 100%;
-}
-
-#portafoli-t {
-  position: absolute;
-  top: 105%;
-  left: 50%;
-  color: rgb(0, 0, 0);
-  transform: translateX(-50%);
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(300deg);
+  }
 }
 
 @media screen and (max-width: 800px) {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/estilos.css" />
     <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="img/logo-white.ico" type="image/x-icon" />
     <title>Home / Jerónimo Robalino</title>
   </head>
@@ -13,6 +14,17 @@
     <!-- =============== HEADER =============== -->
 
     <header>
+      <div
+        class="darker"
+        style="
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100vh;
+          background: #0000009f;
+        "
+      ></div>
       <div class="header-bar">
         <img src="videos/f-logo/28.png" id="logo" alt="" />
         <img class="hamburguer" src="img/hamburguesa.svg" alt="" />
@@ -24,21 +36,42 @@
             <a href="contact/"><li id="menu-4" class="menu">Contact</li></a>
           </ol>
         </nav>
-        <a href="../es/" id="lang">Español</a>
       </div>
-      <p id="nombre">Jerónimo Robalino Pontón</p>
-      <a href="#"><img src="img/video.png" id="video" class="cta" alt="" /></a>
-      <div class="modal-container">
-        <div class="modal modal-close">
-          <p class="close"><img src="img/close.png" alt="" /></p>
-          <!-- <video src="videos/logo.mp4" controls></video> -->
-          <iframe
-            style="width: 100%; height: 100%"
-            src="https://www.youtube.com/embed/c3MbFWr-NT4"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+      <a href="../es/" id="lang">Español</a>
+      <div id="v-b">
+        <video src="videos/background.mp4" muted autoplay loop></video>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="svg-wrapper"></div>
+          <div class="col-xs-12">
+            <h1 id="name">
+              <span class="com">w</span><span class="com">w</span
+              ><span class="com">w</span><span class="com">.</span
+              ><span>jero</span><span class="xaviro transparent">n</span
+              ><span class="xaviro transparent">i</span
+              ><span class="xaviro transparent">m</span
+              ><span class="xaviro transparent">o</span
+              ><span class="xaviro transparent"> </span
+              ><span class="xaviro transparent">r</span
+              ><span class="xaviro transparent">o</span
+              ><span class="xaviro transparent">b</span
+              ><span class="xaviro transparent">a</span
+              ><span class="xaviro transparent">l</span
+              ><span class="xaviro transparent">i</span
+              ><span class="xaviro transparent">n</span
+              ><span class="xaviro transparent">o</span
+              ><span class="com">.</span><span class="com">c</span
+              ><span class="com">o</span><span class="com">m</span>
+            </h1>
+            <div class="absolute">
+              <span class="typed"></span>
+            </div>
+            <div class="front" style="text-align: center">
+              <p><span class="lead">Front-end Developer</span></p>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -54,6 +87,8 @@
       src="https://kit.fontawesome.com/b979663c31.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/GSAP.js"></script>
   </body>
 </html>
