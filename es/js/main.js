@@ -1,4 +1,4 @@
-let cerrar = document.querySelectorAll(".close")[0];
+/*let cerrar = document.querySelectorAll(".close")[0];
 let abrir = document.querySelectorAll(".cta")[0];
 let modal = document.querySelectorAll(".modal")[0];
 let modalC = document.querySelectorAll(".modal-container")[0];
@@ -29,7 +29,7 @@ window.addEventListener("click", function (e) {
       modalC.style.visibility = "hidden";
     }, 900);
   }
-});
+});*/
 
 
 
