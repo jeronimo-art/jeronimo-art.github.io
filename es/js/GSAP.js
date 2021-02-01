@@ -26308,10 +26308,7 @@ var _gsScope =
                     var h = a.getComponent(g);
                     if (!h)
                       throw new Error("Component " + g + " does not exist");
-                    // data stored directly on the videojs object may be
-                    // misidentified as a component to retain
-                    // backwards-compatibility with 4.x. check to make sure the
-                    // component class can be instantiated.
+
                     if ("function" != typeof h) return null;
                     e = new h(this.player_ || this, c);
                   } else e = b;
@@ -33211,9 +33208,6 @@ var _gsScope =
                           ? (b.className = d[a])
                           : b.setAttribute(a, d[a]);
                       }),
-                      // Update tag id/class for use as HTML5 playback tech
-                      // Might think we should do this after embedding in container so .vjs-tech class
-                      // doesn't flash 100% width/height, but class only applies with .video-js parent
                       (c.playerId = c.id),
                       (c.id += "_html5_api"),
                       (c.className = "vjs-tech"),
@@ -35517,12 +35511,6 @@ var _gsScope =
       ],
       121: [
         function (a, b, c) {
-          /**
-           * @file flash.js
-           * VideoJS-SWF - Custom Flash Player with HTML5-ish API
-           * https://github.com/zencoder/video-js-swf
-           * Not using setupTriggers. Using global onEvent func to distribute events
-           */
           "use strict";
           function d(a) {
             if (a && a.__esModule) return a;

@@ -3,15 +3,9 @@
   padding: 0;
 }
 
-body,
-html {
-  min-height: 100%;
-}
-
 body {
-  background-image: url("https://webstatic-sea.mihoyo.com/upload/event/2020/12/17/ca3b51c9f519bf444e7a29cd4667d647_3770162778656332703.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: black;
+  overflow-x: hidden;
 }
 
 .header-bar {
@@ -50,6 +44,31 @@ body {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
+}
+
+#v-b {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#v-b video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  #v-b video {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: -200px;
+    left: -500px;
+  }
 }
 
 .menu {
