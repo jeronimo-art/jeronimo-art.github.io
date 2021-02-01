@@ -413,3 +413,21 @@ html {
     opacity: 1;
   }
 }
+
+
+@media screen and (max-width: 800px) {
+  #copyr {
+    position: fixed;
+    top: 100%;
+    left: 5px;
+    color: #ffffffe7;
+    transform: translateY(0%);
+  }
+}
+#copyr {
+  position: fixed;
+  top: 100%;
+  left: 5px;
+  transform: translateY(-100%);
+  color: #ffffffe7;
+}

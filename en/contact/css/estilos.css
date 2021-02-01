@@ -139,7 +139,6 @@ body {
   animation: animate 0.5s linear;
 }
 
-
 @keyframes animate {
   0% {
     transform: rotate(0deg);
@@ -252,4 +251,21 @@ body {
       margin: 0 auto;
     }
   }
+}
+
+@media screen and (max-width: 800px) {
+  #copyr {
+    position: fixed;
+    top: 100%;
+    left: 5px;
+    color: #ffffffe7;
+    transform: translateY(0%);
+  }
+}
+#copyr {
+  position: fixed;
+  top: 100%;
+  left: 5px;
+  transform: translateY(-100%);
+  color: #ffffffe7;
 }

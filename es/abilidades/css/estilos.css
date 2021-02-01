@@ -167,7 +167,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 66px;
-  background: rgba(42, 185, 221, 0.75);
+  margin-bottom: 20px;
 }
 
 .img-abilidades {
@@ -306,4 +306,21 @@ body {
       margin: 0 auto;
     }
   }
+}
+
+@media screen and (max-width: 800px) {
+  #copyr {
+    position: fixed;
+    top: 100%;
+    left: 5px;
+    color: #ffffffe7;
+    transform: translateY(0%);
+  }
+}
+#copyr {
+  position: fixed;
+  top: 100%;
+  left: 5px;
+  transform: translateY(-100%);
+  color: #ffffffe7;
 }

@@ -127,11 +127,11 @@ html {
   margin-top: 40px;
 }
 
-#link-modal:hover{
-  animation: link .5s linear;
+#link-modal:hover {
+  animation: link 0.5s linear;
 }
 
-@keyframes link{
+@keyframes link {
   0% {
     transform: rotate(0deg);
   }
@@ -157,8 +157,6 @@ html {
   transform: translateY(-200%);
   text-align: center;
 }
-
-
 
 .close,
 .close-2,
@@ -412,4 +410,21 @@ html {
   .close {
     opacity: 1;
   }
+}
+
+@media screen and (max-width: 800px) {
+  #copyr {
+    position: fixed;
+    top: 100%;
+    left: 5px;
+    color: #ffffffe7;
+    transform: translateY(0%);
+  }
+}
+#copyr {
+  position: fixed;
+  top: 100%;
+  left: 5px;
+  transform: translateY(-100%);
+  color: #ffffffe7;
 }
