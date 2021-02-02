@@ -1,5 +1,5 @@
-<?php
-$name = $_POST['nombre'];
+ <?php
+/*$name = $_POST['nombre'];
 $mail = $_POST['mail'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
@@ -20,5 +20,15 @@ $asunto = 'Mensaje del portafolio';
 
 mail($para, $asunto, utf8_decode($message), $header);
 
-header("Location:index.html");
+header("Location:index.html"); */
+$name = $_POST['nombre'];
+$mail = $_POST['mail'];
+$phone = $_POST['phone'];
+$message = $_POST['message'];
+$header = "From: noreplay@example.com" . " \r\n";
+$header.= "Replay-To: noreplay@example,com" . " \r\n";
+$header .= "X-Mailer: PHP/" . phpversion();
+$mail = mail($mail, $message; $header);
+
+
 ?>
