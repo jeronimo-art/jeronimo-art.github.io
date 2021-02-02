@@ -50728,15 +50728,6 @@ if (
 
     var $svgIntro = $("#svg-intro");
 
-    //svg elements
-
-    var $circle = $("#svg-intro-circle");
-
-    var $computer = $("#svg-intro-computer");
-
-    var $screen = $("#svg-intro-screen");
-
-    var $code = $("#svg-intro-code");
 
     var tl = new TimelineMax({ delay: 0.1 });
 
@@ -50745,42 +50736,7 @@ if (
       1,
       { transformOrigin: "50% 50%", scale: 0.8 },
       { opacity: 1, scale: 1, ease: Power4.easeOut, onComplete: animateIcons }
-    )
-
-      .fromTo(
-        $circle,
-        1.2,
-        { transformOrigin: "50% 50%", scale: 0.8 },
-        { opacity: 1, scale: 1, ease: Back.easeOut.config(4) },
-        "=-1"
-      )
-
-      .fromTo(
-        $computer,
-        1,
-        { y: "100%" },
-        { y: "0%", opacity: 1, ease: Power4.easeOut },
-        "=-0.5"
-      )
-
-      .to(
-        $screen,
-        1,
-        {
-          opacity: 1,
-          ease: RoughEase.ease.config({
-            template: Power0.easeNone,
-            strength: 1,
-            points: 20,
-            taper: "none",
-            randomize: true,
-            clamp: false,
-          }),
-        },
-        "=-0.5"
-      )
-
-      .to($code, 0.5, { opacity: 1, onComplete: loopUnderscore });
+    );
   })();
 
   //icons
@@ -50877,21 +50833,7 @@ if (
     windowPosition = windowVar.scrollTop();
     sectionPosition = section.offset().top;
   }
-  windowVar.scroll(function () {
-    collapsible.collapse("hide");
-    changingValues();
-    if (windowPosition >= navParentPosition && counter == "on") {
-      nav.addClass("navbar-fixed-top");
-      section.css("margin-top", sectionPosition - navParentPosition);
-      scrollFade.fadeIn();
-      counter = "off";
-    } else if (windowPosition < navParentPosition && counter == "off") {
-      nav.removeClass("navbar-fixed-top");
-      section.css("margin-top", 0);
-      scrollFade.fadeOut();
-      counter = "on";
-    }
-  });
+
   /*----------  BOOTSTRAP TOOLTIP  ----------*/
   $('[data-toggle="tooltip"]').tooltip();
 })();
