@@ -26,7 +26,7 @@ $mail = $_POST['mail'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
 $header = "From: noreplay@example.com" . " \r\n";
-$header.= "Replay-To: noreplay@example,com" . " \r\n";
+$header.= "Replay-To: gerorobalino@gmail.com" . " \r\n";
 $header .= "X-Mailer: PHP/" . phpversion();
 $mail = mail($mail, $message; $header);
 
