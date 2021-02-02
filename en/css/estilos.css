@@ -35,7 +35,7 @@ body {
   color: white;
   text-decoration: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 #menu {
