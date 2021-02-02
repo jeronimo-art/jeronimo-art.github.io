@@ -130,13 +130,7 @@
       return jQuery.each(this, callback);
     },
 
-    map: function (callback) {
-      return this.pushStack(
-        jQuery.map(this, function (elem, i) {
-          return callback.call(elem, i, elem);
-        })
-      );
-    },
+
 
     slice: function () {
       return this.pushStack(slice.apply(this, arguments));
@@ -562,8 +556,6 @@
     jQuery.fn[Symbol.iterator] = arr[Symbol.iterator];
   }
 
-  // Populate the class2type map
-
   jQuery.each(
     "Boolean Number String Function Array Date RegExp Object Error Symbol".split(
       " "
@@ -681,7 +673,7 @@
           return -1;
         },
         booleans =
-          "checked|selected|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",
+          "checked|selected|autofocus|autoplay|controls|defer|disabled|hidden|loop|multiple|open|readonly|required|scoped",
         // Regular expressions
 
         // http://www.w3.org/TR/css3-selectors/#whitespace
@@ -3083,12 +3075,11 @@
         return results;
       }
 
-      function condense(unmatched, map, filter, context, xml) {
+      function condense(unmatched, filter, context, xml) {
         var elem,
           newUnmatched = [],
           i = 0,
-          len = unmatched.length,
-          mapped = map != null;
+          len = unmatched.length;
 
         for (; i < len; i++) {
           if ((elem = unmatched[i])) {
@@ -3096,7 +3087,6 @@
               newUnmatched.push(elem);
 
               if (mapped) {
-                map.push(i);
               }
             }
           }
@@ -3125,8 +3115,6 @@
           var temp,
             i,
             elem,
-            preMap = [],
-            postMap = [],
             preexisting = results.length,
             // Get initial elements from seed or context
 
@@ -3137,8 +3125,6 @@
                 context.nodeType ? [context] : context,
                 []
               ),
-            // Prefilter to get matcher input, preserving a map for seed-results synchronization
-
             matcherIn =
               preFilter && (seed || !selector)
                 ? condense(elems, preMap, preFilter, context, xml)
@@ -4205,7 +4191,7 @@
     },
     function (name, fn) {
       jQuery.fn[name] = function (until, selector) {
-        var matched = jQuery.map(this, fn, until);
+
 
         if (name.slice(-5) !== "Until") {
           selector = until;
@@ -4630,7 +4616,6 @@
             return jQuery
               .Deferred(function (newDefer) {
                 jQuery.each(tuples, function (i, tuple) {
-                  // Map tuples (progress, done, fail) to arguments (done, fail, progress)
 
                   var fn = jQuery.isFunction(fns[tuple[4]]) && fns[tuple[4]];
 
@@ -5396,7 +5381,6 @@
 
           // We always set camelCase keys, so remove that.
 
-          key = key.map(jQuery.camelCase);
         } else {
           key = jQuery.camelCase(key);
 
@@ -5444,23 +5428,7 @@
 
   var dataUser = new Data();
 
-  //	Implementation Summary
 
-  //
-
-  //	1. Enforce API surface and semantic compatibility with 1.9.x branch
-
-  //	2. Improve the module's maintainability by reducing the storage
-
-  //		paths to a single mechanism.
-
-  //	3. Use the same single mechanism to support "private" and "user" data.
-
-  //	4. _Never_ expose "private" data to user code (TODO: Drop _data, _removeData)
-
-  //	5. Avoid exposing implementation details on user objects (eg. expando properties)
-
-  //	6. Provide a clear path for implementation upgrade to WeakMap in 2014
 
   var rbrace = /^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,
     rmultiDash = /[A-Z]/g;
@@ -5949,7 +5917,7 @@
     return adjusted;
   }
 
-  var defaultDisplayMap = {};
+
 
   function getDefaultDisplay(elem) {
     var temp,
@@ -5971,7 +5939,7 @@
       display = "block";
     }
 
-    defaultDisplayMap[nodeName] = display;
+
 
     return display;
   }
@@ -42566,12 +42534,9 @@ var _gsScope =
   )(153);
 }),
   //# sourceMappingURL=video.js.map
-  /* vtt.js - v0.12.1 (https://github.com/mozilla/vtt.js) built on 08-07-2015 */
   (function (a) {
     var b = (a.vttjs = {}),
       c = b.VTTCue,
-      d = b.VTTRegion,
-      e = a.VTTCue,
       f = a.VTTRegion;
     (b.shim = function () {
       (b.VTTCue = c), (b.VTTRegion = d);
@@ -42580,21 +42545,8 @@ var _gsScope =
         (b.VTTCue = e), (b.VTTRegion = f);
       });
   })(this),
-  /**
-   * Copyright 2013 vtt.js Contributors
-   *
-   * Licensed under the Apache License, Version 2.0 (the "License");
-   * you may not use this file except in compliance with the License.
-   * You may obtain a copy of the License at
-   *
-   *   http://www.apache.org/licenses/LICENSE-2.0
-   *
-   * Unless required by applicable law or agreed to in writing, software
-   * distributed under the License is distributed on an "AS IS" BASIS,
-   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   * See the License for the specific language governing permissions and
-   * limitations under the License.
-   */ (function (a, b) {
+
+   (function (a, b) {
     function c(a) {
       if ("string" != typeof a) return !1;
       var b = h[a.toLowerCase()];
@@ -42616,16 +42568,10 @@ var _gsScope =
       var h = this,
         i = /MSIE\s8\.0/.test(navigator.userAgent),
         j = {};
-      i ? (h = document.createElement("custom")) : (j.enumerable = !0), // Lets us know when the VTTCue's data has changed in such a way that we need // to recompute its display state. This lets us compute its display state
-        /**
-         * Shim implementation specific properties. These properties are not in
-         * the spec.
-         */ // lazily.
+      i ? (h = document.createElement("custom")) : (j.enumerable = !0), 
+
         (h.hasBeenReset = !1);
-      /**
-       * VTTCue and TextTrackCue properties
-       * http://dev.w3.org/html5/webvtt/#vttcue-interface
-       */
+
       var k = "",
         l = !1,
         m = a,
@@ -42726,7 +42672,6 @@ var _gsScope =
             },
             set: function (a) {
               var b = c(a);
-              // Have to check for false because the setting an be an empty string.
               if (b === !1)
                 throw new SyntaxError(
                   "An invalid or illegal string was specified."
@@ -42841,7 +42786,7 @@ var _gsScope =
               (x = b), (this.hasBeenReset = !0);
             },
           })
-        ), // http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#text-track-cue-display-state
+        ), 
         /**
          * Other <track> spec defined properties
          */ (h.displayState = void 0),
@@ -42901,7 +42846,7 @@ var _gsScope =
             return a;
           },
           set: function (b) {
-            if (!d(b)) throw new Error("Width must be between 0 and 100.");
+            if (!d(b)) throw new Error("");
             a = b;
           },
         },
