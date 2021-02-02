@@ -681,7 +681,7 @@
           return -1;
         },
         booleans =
-          "checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",
+          "checked|selected|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",
         // Regular expressions
 
         // http://www.w3.org/TR/css3-selectors/#whitespace
@@ -4822,9 +4822,6 @@
                 if (depth) {
                   process();
                 } else {
-                  // Call an optional hook to record the stack, in case of exception
-
-                  // since it's otherwise lost when execution goes async
 
                   if (jQuery.Deferred.getStackHook) {
                     process.stackTrace = jQuery.Deferred.getStackHook();
@@ -5156,7 +5153,6 @@
     document.readyState === "complete" ||
     (document.readyState !== "loading" && !document.documentElement.doScroll)
   ) {
-    // Handle it asynchronously to allow scripts the opportunity to delay ready
 
     window.setTimeout(jQuery.ready);
   } else {
@@ -11197,8 +11193,6 @@
 
       processData: true,
 
-      async: true,
-
       contentType: "application/x-www-form-urlencoded; charset=UTF-8",
 
       /*
@@ -11695,11 +11689,7 @@
 
         // Timeout
 
-        if (s.async && s.timeout > 0) {
-          timeoutTimer = window.setTimeout(function () {
-            jqXHR.abort("timeout");
-          }, s.timeout);
-        }
+
 
         try {
           completed = false;
@@ -11910,25 +11900,7 @@
     };
   });
 
-  jQuery._evalUrl = function (url) {
-    return jQuery.ajax({
-      url: url,
 
-      // Make this explicit, since user can override this through ajaxSetup (#11264)
-
-      type: "GET",
-
-      dataType: "script",
-
-      cache: true,
-
-      async: false,
-
-      global: false,
-
-      throws: true,
-    });
-  };
 
   jQuery.fn.extend({
     wrapAll: function (html) {
@@ -12052,7 +12024,6 @@
 
             options.url,
 
-            options.async,
 
             options.username,
 
@@ -26501,7 +26472,6 @@ var _gsScope =
                   var b =
                     !(arguments.length <= 1 || void 0 === arguments[1]) &&
                     arguments[1];
-                  // Call the function asynchronously by default for consistency
                   return (
                     a &&
                       (this.isReady_
@@ -26515,7 +26485,6 @@ var _gsScope =
                 }),
                 (a.prototype.triggerReady = function () {
                   (this.isReady_ = !0),
-                    // Ensure ready is triggerd asynchronously
                     this.setTimeout(function () {
                       var a = this.readyQueue_;
                       // Reset Ready Queue
@@ -32902,21 +32871,6 @@ var _gsScope =
                  * @return {String} poster URL when getting
                  * @return {Player} self when setting
                  * @method poster
-                 */
-                /**
-                 * Some techs (e.g. YouTube) can provide a poster source in an
-                 * asynchronous way. We want the poster component to use this
-                 * poster source so that it covers up the tech's controls.
-                 * (YouTube's play button). However we only want to use this
-                 * soruce if the player user hasn't set a poster through
-                 * the normal APIs.
-                 *
-                 * @private
-                 * @method handleTechPosterChange_
-                 */
-                /**
-                 * Get or set whether or not the controls are showing.
-                 *
                  * @param  {Boolean} bool Set controls to showing or not
                  * @return {Boolean}    Controls are showing
                  * @method controls
@@ -33376,7 +33330,6 @@ var _gsScope =
                         (this.tag.player = null),
                         (this.tag = null)),
                       (this.techName_ = a),
-                      // Turn off API access because we're loading a new tech that might load asynchronously
                       (this.isReady_ = !1);
                     // Grab tech-specific options from player options and add source and parent element to use.
                     var c = M["default"](
@@ -33412,7 +33365,6 @@ var _gsScope =
                     // Remove once that deprecated behavior is removed.
                     d || (d = i["default"].getComponent(a)),
                       (this.tech_ = new d(c)),
-                      // player.triggerReady is always async, so don't need this to be async
                       this.tech_.ready(s.bind(this, this.handleTechReady_), !0),
                       Q["default"].jsonToTextTracks(
                         this.textTracksJson_ || [],
@@ -50724,15 +50676,9 @@ if (
   //self executing intro function: computer, circle and the other functions
 
   (function () {
-    //svg
-
-    var $svgIntro = $("#svg-intro");
-
-
     var tl = new TimelineMax({ delay: 0.1 });
 
     tl.fromTo(
-      $svgIntro,
       1,
       { transformOrigin: "50% 50%", scale: 0.8 },
       { opacity: 1, scale: 1, ease: Power4.easeOut, onComplete: animateIcons }
@@ -50742,8 +50688,6 @@ if (
   //icons
 
   function animateIcons() {
-    //svg
-
     var $svgIntro = $("#svg-intro");
 
     //svg elements
