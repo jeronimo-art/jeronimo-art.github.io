@@ -129,41 +129,6 @@
     each: function (callback) {
       return jQuery.each(this, callback);
     },
-
-
-
-    slice: function () {
-      return this.pushStack(slice.apply(this, arguments));
-    },
-
-    first: function () {
-      return this.eq(0);
-    },
-
-    last: function () {
-      return this.eq(-1);
-    },
-
-    eq: function (i) {
-      var len = this.length,
-        j = +i + (i < 0 ? len : 0);
-
-      return this.pushStack(j >= 0 && j < len ? [this[j]] : []);
-    },
-
-    end: function () {
-      return this.prevObject || this.constructor();
-    },
-
-    // For internal use only.
-
-    // Behaves like an Array's method, not like a jQuery method.
-
-    push: push,
-
-    sort: arr.sort,
-
-    splice: arr.splice,
   };
 
   jQuery.extend = jQuery.fn.extend = function () {
@@ -22522,7 +22487,7 @@ var _gsScope =
         for (f = 0; f < e.length; f++) e[f]();
         for (g in p)
           p[g].func ||
-            a.console.log("GSAP encountered missing dependency: " + g);
+            a;
       }
       i = !1;
     }
@@ -50613,8 +50578,7 @@ if (
 
 /*----------  CUSTOM JS  ----------*/
 
-(function () {
-  "use strict";
+
 
   /*----------  INTRO ANIMATION  ----------*/
 
@@ -50708,21 +50672,4 @@ if (
         letter.addClass("transparent");
       }, 100 * i);
     });
-  }
-  //navbar fixed
-  var nav = $("#navbar");
-  var navParent = $("#nav-parent");
-  var section = $("#portfolio");
-  var navParentPosition,
-    windowPosition,
-    sectionPosition,
-    counter = "on";
-  function changingValues() {
-    navParentPosition = navParent.offset().top;
-    windowPosition = windowVar.scrollTop();
-    sectionPosition = section.offset().top;
-  }
-
-  /*----------  BOOTSTRAP TOOLTIP  ----------*/
-  $('[data-toggle="tooltip"]').tooltip();
-})();
+  };

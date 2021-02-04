@@ -45,28 +45,19 @@
     -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
     transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
   }
-  .hamburger:hover .-top {
-    -webkit-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  .hamburger:hover .-bottom {
-    -webkit-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    transform: translateY(100%);
-  }
+
   .hamburger.is-active .-top {
-    -webkit-transform: translateY(200%) rotate(45deg) !important;
-    -ms-transform: translateY(200%) rotate(45deg) !important;
-    transform: translateY(200%) rotate(45deg) !important;
+    -webkit-transform: translateY(200%) rotate(45deg);
+    -ms-transform: translateY(200%) rotate(45deg);
+    transform: translateY(200%) rotate(45deg);
   }
   .hamburger.is-active .-mid {
     opacity: 0;
   }
   .hamburger.is-active .-bottom {
-    -webkit-transform: translateY(-200%) rotate(135deg) !important;
-    -ms-transform: translateY(-200%) rotate(135deg) !important;
-    transform: translateY(-200%) rotate(135deg) !important;
+    -webkit-transform: translateY(-200%) rotate(135deg);
+    -ms-transform: translateY(-200%) rotate(135deg);
+    transform: translateY(-200%) rotate(135deg);
   }
 
   .menu-navegacion {
