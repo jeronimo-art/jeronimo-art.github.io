@@ -8,6 +8,16 @@ body {
   overflow-x: hidden;
 }
 
+.animate__animated{
+  color: #aaaaaa;
+}
+.animate__animated:hover {
+  display: inline-block;
+  animation: rubberBand;
+  animation-duration: 0.7s;
+  cursor: pointer;
+}
+
 .header-bar {
   position: fixed;
   left: 0;

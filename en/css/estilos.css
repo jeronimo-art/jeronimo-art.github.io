@@ -20,6 +20,17 @@ body {
   box-shadow: 0 3px 7px 0 rgb(0 0 0 / 35%);
 }
 
+.animate__animated{
+  color: #aaaaaa;
+}
+
+.animate__animated:hover {
+  display: inline-block;
+  animation: rubberBand;
+  animation-duration: 0.7s;
+  cursor: pointer;
+}
+
 #logo {
   position: fixed;
   height: 62px;

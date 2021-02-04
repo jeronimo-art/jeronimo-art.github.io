@@ -26,6 +26,13 @@ body {
   box-shadow: 0 3px 7px 0 rgb(0 0 0 / 35%);
 }
 
+.animate__animated:hover {
+  display: inline-block;
+  animation: rubberBand;
+  animation-duration: 0.7s;
+  cursor: pointer;
+}
+
 #logo {
   position: fixed;
   height: 62px;
@@ -268,4 +275,94 @@ body {
   left: 5px;
   transform: translateY(-100%);
   color: #ffffffe7;
+}
+
+
+.social-bar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 100;
+}
+
+@media screen and (max-width: 800px) {
+  .social-bar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+  }
+  #copyr {
+    position: fixed;
+    top: 100%;
+    left: 5px;
+    color: #ffffffe7;
+    transform: translateY(0%);
+  }
+}
+#copyr {
+  position: fixed;
+  top: 100%;
+  left: 5px;
+  transform: translateY(-100%);
+  color: #ffffffe7;
+}
+.icon {
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem;
+  display: flex;
+  transition: all 0.5s;
+  margin-top: 10px;
+  border-radius: 1.5rem 0 0 1.5rem;
+}
+
+.icon-facebook {
+  background: #000000;
+}
+.icon-facebook:hover {
+  background: #2d88ff;
+  transition: all 0.2s;
+}
+
+.icon-twitter {
+  background: #000000;
+}
+
+.icon-twitter:hover {
+  background: #1da1f2;
+  transition: all 0.2s;
+}
+
+.fa-github {
+  background: #000000;
+}
+
+.fa-github:hover {
+  background: #fe0000;
+  transition: all 0.2s;
+}
+
+.icon-instagram {
+  background: #000000;
+}
+
+.icon-instagram:hover {
+  background: #d82667;
+  transition: all 0.2s;
+}
+
+.icon:hover {
+  padding-right: 7rem;
+  border-radius: 1.5rem 0 0 1.5rem;
 }

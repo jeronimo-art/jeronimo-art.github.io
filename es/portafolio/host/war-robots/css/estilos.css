@@ -18,21 +18,13 @@
   width: 30px;
   margin: 20px;
 }
-.back-to-port img:hover {
-  width: 30px;
-  margin: 20px;
-  animation: link 0.5s linear;
-}
 
-@keyframes link {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(480deg);
-  }
+.animate__animated:hover {
+  display: inline-block;
+  animation: rubberBand;
+  animation-duration: 0.7s;
+  cursor: pointer;
 }
-
 
 .back-to-port p {
   color: white;

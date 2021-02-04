@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="css/estilos.css" />
     <link rel="stylesheet" href="css/formulario.css" />
     <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="font.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="shortcut icon" href="img/logo-white.ico" type="image/x-icon" />
     <title>Contact / Jerónimo Robalino</title>
   </head>
@@ -15,7 +21,7 @@
 
     <header>
       <div class="header-bar">
-        <img src="videos/f-logo/28.png" id="logo" alt="" />
+        <img src="videos/f-logo/28.png" class="animate__animated" id="logo" alt="" />
         <div class="hamburger">
           <div class="_layer -top"></div>
           <div class="_layer -mid"></div>
@@ -23,15 +29,15 @@
         </div>
         <nav class="menu-navegacion">
           <ol id="menu">
-            <a href="../"><li id="menu-1" class="menu">Home</li></a>
+            <a href="../"><li id="menu-1" class="menu animate__animated">Home</li></a>
             <a href="../briefcase/"
-              ><li id="menu-2" class="menu">Briefcase</li></a
+              ><li id="menu-2" class="menu animate__animated">Briefcase</li></a
             >
-            <a href="../skills/"><li id="menu-3" class="menu">Skills</li></a>
-            <a href=""><li id="menu-4" class="menu">Contact</li></a>
+            <a href="../skills/"><li id="menu-3" class="menu animate__animated">Skills</li></a>
+            <a href=""><li id="menu-4" class="menu animate__animated">Contact</li></a>
           </ol>
         </nav>
-        <a href="../../es/contacto/" id="lang">Español</a>
+        <a href="../../es/contacto/" class="animate__animated" id="lang">Español</a>
       </div>
     </header>
 
@@ -116,13 +122,20 @@
         </div>
 
         <div class="formulario__grupo formulario__grupo-btn-enviar">
-          <button type="submit" class="formulario__btn">Enviar</button>
+          <button type="submit" class="formulario__btn animate__animated">Enviar</button>
           <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
             Form sent successfully!
           </p>
         </div>
       </form>
     </main>
+
+    <div class="social-bar">
+      <a href="" class="icon icon-facebook" target="_blank"></a>
+      <a href="" class="icon icon-twitter" target="_blank"></a>
+      <a href="" class="icon fab fa-github" target="_blank"></a>
+      <a href="" class="icon icon-instagram" target="_blank"></a>
+    </div>
 
     <div class="not-display"></div>
     <div class="fon-animation">

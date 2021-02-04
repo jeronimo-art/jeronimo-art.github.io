@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/formulario.css" />
     <link rel="stylesheet" href="font.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="shortcut icon" href="img/logo-white.ico" type="image/x-icon" />
     <title>Contacto / Jerónimo Robalino</title>
   </head>
@@ -17,7 +21,7 @@
 
     <header>
       <div class="header-bar">
-        <img src="videos/f-logo/28.png" id="logo" alt="" />
+        <img src="videos/f-logo/28.png" class="animate__animated" id="logo" alt="" />
         <div class="hamburger">
           <div class="_layer -top"></div>
           <div class="_layer -mid"></div>
@@ -25,24 +29,36 @@
         </div>
         <nav class="menu-navegacion">
           <ol id="menu">
-            <a href="../"><li id="menu-1" class="menu">Inicio</li></a>
+            <a href="../"
+              ><li id="menu-1" class="menu animate__animated">Inicio</li></a
+            >
             <a href="../portafolio/"
-              ><li id="menu-2" class="menu">Portafolio</li></a
+              ><li id="menu-2" class="menu animate__animated">Portafolio</li></a
             >
             <a href="../habilidades/"
-              ><li id="menu-3" class="menu">Habilidades</li></a
+              ><li id="menu-3" class="menu animate__animated">
+                Habilidades</li></a
             >
-            <a href=""><li id="menu-4" class="menu">Contacto</li></a>
+            <a href=""
+              ><li id="menu-4" class="menu animate__animated">Contacto</li></a
+            >
           </ol>
         </nav>
-        <a href="../../en/contact/" id="lang">Inglish</a>
+        <a href="../../en/contact/" class="animate__animated" id="lang"
+          >Inglish</a
+        >
       </div>
     </header>
 
     <!-- =============== CONTACTO =============== -->
 
     <main>
-      <form action="enviar.php" method="POST" class="formulario" id="formulario">
+      <form
+        action="enviar.php"
+        method="POST"
+        class="formulario"
+        id="formulario"
+      >
         <!-- Grupo: Nombre -->
         <div class="formulario__grupo" id="grupo__nombre">
           <label for="nombre" class="formulario__label">Nombre</label>
@@ -122,7 +138,9 @@
         </div>
 
         <div class="formulario__grupo formulario__grupo-btn-enviar">
-          <button type="submit" class="formulario__btn">Enviar</button>
+          <button type="submit" class="formulario__btn animate__animated">
+            Enviar
+          </button>
           <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
             Formulario enviado exitosamente!
           </p>
