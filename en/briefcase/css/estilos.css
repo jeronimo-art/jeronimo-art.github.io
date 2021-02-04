@@ -8,6 +8,13 @@ html {
   min-height: 100%;
 }
 
+.animate__animated:hover {
+  display: inline-block;
+  animation: rubberBand;
+  animation-duration: 0.7s;
+  cursor: pointer;
+}
+
 .header-bar {
   position: fixed;
   left: 0;
@@ -127,18 +134,6 @@ html {
   margin-top: 40px;
 }
 
-#link-modal:hover {
-  animation: link 0.5s linear;
-}
-
-@keyframes link {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(480deg);
-  }
-}
 
 @media screen and (max-width: 800px) {
   #img-modal {
@@ -158,6 +153,8 @@ html {
   text-align: center;
 }
 
+
+
 .close,
 .close-2,
 .close-3,
@@ -175,38 +172,8 @@ html {
   cursor: pointer;
 }
 
-.close:hover {
-  animation: animate 0.5s linear;
-}
 
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(300deg);
-  }
-}
 
-.close-2:hover {
-  animation: animate 0.5s linear;
-}
-
-.close-3:hover {
-  animation: animate 0.5s linear;
-}
-
-.close-4:hover {
-  animation: animate 0.5s linear;
-}
-
-.close-5:hover {
-  animation: animate 0.5s linear;
-}
-
-.close-6:hover {
-  animation: animate 0.5s linear;
-}
 
 .titulo {
   text-align: center;
@@ -235,7 +202,6 @@ html {
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
 }
 
 .imagen-port > img {
@@ -411,6 +377,7 @@ html {
     opacity: 1;
   }
 }
+
 
 @media screen and (max-width: 800px) {
   #copyr {
