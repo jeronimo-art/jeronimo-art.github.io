@@ -324,27 +324,17 @@
     globalEval: function (code) {
       DOMEval(code);
     },
-
-    // Convert dashed to camelCase; used by the css and data modules
-
-    // Support: IE <=9 - 11, Edge 12 - 13
-
-    // Microsoft forgot to hump their vendor prefix (#9572)
-
     camelCase: function (string) {
       return string.replace(rmsPrefix, "ms-").replace(rdashAlpha, fcamelCase);
     },
-
     nodeName: function (elem, name) {
       return (
         elem.nodeName && elem.nodeName.toLowerCase() === name.toLowerCase()
       );
     },
-
     each: function (obj, callback) {
       var length,
         i = 0;
-
       if (isArrayLike(obj)) {
         length = obj.length;
 
@@ -431,7 +421,7 @@
 
     // arg is for internal usage only
 
-    map: function (elems, callback, arg) {
+    map: function () {
       var length,
         value,
         i = 0,
@@ -509,37 +499,9 @@
     },
 
     now: Date.now,
-
-    // jQuery.support is not used in Core but other projects attach their
-
-    // properties to it so it needs to exist.
-
     support: support,
   });
-
-  if (typeof Symbol === "function") {
-    jQuery.fn[Symbol.iterator] = arr[Symbol.iterator];
-  }
-
-  jQuery.each(
-    "Boolean Number String Function Array Date RegExp Object Error Symbol".split(
-      " "
-    ),
-
-    function (i, name) {
-      class2type["[object " + name + "]"] = name.toLowerCase();
-    }
-  );
-
   function isArrayLike(obj) {
-    // Support: real iOS 8.2 only (not reproducible in simulator)
-
-    // `in` check used to prevent JIT error (gh-2145)
-
-    // hasOwn isn't used here due to false negatives
-
-    // regarding Nodelist length in IE
-
     var length = !!obj && "length" in obj && obj.length,
       type = jQuery.type(obj);
 
@@ -554,28 +516,7 @@
     );
   }
 
-  var Sizzle =
-    /*!
-    
-     * Sizzle CSS Selector Engine v2.3.3
-    
-     * https://sizzlejs.com/
-    
-     *
-    
-     * Copyright jQuery Foundation and other contributors
-    
-     * Released under the MIT license
-    
-     * http://jquery.org/license
-    
-     *
-    
-     * Date: 2016-08-08
-    
-     */
-
-    (function (window) {
+  var Sizzle = (function (window) {
       var i,
         support,
         Expr,
@@ -7243,11 +7184,7 @@
   function restoreScript(elem) {
     var match = rscriptTypeMasked.exec(elem.type);
 
-    if (match) {
-      elem.type = match[1];
-    } else {
-      elem.removeAttribute("type");
-    }
+
 
     return elem;
   }
@@ -7258,8 +7195,6 @@
     if (dest.nodeType !== 1) {
       return;
     }
-
-    // 1. Copy private data: events, handlers, etc.
 
     if (dataPriv.hasData(src)) {
       pdataOld = dataPriv.access(src);
@@ -7324,27 +7259,6 @@
       iNoClone = l - 1,
       value = args[0],
       isFunction = jQuery.isFunction(value);
-
-    // We can't cloneNode fragments that contain checked, in WebKit
-
-    if (
-      isFunction ||
-      (l > 1 &&
-        typeof value === "string" &&
-        !support.checkClone &&
-        rchecked.test(value))
-    ) {
-      return collection.each(function (index) {
-        var self = collection.eq(index);
-
-        if (isFunction) {
-          args[0] = value.call(this, index, self.html());
-        }
-
-        domManip(self, args, callback, ignored);
-      });
-    }
-
     if (l) {
       fragment = buildFragment(
         args,
@@ -7359,35 +7273,15 @@
       if (fragment.childNodes.length === 1) {
         fragment = first;
       }
-
-      // Require either new content or an interest in ignored elements to invoke the callback
-
       if (first || ignored) {
         scripts = jQuery.map(getAll(fragment, "script"), disableScript);
 
         hasScripts = scripts.length;
-
-        // Use the original fragment for the last item
-
-        // instead of the first because it can end up
-
-        // being emptied incorrectly in certain situations (#8070).
-
         for (; i < l; i++) {
           node = fragment;
 
           if (i !== iNoClone) {
             node = jQuery.clone(node, true, true);
-
-            // Keep references to cloned scripts for later restoration
-
-            if (hasScripts) {
-              // Support: Android <=4.0 only, PhantomJS 1 only
-
-              // push.apply(_, arraylike) throws on ancient WebKit
-
-              jQuery.merge(scripts, getAll(node, "script"));
-            }
           }
 
           callback.call(collection[i], node, i);
@@ -8040,59 +7934,6 @@
   function augmentWidthOrHeight(elem, name, extra, isBorderBox, styles) {
     var i,
       val = 0;
-
-    // If we already have the right measurement, avoid augmentation
-
-    if (extra === (isBorderBox ? "border" : "content")) {
-      i = 4;
-
-      // Otherwise initialize for horizontal or vertical properties
-    } else {
-      i = name === "width" ? 1 : 0;
-    }
-
-    for (; i < 4; i += 2) {
-      // Both box models exclude margin, so add it if we want it
-
-      if (extra === "margin") {
-        val += jQuery.css(elem, extra + cssExpand[i], true, styles);
-      }
-
-      if (isBorderBox) {
-        // border-box includes padding, so remove it if we want content
-
-        if (extra === "content") {
-          val -= jQuery.css(elem, "padding" + cssExpand[i], true, styles);
-        }
-
-        // At this point, extra isn't border nor margin, so remove border
-
-        if (extra !== "margin") {
-          val -= jQuery.css(
-            elem,
-            "border" + cssExpand[i] + "Width",
-            true,
-            styles
-          );
-        }
-      } else {
-        // At this point, extra isn't content, so add padding
-
-        val += jQuery.css(elem, "padding" + cssExpand[i], true, styles);
-
-        // At this point, extra isn't content nor padding, so add border
-
-        if (extra !== "padding") {
-          val += jQuery.css(
-            elem,
-            "border" + cssExpand[i] + "Width",
-            true,
-            styles
-          );
-        }
-      }
-    }
-
     return val;
   }
 
@@ -12895,29 +12736,6 @@
   });
 
   jQuery.parseJSON = JSON.parse;
-
-  // Register as a named AMD module, since jQuery can be concatenated with other
-
-  // files that may use define, but not via a proper concatenation script that
-
-  // understands anonymous AMD modules. A named AMD is safest and most robust
-
-  // way to register. Lowercase jquery is used because AMD module names are
-
-  // derived from file names, and jQuery is normally delivered in a lowercase
-
-  // file name. Do this after creating the global so that if an AMD module wants
-
-  // to call noConflict to hide this version of jQuery, it will work.
-
-  // Note that for maximum portability, libraries that are not jQuery should
-
-  // declare themselves as anonymous modules, and avoid setting a global if an
-
-  // AMD loader is present. jQuery is a special case. For more information, see
-
-  // https://github.com/jrburke/requirejs/wiki/Updating-existing-libraries#wiki-anon
-
   if (typeof define === "function" && define.amd) {
     define("jquery", [], function () {
       return jQuery;
@@ -25617,500 +25435,6 @@ var _gsScope =
                   // finished for all children that run this constructor
                   c.reportTouchActivity !== !1 && this.enableTouchActivity();
               }
-              /**
-               * Dispose of the component and all child components
-               *
-               * @method dispose
-               */
-              /**
-               * Return the component's player
-               *
-               * @return {Player}
-               * @method player
-               */
-              /**
-               * Deep merge of options objects
-               * Whenever a property is an object on both options objects
-               * the two properties will be merged using mergeOptions.
-               *
-               * ```js
-               *     Parent.prototype.options_ = {
-               *       optionSet: {
-               *         'childOne': { 'foo': 'bar', 'asdf': 'fdsa' },
-               *         'childTwo': {},
-               *         'childThree': {}
-               *       }
-               *     }
-               *     newOptions = {
-               *       optionSet: {
-               *         'childOne': { 'foo': 'baz', 'abc': '123' }
-               *         'childTwo': null,
-               *         'childFour': {}
-               *       }
-               *     }
-               *
-               *     this.options(newOptions);
-               * ```
-               * RESULT
-               * ```js
-               *     {
-               *       optionSet: {
-               *         'childOne': { 'foo': 'baz', 'asdf': 'fdsa', 'abc': '123' },
-               *         'childTwo': null, // Disabled. Won't be initialized.
-               *         'childThree': {},
-               *         'childFour': {}
-               *       }
-               *     }
-               * ```
-               *
-               * @param  {Object} obj Object of new option values
-               * @return {Object}     A NEW object of this.options_ and obj merged
-               * @method options
-               */
-              /**
-               * Get the component's DOM element
-               * ```js
-               *     var domEl = myComponent.el();
-               * ```
-               *
-               * @return {Element}
-               * @method el
-               */
-              /**
-               * Create the component's DOM element
-               *
-               * @param  {String=} tagName  Element's node type. e.g. 'div'
-               * @param  {Object=} properties An object of properties that should be set
-               * @param  {Object=} attributes An object of attributes that should be set
-               * @return {Element}
-               * @method createEl
-               */
-              /**
-               * Return the component's DOM element where children are inserted.
-               * Will either be the same as el() or a new element defined in createEl().
-               *
-               * @return {Element}
-               * @method contentEl
-               */
-              /**
-               * Get the component's ID
-               * ```js
-               *     var id = myComponent.id();
-               * ```
-               *
-               * @return {String}
-               * @method id
-               */
-              /**
-               * Get the component's name. The name is often used to reference the component.
-               * ```js
-               *     var name = myComponent.name();
-               * ```
-               *
-               * @return {String}
-               * @method name
-               */
-              /**
-               * Get an array of all child components
-               * ```js
-               *     var kids = myComponent.children();
-               * ```
-               *
-               * @return {Array} The children
-               * @method children
-               */
-              /**
-               * Returns a child component with the provided ID
-               *
-               * @return {Component}
-               * @method getChildById
-               */
-              /**
-               * Returns a child component with the provided name
-               *
-               * @return {Component}
-               * @method getChild
-               */
-              /**
-               * Adds a child component inside this component
-               * ```js
-               *     myComponent.el();
-               *     // -> <div class='my-component'></div>
-               *     myComponent.children();
-               *     // [empty array]
-               *
-               *     var myButton = myComponent.addChild('MyButton');
-               *     // -> <div class='my-component'><div class="my-button">myButton<div></div>
-               *     // -> myButton === myComponent.children()[0];
-               * ```
-               * Pass in options for child constructors and options for children of the child
-               * ```js
-               *     var myButton = myComponent.addChild('MyButton', {
-               *       text: 'Press Me',
-               *       buttonChildExample: {
-               *         buttonChildOption: true
-               *       }
-               *     });
-               * ```
-               *
-               * @param {String|Component} child The class name or instance of a child to add
-               * @param {Object=} options Options, including options to be passed to children of the child.
-               * @param {Number} index into our children array to attempt to add the child
-               * @return {Component} The child component (created by this process if a string was used)
-               * @method addChild
-               */
-              /**
-               * Remove a child component from this component's list of children, and the
-               * child component's element from this component's element
-               *
-               * @param  {Component} component Component to remove
-               * @method removeChild
-               */
-              /**
-               * Add and initialize default child components from options
-               * ```js
-               *     // when an instance of MyComponent is created, all children in options
-               *     // will be added to the instance by their name strings and options
-               *     MyComponent.prototype.options_ = {
-               *       children: [
-               *         'myChildComponent'
-               *       ],
-               *       myChildComponent: {
-               *         myChildOption: true
-               *       }
-               *     };
-               *
-               *     // Or when creating the component
-               *     var myComp = new MyComponent(player, {
-               *       children: [
-               *         'myChildComponent'
-               *       ],
-               *       myChildComponent: {
-               *         myChildOption: true
-               *       }
-               *     });
-               * ```
-               * The children option can also be an array of
-               * child options objects (that also include a 'name' key).
-               * This can be used if you have two child components of the
-               * same type that need different options.
-               * ```js
-               *     var myComp = new MyComponent(player, {
-               *       children: [
-               *         'button',
-               *         {
-               *           name: 'button',
-               *           someOtherOption: true
-               *         },
-               *         {
-               *           name: 'button',
-               *           someOtherOption: false
-               *         }
-               *       ]
-               *     });
-               * ```
-               *
-               * @method initChildren
-               */
-              /**
-               * Allows sub components to stack CSS class names
-               *
-               * @return {String} The constructed class name
-               * @method buildCSSClass
-               */
-              /**
-               * Add an event listener to this component's element
-               * ```js
-               *     var myFunc = function(){
-               *       var myComponent = this;
-               *       // Do something when the event is fired
-               *     };
-               *
-               *     myComponent.on('eventType', myFunc);
-               * ```
-               * The context of myFunc will be myComponent unless previously bound.
-               * Alternatively, you can add a listener to another element or component.
-               * ```js
-               *     myComponent.on(otherElement, 'eventName', myFunc);
-               *     myComponent.on(otherComponent, 'eventName', myFunc);
-               * ```
-               * The benefit of using this over `VjsEvents.on(otherElement, 'eventName', myFunc)`
-               * and `otherComponent.on('eventName', myFunc)` is that this way the listeners
-               * will be automatically cleaned up when either component is disposed.
-               * It will also bind myComponent as the context of myFunc.
-               * **NOTE**: When using this on elements in the page other than window
-               * and document (both permanent), if you remove the element from the DOM
-               * you need to call `myComponent.trigger(el, 'dispose')` on it to clean up
-               * references to it and allow the browser to garbage collect it.
-               *
-               * @param  {String|Component} first   The event type or other component
-               * @param  {Function|String}      second  The event handler or event type
-               * @param  {Function}             third   The event handler
-               * @return {Component}
-               * @method on
-               */
-              /**
-               * Remove an event listener from this component's element
-               * ```js
-               *     myComponent.off('eventType', myFunc);
-               * ```
-               * If myFunc is excluded, ALL listeners for the event type will be removed.
-               * If eventType is excluded, ALL listeners will be removed from the component.
-               * Alternatively you can use `off` to remove listeners that were added to other
-               * elements or components using `myComponent.on(otherComponent...`.
-               * In this case both the event type and listener function are REQUIRED.
-               * ```js
-               *     myComponent.off(otherElement, 'eventType', myFunc);
-               *     myComponent.off(otherComponent, 'eventType', myFunc);
-               * ```
-               *
-               * @param  {String=|Component}  first  The event type or other component
-               * @param  {Function=|String}       second The listener function or event type
-               * @param  {Function=}              third  The listener for other component
-               * @return {Component}
-               * @method off
-               */
-              /**
-               * Add an event listener to be triggered only once and then removed
-               * ```js
-               *     myComponent.one('eventName', myFunc);
-               * ```
-               * Alternatively you can add a listener to another element or component
-               * that will be triggered only once.
-               * ```js
-               *     myComponent.one(otherElement, 'eventName', myFunc);
-               *     myComponent.one(otherComponent, 'eventName', myFunc);
-               * ```
-               *
-               * @param  {String|Component}  first   The event type or other component
-               * @param  {Function|String}       second  The listener function or event type
-               * @param  {Function=}             third   The listener function for other component
-               * @return {Component}
-               * @method one
-               */
-              /**
-               * Trigger an event on an element
-               * ```js
-               *     myComponent.trigger('eventName');
-               *     myComponent.trigger({'type':'eventName'});
-               *     myComponent.trigger('eventName', {data: 'some data'});
-               *     myComponent.trigger({'type':'eventName'}, {data: 'some data'});
-               * ```
-               *
-               * @param  {Event|Object|String} event  A string (the type) or an event object with a type attribute
-               * @param  {Object} [hash] data hash to pass along with the event
-               * @return {Component}       self
-               * @method trigger
-               */
-              /**
-               * Bind a listener to the component's ready state.
-               * Different from event listeners in that if the ready event has already happened
-               * it will trigger the function immediately.
-               *
-               * @param  {Function} fn Ready listener
-               * @param  {Boolean} sync Exec the listener synchronously if component is ready
-               * @return {Component}
-               * @method ready
-               */
-              /**
-               * Trigger the ready listeners
-               *
-               * @return {Component}
-               * @method triggerReady
-               */
-              /**
-               * Finds a single DOM element matching `selector` within the component's
-               * `contentEl` or another custom context.
-               *
-               * @method $
-               * @param  {String} selector
-               *         A valid CSS selector, which will be passed to `querySelector`.
-               *
-               * @param  {Element|String} [context=document]
-               *         A DOM element within which to query. Can also be a selector
-               *         string in which case the first matching element will be used
-               *         as context. If missing (or no element matches selector), falls
-               *         back to `document`.
-               *
-               * @return {Element|null}
-               */
-              /**
-               * Finds a all DOM elements matching `selector` within the component's
-               * `contentEl` or another custom context.
-               *
-               * @method $$
-               * @param  {String} selector
-               *         A valid CSS selector, which will be passed to `querySelectorAll`.
-               *
-               * @param  {Element|String} [context=document]
-               *         A DOM element within which to query. Can also be a selector
-               *         string in which case the first matching element will be used
-               *         as context. If missing (or no element matches selector), falls
-               *         back to `document`.
-               *
-               * @return {NodeList}
-               */
-              /**
-               * Check if a component's element has a CSS class name
-               *
-               * @param {String} classToCheck Classname to check
-               * @return {Component}
-               * @method hasClass
-               */
-              /**
-               * Add a CSS class name to the component's element
-               *
-               * @param {String} classToAdd Classname to add
-               * @return {Component}
-               * @method addClass
-               */
-              /**
-               * Remove a CSS class name from the component's element
-               *
-               * @param {String} classToRemove Classname to remove
-               * @return {Component}
-               * @method removeClass
-               */
-              /**
-               * Add or remove a CSS class name from the component's element
-               *
-               * @param  {String} classToToggle
-               * @param  {Boolean|Function} [predicate]
-               *         Can be a function that returns a Boolean. If `true`, the class
-               *         will be added; if `false`, the class will be removed. If not
-               *         given, the class will be added if not present and vice versa.
-               *
-               * @return {Component}
-               * @method toggleClass
-               */
-              /**
-               * Show the component element if hidden
-               *
-               * @return {Component}
-               * @method show
-               */
-              /**
-               * Hide the component element if currently showing
-               *
-               * @return {Component}
-               * @method hide
-               */
-              /**
-               * Lock an item in its visible state
-               * To be used with fadeIn/fadeOut.
-               *
-               * @return {Component}
-               * @private
-               * @method lockShowing
-               */
-              /**
-                 * Unlock an item to be hidden
-                 * To be used with fadeIn/fadeOut.
-                 *
-                 * @return {Component}
-                 * @private
-                 * @method unlockShowing
-                 * @param  {Number|String=} num   Optional width number
-                 * @param  {Boolean} skipListeners Skip the 'resize' event trigger
-                 * @return {Component} This component, when setting the width
-                 * @return {Number|String} The width, when getting
-                 * @method width
-                 * @param  {Number|String=} num     New component height
-                 * @param  {Boolean=} skipListeners Skip the resize event trigger
-                 * @return {Component} This component, when setting the height
-                 * @return {Number|String} The height, when getting
-                 * @method height
-                 * @param  {Number|String} width Width of player
-                 * @param  {Number|String} height Height of player
-                 * @return {Component} The component
-                 * @method dimensions
-                   @param  {String} widthOrHeight  'width' or 'height'
-                 * @param  {Number|String=} num     New dimension
-                 * @param  {Boolean=} skipListeners Skip resize event trigger
-                 * @return {Component} The component if a dimension was set
-                 * @return {Number|String} The dimension if nothing was set
-                 * @private
-                 * @method dimension
-                 */
-              /**
-               * Get width or height of computed style
-               * @param  {String} widthOrHeight  'width' or 'height'
-               * @return {Number|Boolean} The bolean false if nothing was set
-               * @method currentDimension
-               */
-              /**
-               * Get an object which contains width and height values of computed style
-               * @return {Object} The dimensions of element
-               * @method currentDimensions
-               */
-              /**
-               * Get width of computed style
-               * @return {Integer}
-               * @method currentWidth
-               */
-              /**
-               * Get height of computed style
-               * @return {Integer}
-               * @method currentHeight
-               * @private
-               * @method emitTapEvents
-               * @method enableTouchActivity
-               */
-              /**
-               * Creates timeout and sets up disposal automatically.
-               *
-               * @param {Function} fn The function to run after the timeout.
-               * @param {Number} timeout Number of ms to delay before executing specified function.
-               * @return {Number} Returns the timeout ID
-               * @method setTimeout
-               */
-              /**
-               * Clears a timeout and removes the associated dispose listener
-               *
-               * @param {Number} timeoutId The id of the timeout to clear
-               * @return {Number} Returns the timeout ID
-               * @method clearTimeout
-               */
-              /**
-               * Creates an interval and sets up disposal automatically.
-               *
-               * @param {Function} fn The function to run every N seconds.
-               * @param {Number} interval Number of ms to delay before executing specified function.
-               * @return {Number} Returns the interval ID
-               * @method setInterval
-               */
-              /**
-               * Clears an interval and removes the associated dispose listener
-               *
-               * @param {Number} intervalId The id of the interval to clear
-               * @return {Number} Returns the interval ID
-               * @method clearInterval
-               */
-              /**
-               * Registers a component
-               *
-               * @param {String} name Name of the component to register
-               * @param {Object} comp The component to register
-               * @static
-               * @method registerComponent
-               */
-              /**
-               * Gets a component by name
-               *
-               * @param {String} name Name of the component to get
-               * @return {Component}
-               * @static
-               * @method getComponent
-               */
-              /**
-               * Sets up the constructor using the supplied init method
-               * or uses the init of the parent object
-               *
-               * @param {Object} props An object of properties
-               * @static
-               * @deprecated
-               * @method extend
-               */
               return (
                 (a.prototype.dispose = function () {
                   // Dispose all children.
@@ -26310,9 +25634,6 @@ var _gsScope =
                             );
                           })
                           .filter(function (b) {
-                            // we have to make sure that child.name isn't in the techOrder since
-                            // techs are registerd as Components but can't aren't compatible
-                            // See https://github.com/videojs/video.js/issues/2772
                             var c = a.getComponent(
                               b.opts.componentClass || t["default"](b.name)
                             );
@@ -26322,8 +25643,6 @@ var _gsScope =
                     })();
                 }),
                 (a.prototype.buildCSSClass = function () {
-                  // Child classes can include a function that does:
-                  // return 'CLASS NAME' + this._super();
                   return "";
                 }),
                 (a.prototype.on = function (a, b, c) {
@@ -26338,8 +25657,6 @@ var _gsScope =
                             h = function () {
                               return d.off(e, f, g);
                             };
-                          // Use the same function ID so we can remove it later it using the ID
-                          // of the original listener
                           (h.guid = g.guid), d.on("dispose", h);
                           // If the other component is disposed first we need to clean the reference
                           // to the other component in this component's removeOnDispose listener
@@ -26770,18 +26087,6 @@ var _gsScope =
                   a.call(this, c, d),
                   this.el_.setAttribute("aria-label", "Audio Menu");
               }
-              /**
-               * Allow sub components to stack CSS class names
-               *
-               * @return {String} The constructed class name
-               * @method buildCSSClass
-               */
-              /**
-               * Create a menu item for each audio track
-               *
-               * @return {Array} Array of menu items
-               * @method createItems
-               */
               return (
                 g(b, a),
                 (b.prototype.buildCSSClass = function () {
@@ -33410,8 +32715,6 @@ var _gsScope =
                   }),
                   (b.prototype.tech = function (a) {
                     if (a && a.IWillNotUseThisInPlugins) return this.tech_;
-                    var b =
-                      "\n      Please make sure that you are not using this inside of a plugin.\n      To disable this alert and error, please pass in an object with\n      `IWillNotUseThisInPlugins` to the `tech` method. See\n      https://github.com/videojs/video.js/issues/2617 for more info.\n    ";
                     throw (m["default"].alert(b), new Error(b));
                   }),
                   (b.prototype.addTechControlsListeners_ = function () {
@@ -36910,14 +36213,7 @@ var _gsScope =
              * @param  {Object} source   The source object
              * @param  {Html5} tech  The instance of the HTML5 tech
              */ (K.nativeSourceHandler = {}),
-            /*
-             * Check if the video element can play the given videotype
-             *
-             * @param  {String} type    The mimetype to check
-             * @return {String}         'probably', 'maybe', or '' (empty string)
-             */ (K.nativeSourceHandler.canPlayType = function (a) {
-              // IE9 on Windows 7 without MediaPlayer throws an error here
-              // https://github.com/videojs/video.js/issues/519
+                (K.nativeSourceHandler.canPlayType = function (a) {
               try {
                 return K.TEST_VID.canPlayType(a);
               } catch (b) {
@@ -36981,8 +36277,6 @@ var _gsScope =
              *
              * @return {Boolean}
              */ (K.canControlPlaybackRate = function () {
-              // Playback rate API is implemented in Android Chrome, but doesn't do anything
-              // https://github.com/videojs/video.js/issues/3180
               if (z.IS_ANDROID && z.IS_CHROME) return !1;
               // IE will error if Windows Media Player not installed #3315
               try {
@@ -37005,7 +36299,7 @@ var _gsScope =
               // If mode is a number, we cannot change it because it'll disappear from view.
               // Browsers with numeric modes include IE10 and older (<=2013) samsung android models.
               // Firefox isn't playing nice either with modifying the mode
-              // TODO: Investigate firefox: https://github.com/videojs/video.js/issues/1862
+              //
               return (
                 (a = !!K.TEST_VID.textTracks),
                 a &&
@@ -42892,52 +42186,16 @@ var _gsScope =
   })(
     this,
     this.vttjs || {}
-  ) /* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*- */ /* vim: set shiftwidth=2 tabstop=2 autoindent cindent expandtab: */,
-  /**
-   * Copyright 2013 vtt.js Contributors
-   *
-   * Licensed under the Apache License, Version 2.0 (the "License");
-   * you may not use this file except in compliance with the License.
-   * You may obtain a copy of the License at
-   *
-   *   http://www.apache.org/licenses/LICENSE-2.0
-   *
-   * Unless required by applicable law or agreed to in writing, software
-   * distributed under the License is distributed on an "AS IS" BASIS,
-   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   * See the License for the specific language governing permissions and
-   * limitations under the License.
-   */ (function (a) {
-    // Creates a new ParserError object from an errorData object. The errorData
-    // object should have default code and message properties. The default message
-    // property can be overriden by passing in a message parameter.
-    // See ParsingError.Errors below for acceptable errors.
+  ),(function (a) {
     function b(a, b) {
       (this.name = "ParsingError"),
         (this.code = a.code),
         (this.message = b || a.message);
+    
     }
-    // Try to parse input as a time stamp.
-    function c(a) {
-      function b(a, b, c, d) {
-        return 3600 * (0 | a) + 60 * (0 | b) + (0 | c) + (0 | d) / 1e3;
-      }
-      var c = a.match(/^(\d+):(\d{2})(:\d{2})?\.(\d{3})/);
-      return c
-        ? c[3]
-          ? b(c[1], c[2], c[3].replace(":", ""), c[4])
-          : c[1] > 59
-          ? b(c[1], c[2], 0, c[4])
-          : b(0, c[1], c[2], c[4])
-        : null;
-    }
-    // A settings object holds key/value pairs and will ignore anything but the first
-    // assignment to a specific key.
     function d() {
       this.values = o(null);
     }
-    // Helper function to parse input into groups separated by 'groupDelim', and
-    // interprete each group as a key/value pair separated by 'keyValueDelim'.
     function e(a, b, c, d) {
       var e = d ? a.split(d) : [a];
       for (var f in e)
@@ -42951,15 +42209,6 @@ var _gsScope =
         }
     }
     function f(a, f, g) {
-      // 4.1 WebVTT timestamp
-      function h() {
-        var d = c(a);
-        if (null === d)
-          throw new b(b.Errors.BadTimeStamp, "Malformed timestamp: " + k);
-        // Remove time stamp from input.
-        return (a = a.replace(/^[^\sa-zA-Z-]+/, "")), d;
-      }
-      // 4.4.2 WebVTT cue settings
       function i(a, b) {
         var c = new d();
         e(
@@ -42967,7 +42216,6 @@ var _gsScope =
           function (a, b) {
             switch (a) {
               case "region":
-                // Find the last region we parsed with the same region id.
                 for (var d = g.length - 1; d >= 0; d--)
                   if (g[d].id === b) {
                     c.set(a, g[d].region);
@@ -50582,8 +49830,6 @@ if (
 
   /*----------  INTRO ANIMATION  ----------*/
 
-  //self executing intro function: computer, circle and the other functions
-
   (function () {
     var tl = new TimelineMax({ delay: 0.1 });
 
@@ -50655,10 +49901,6 @@ if (
   //letters
 
   function animateLetters() {
-    var $lead = $(".lead");
-
-    TweenMax.to($lead, 1, { opacity: 1 });
-
     $(".xaviro").each(function (i) {
       var letter = $(this);
 
