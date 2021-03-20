@@ -655,16 +655,7 @@ if (date.getDay() == 7 && date.getHours() == 12) {
   reiniciar();
 }
 
-if (
-  btnSwitch0.classList.contains("active") &&
-  date.getDay() == 1 &&
-  date.getHours() >= 8
-) {
-  lunes.style.background = "#0cc141";
-}
-
-if (btnSwitch1.classList.contains("active") && date.getDay() == 2) {
-  martes.style.background = "#0cc141";
+if (date.getDay() == 1) {
   if (btnSwitch0.classList.contains("active")) {
     lunes.style.background = "#0cc141";
   } else {
@@ -672,8 +663,7 @@ if (btnSwitch1.classList.contains("active") && date.getDay() == 2) {
   }
 }
 
-if (btnSwitch2.classList.contains("active") && date.getDay() == 3) {
-  miercoles.style.background = "#0cc141";
+if (date.getDay() == 2) {
   if (btnSwitch0.classList.contains("active")) {
     lunes.style.background = "#0cc141";
   } else {
@@ -686,8 +676,7 @@ if (btnSwitch2.classList.contains("active") && date.getDay() == 3) {
   }
 }
 
-if (btnSwitch3.classList.contains("active") && date.getDay() == 4) {
-  jueves.style.background = "#0cc141";
+if (date.getDay() == 3) {
   if (btnSwitch0.classList.contains("active")) {
     lunes.style.background = "#0cc141";
   } else {
@@ -705,8 +694,7 @@ if (btnSwitch3.classList.contains("active") && date.getDay() == 4) {
   }
 }
 
-if (btnSwitch4.classList.contains("active") && date.getDay() == 5) {
-  viernes.style.background = "#0cc141";
+if (date.getDay() == 4) {
   if (btnSwitch0.classList.contains("active")) {
     lunes.style.background = "#0cc141";
   } else {
@@ -729,8 +717,7 @@ if (btnSwitch4.classList.contains("active") && date.getDay() == 5) {
   }
 }
 
-if (btnSwitch5.classList.contains("active") && date.getDay() == 6) {
-  sabado.style.background = "#0cc141";
+if (date.getDay() == 5) {
   if (btnSwitch0.classList.contains("active")) {
     lunes.style.background = "#0cc141";
   } else {
@@ -752,14 +739,13 @@ if (btnSwitch5.classList.contains("active") && date.getDay() == 6) {
     jueves.style.background = "#ff0000";
   }
   if (btnSwitch4.classList.contains("active")) {
-    viernes.style.background = "#0cc141";
+    sabado.style.background = "#0cc141";
   } else {
-    viernes.style.background = "#ff0000";
+    sabado.style.background = "#ff0000";
   }
 }
 
-if (btnSwitch6.classList.contains("active") && date.getDay() == 7) {
-  domingo.style.background = "#0cc141";
+if (date.getDay() == 6) {
   if (btnSwitch0.classList.contains("active")) {
     lunes.style.background = "#0cc141";
   } else {
@@ -789,5 +775,43 @@ if (btnSwitch6.classList.contains("active") && date.getDay() == 7) {
     sabado.style.background = "#0cc141";
   } else {
     sabado.style.background = "#ff0000";
+  }
+}
+
+if (date.getDay() == 7) {
+  if (btnSwitch0.classList.contains("active")) {
+    lunes.style.background = "#0cc141";
+  } else {
+    lunes.style.background = "#ff0000";
+  }
+  if (btnSwitch1.classList.contains("active")) {
+    martes.style.background = "#0cc141";
+  } else {
+    martes.style.background = "#ff0000";
+  }
+  if (btnSwitch2.classList.contains("active")) {
+    miercoles.style.background = "#0cc141";
+  } else {
+    miercoles.style.background = "#ff0000";
+  }
+  if (btnSwitch3.classList.contains("active")) {
+    jueves.style.background = "#0cc141";
+  } else {
+    jueves.style.background = "#ff0000";
+  }
+  if (btnSwitch4.classList.contains("active")) {
+    viernes.style.background = "#0cc141";
+  } else {
+    viernes.style.background = "#ff0000";
+  }
+  if (btnSwitch5.classList.contains("active")) {
+    sabado.style.background = "#0cc141";
+  } else {
+    sabado.style.background = "#ff0000";
+  }
+  if (btnSwitch6.classList.contains("active")) {
+    domingo.style.background = "#0cc141";
+  } else {
+    domingo.style.background = "#ff0000";
   }
 }
