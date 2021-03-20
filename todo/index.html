@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TODO List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  </head>
+  <body>
+    <div class="display-inline">
+      <p class="main_time display-inline" style="color: white" id="time">
+        00:00
+      </p>
+    </div>
+    <p id="dia" class="display-inline" style="color: white">------</p>
+    <p id="date" class="display-inline" style="color: white">00</p>
+    <div class="container">
+      <p id="reiniciar"><i class="fas fa-sync"></i></p>
+      <table>
+        <tr>
+          <td class="border bold">Hora</td>
+          <td class="border bold" id="lun">Lunes</td>
+          <td class="border bold" id="mar">Martes</td>
+          <td class="border bold" id="mie">Miercoles</td>
+          <td class="border bold" id="jue">Jueves</td>
+          <td class="border bold" id="vie">Viernes</td>
+          <td class="border bold" id="sab">Sabado</td>
+          <td class="border bold" id="dom">Domingo</td>
+        </tr>
+        <tr>
+          <td class="border hora">2:30</td>
+          <td class="border change-name" id="act-1-1">Hecho</td>
+          <td class="border change-name" id="act-1-2">Hecho</td>
+          <td class="border change-name" id="act-1-3">Hecho</td>
+          <td class="border change-name" id="act-1-4">Hecho</td>
+          <td class="border change-name" id="act-1-5">Hecho</td>
+          <td class="border change-name" id="act-1-6">Hecho</td>
+          <td class="border change-name" id="act-1-7">Hecho</td>
+        </tr>
+        <tr>
+          <td class="border hora">3:00</td>
+          <td class="border change-name" id="act-2-1">Hecho</td>
+          <td class="border change-name" id="act-2-2">Hecho</td>
+          <td class="border change-name" id="act-2-3">Hecho</td>
+          <td class="border change-name" id="act-2-4">Hecho</td>
+          <td class="border change-name" id="act-2-5">Hecho</td>
+          <td class="border change-name" id="act-2-6">Hecho</td>
+          <td class="border change-name" id="act-2-7">Hecho</td>
+        </tr>
+        <tr>
+          <td class="border hora">4:00</td>
+          <td class="border change-name" id="act-3-1">Hecho</td>
+          <td class="border change-name" id="act-3-2">Hecho</td>
+          <td class="border change-name" id="act-3-3">Hecho</td>
+          <td class="border change-name" id="act-3-4">Hecho</td>
+          <td class="border change-name" id="act-3-5">Hecho</td>
+          <td class="border change-name" id="act-3-6">Hecho</td>
+          <td class="border change-name" id="act-3-7">Hecho</td>
+        </tr>
+        <tr>
+          <td class="border hora">5:30</td>
+          <td class="border change-name" id="act-4-1">Hecho</td>
+          <td class="border change-name" id="act-4-2">Hecho</td>
+          <td class="border change-name" id="act-4-3">Hecho</td>
+          <td class="border change-name" id="act-4-4">Hecho</td>
+          <td class="border change-name" id="act-4-5">Hecho</td>
+          <td class="border change-name" id="act-4-6">Hecho</td>
+          <td class="border change-name" id="act-4-7">Hecho</td>
+        </tr>
+        <tr>
+          <td class="border hora">6:30</td>
+          <td class="border change-name" id="act-5-1">Hecho</td>
+          <td class="border change-name" id="act-5-2">Hecho</td>
+          <td class="border change-name" id="act-5-3">Hecho</td>
+          <td class="border change-name" id="act-5-4">Hecho</td>
+          <td class="border change-name" id="act-5-5">Hecho</td>
+          <td class="border change-name" id="act-5-6">Hecho</td>
+          <td class="border change-name" id="act-5-7">Hecho</td>
+        </tr>
+        <tr>
+          <td class="border hora">7:30</td>
+          <td class="border change-name" id="act-6-1">Hecho</td>
+          <td class="border change-name" id="act-6-2">Hecho</td>
+          <td class="border change-name" id="act-6-3">Hecho</td>
+          <td class="border change-name" id="act-6-4">Hecho</td>
+          <td class="border change-name" id="act-6-5">Hecho</td>
+          <td class="border change-name" id="act-6-6">Hecho</td>
+          <td class="border change-name" id="act-6-7">Hecho</td>
+        </tr>
+        <tr>
+          <td class="border hora">9:00</td>
+          <td class="border change-name" id="act-7-1">Hecho</td>
+          <td class="border change-name" id="act-7-2">Hecho</td>
+          <td class="border change-name" id="act-7-3">Hecho</td>
+          <td class="border change-name" id="act-7-4">Hecho</td>
+          <td class="border change-name" id="act-7-5">Hecho</td>
+          <td class="border change-name" id="act-7-6">Hecho</td>
+          <td class="border change-name" id="act-7-7">Hecho</td>
+        </tr>
+        <tr>
+          <td class="border hora">10:30</td>
+          <td class="border change-name" id="act-8-1">Hecho</td>
+          <td class="border change-name" id="act-8-2">Hecho</td>
+          <td class="border change-name" id="act-8-3">Hecho</td>
+          <td class="border change-name" id="act-8-4">Hecho</td>
+          <td class="border change-name" id="act-8-5">Hecho</td>
+          <td class="border change-name" id="act-8-6">Hecho</td>
+          <td class="border change-name" id="act-8-7">Hecho</td>
+        </tr>
+        <tr>
+          <td class="border hora"></td>
+          <td class="border">
+            <button class="switch" id="switch0">
+              <span><i class="fas fa-times"></i></span>
+              <span><i class="fas fa-check"></i></span>
+            </button>
+          </td>
+          <td class="border">
+            <button class="switch" id="switch1">
+              <span><i class="fas fa-times"></i></span>
+              <span><i class="fas fa-check"></i></span>
+            </button>
+          </td>
+          <td class="border">
+            <button class="switch" id="switch2">
+              <span><i class="fas fa-times"></i></span>
+              <span><i class="fas fa-check"></i></span>
+            </button>
+          </td>
+          <td class="border">
+            <button class="switch" id="switch3">
+              <span><i class="fas fa-times"></i></span>
+              <span><i class="fas fa-check"></i></span>
+            </button>
+          </td>
+          <td class="border">
+            <button class="switch" id="switch4">
+              <span><i class="fas fa-times"></i></span>
+              <span><i class="fas fa-check"></i></span>
+            </button>
+          </td>
+          <td class="border">
+            <button class="switch" id="switch5">
+              <span><i class="fas fa-times"></i></span>
+              <span><i class="fas fa-check"></i></span>
+            </button>
+          </td>
+          <td class="border">
+            <button class="switch" id="switch6">
+              <span><i class="fas fa-times"></i></span>
+              <span><i class="fas fa-check"></i></span>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="uno"></div>
+    <div id="dos"></div>
+    <div id="tres"></div>
+    <div id="cuatro"></div>
+    <div id="cinco"></div>
+    <div id="seis"></div>
+    <div id="ciete"></div>
+    <div id="ocho"></div>
+    <script src="reloj.js"></script>
+    <script src="main.js"></script>
+    <script src="otros.js"></script>
+    <script src="modal.js"></script>
+  </body>
+</html>
