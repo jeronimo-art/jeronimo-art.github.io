@@ -634,7 +634,7 @@ if (new Date().getDay() == 6) {
   btnSwitch5.disabled = true;
 }
 
-if (date.getDay() == 7) {
+if (date.getDay() == 0) {
   btnSwitch0.disabled = true;
   btnSwitch1.disabled = true;
   btnSwitch2.disabled = true;
@@ -644,7 +644,7 @@ if (date.getDay() == 7) {
   btnSwitch6.disabled = true;
 }
 
-if (date.getDay() == 7 && date.getHours() == 12) {
+if (date.getDay() == 0 && date.getHours() == 12) {
   btnSwitch0.disabled = false;
   btnSwitch1.disabled = false;
   btnSwitch2.disabled = false;
@@ -778,7 +778,7 @@ if (date.getDay() == 6) {
   }
 }
 
-if (date.getDay() == 7) {
+if (date.getDay() == 0) {
   if (btnSwitch0.classList.contains("active")) {
     lunes.style.background = "#0cc141";
   } else {
