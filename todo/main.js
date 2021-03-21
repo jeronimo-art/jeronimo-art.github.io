@@ -815,3 +815,24 @@ if (date.getDay() == 0) {
     domingo.style.background = "#ff0000";
   }
 }
+var sc = document.getElementById("sc");
+var scn = 0;
+if (
+  date.getDay() == 0 &&
+  date.getHours() >= 8 &&
+  btnSwitch0.classList.contains("active") &&
+  btnSwitch1.classList.contains("active") &&
+  btnSwitch2.classList.contains("active") &&
+  btnSwitch3.classList.contains("active") &&
+  btnSwitch4.classList.contains("active") &&
+  btnSwitch5.classList.contains("active") &&
+  btnSwitch6.classList.contains("active")
+) {
+  scn = +1;
+  localStorage.setItem("scn", scn);
+  sc.innerHTML += `${localStorage.getItem("scn")}`;
+}else{
+  scn = "";
+  localStorage.setItem("scn", scn);
+  sc.innerHTML += `${localStorage.getItem("scn")}`;
+}
