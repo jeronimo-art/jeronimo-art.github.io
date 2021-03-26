@@ -656,7 +656,7 @@ if (date.getDay() == 0 && date.getHours() == 12) {
 }
 
 if (date.getDay() == 1) {
-  if (btnSwitch0.classList.contains("active")) {
+  if (btnSwitch0.classList.contains("active")  && date.getHours() >= 10) {
     lunes.style.background = "#0cc141";
   } else {
     lunes.style.background = "#ff0000";
@@ -669,7 +669,7 @@ if (date.getDay() == 2) {
   } else {
     lunes.style.background = "#ff0000";
   }
-  if (btnSwitch1.classList.contains("active")) {
+  if (btnSwitch1.classList.contains("active") && date.getHours() >= 10) {
     martes.style.background = "#0cc141";
   } else {
     martes.style.background = "#ff0000";
@@ -687,7 +687,7 @@ if (date.getDay() == 3) {
   } else {
     martes.style.background = "#ff0000";
   }
-  if (btnSwitch2.classList.contains("active")) {
+  if (btnSwitch2.classList.contains("active") && date.getHours() >= 10) {
     miercoles.style.background = "#0cc141";
   } else {
     miercoles.style.background = "#ff0000";
@@ -710,7 +710,7 @@ if (date.getDay() == 4) {
   } else {
     miercoles.style.background = "#ff0000";
   }
-  if (btnSwitch3.classList.contains("active")) {
+  if (btnSwitch3.classList.contains("active") && date.getHours() >= 10) {
     jueves.style.background = "#0cc141";
   } else {
     jueves.style.background = "#ff0000";
@@ -738,10 +738,10 @@ if (date.getDay() == 5) {
   } else {
     jueves.style.background = "#ff0000";
   }
-  if (btnSwitch4.classList.contains("active")) {
-    sabado.style.background = "#0cc141";
+  if (btnSwitch4.classList.contains("active") && date.getHours() >= 10) {
+    viernes.style.background = "#0cc141";
   } else {
-    sabado.style.background = "#ff0000";
+    viernes.style.background = "#ff0000";
   }
 }
 
@@ -771,7 +771,7 @@ if (date.getDay() == 6) {
   } else {
     viernes.style.background = "#ff0000";
   }
-  if (btnSwitch5.classList.contains("active")) {
+  if (btnSwitch5.classList.contains("active") && date.getHours() >= 10) {
     sabado.style.background = "#0cc141";
   } else {
     sabado.style.background = "#ff0000";
@@ -809,7 +809,7 @@ if (date.getDay() == 0) {
   } else {
     sabado.style.background = "#ff0000";
   }
-  if (btnSwitch6.classList.contains("active")) {
+  if (btnSwitch6.classList.contains("active") && date.getHours() >= 10) {
     domingo.style.background = "#0cc141";
   } else {
     domingo.style.background = "#ff0000";
