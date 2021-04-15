@@ -28,7 +28,7 @@
   position: absolute;
   top: calc(100% - 45px);
   text-align: center;
-  z-index: 12;
+  z-index: 22;
 }
 
 .icon {
@@ -185,7 +185,6 @@ i {
   overflow: hidden;
 }
 
-
 .visible {
   opacity: 1;
   visibility: visible;
@@ -212,7 +211,7 @@ i {
   background: #ffffff65;
 }
 
-.title{
+.title {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -223,18 +222,19 @@ i {
   color: #00ffff !important;
 }
 
-.windows-open{
+.windows-open {
   width: 90%;
-  height: 10px;
+  height: 0px;
   background: #252525;
   position: absolute;
   top: 100%;
   left: 0%;
   transform: translateY(-100%);
   transition: all 0.2s;
+  z-index: 21;
 }
-.win-open{
+.win-open {
   height: 90vh;
-  z-index: 11;
+  z-index: 21;
   transition: all 0.2s;
 }
