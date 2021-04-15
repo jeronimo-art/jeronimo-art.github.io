@@ -170,6 +170,22 @@ i {
   margin: 0px 10px 0px 10px;
 }
 
+.portafolio {
+  opacity: 0;
+  visibility: hidden;
+  width: 60%;
+  height: 50vh;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 3;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+
 .visible {
   opacity: 1;
   visibility: visible;
