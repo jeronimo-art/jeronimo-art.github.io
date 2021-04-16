@@ -11,6 +11,8 @@ var d_port = document.getElementById("d_port");
 habilidades_windows.addEventListener("click", function () {
   d_hab.style.background = "#ffffff65";
   d_port.style.background = "transparent";
+  habilidades_windows.style.zIndex = "15";
+  portafolio_windows.style.zIndex = "10";
   habilidades_windows.style.transition = "0.2s";
 });
 
