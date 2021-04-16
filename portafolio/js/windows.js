@@ -3,5 +3,7 @@ var windows_open = document.getElementById("windows-open");
 
 
 btn_windows.addEventListener("click", function () {
-  windows_open.classList.toggle("win-open");
+  windows_open.classList.toggle("win-open"); 
+  close_win.style.display = "block";
 });
+

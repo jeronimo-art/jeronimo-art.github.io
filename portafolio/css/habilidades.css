@@ -61,7 +61,8 @@
   height: calc(100vh - 45px) !important;
   position: absolute !important;
   top: 0 !important;
-  transform: translateX(-50%) !important;
+  left: 0 !important;
+  transform: translateX(0%) !important;
 }
 
 #d-hab {

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body{
+  overflow: hidden;
+}
+
 .content-view {
   width: 100%;
   height: calc(100vh - 45px);
@@ -223,7 +227,7 @@ i {
 }
 
 .windows-open {
-  width: 90%;
+  width: 95%;
   height: 0px;
   background: #252525;
   position: absolute;
@@ -234,7 +238,7 @@ i {
   z-index: 21;
 }
 .win-open {
-  height: 90vh;
+  height: 95vh;
   z-index: 21;
   transition: all 0.2s;
 }
