@@ -4,14 +4,15 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   overflow: hidden;
 }
 
 .content-view {
   width: 100%;
   height: calc(100vh - 45px);
-  background: blueviolet;
+  background: url(../img/fondo.png);
+  background-size: cover;
 }
 
 .content-manager {
@@ -54,8 +55,8 @@ i {
 
 .desktop {
   display: grid;
-  grid-template-columns: repeat(11, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   width: 100%;
@@ -64,13 +65,14 @@ i {
 
 .grid {
   width: 100%;
-  height: calc(14.28vh - 6.4px);
+  height: calc(16.66vh - 6.4px);
   text-align: center;
   z-index: 2;
 }
 
 .grid:hover {
   background: #6666667e;
+  cursor: default;
 }
 
 #close-port {
@@ -126,17 +128,50 @@ i {
 }
 
 .grid img {
-  width: 90%;
-  height: 90%;
+  width: 70%;
+  height: 70%;
 }
 
 .grid i {
-  width: 90%;
-  height: 90%;
+  width: 70%;
+  height: 70%;
   font-size: 50px;
+  margin-top: 50%;
+  transform: translateY(-50%);
 }
 .grid p {
-  margin-top: -20px;
+  color: white;
+  margin-top: -45px;
+}
+
+.mobil {
+  display: none;
+}
+@media screen and (max-width: 640px) {
+  .content-manager {
+    display: none;
+  }
+  .content-view {
+    display: none;
+  }
+  .mobil {
+    width: 100%;
+    height: 100vh;
+    display: block !important;
+    background: #616161;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    content: "go to https://jeronimo-art.github.io/portafolio/mobil/ for better display";
+  }
+  .mobil p {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
 }
 
 .portafolio {
@@ -225,21 +260,4 @@ i {
 
 #windows:hover > .fa-windows {
   color: #00ffff !important;
-}
-
-.windows-open {
-  width: 95%;
-  height: 0px;
-  background: #252525;
-  position: absolute;
-  top: 100%;
-  left: 0%;
-  transform: translateY(-100%);
-  transition: all 0.2s;
-  z-index: 21;
-}
-.win-open {
-  height: 95vh;
-  z-index: 21;
-  transition: all 0.2s;
 }
