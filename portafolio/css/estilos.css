@@ -16,12 +16,12 @@ body {
 
 .content-view #fondo {
   width: 100%;
-  min-height: calc(100vh - 45px);
-  object-fit: cover;
+  height: calc(100vh - 45px);
   position: absolute;
   top: 0;
   left: 0;
 }
+
 
 
 .content-manager {
@@ -150,7 +150,7 @@ i {
 }
 .grid p {
   color: white;
-  margin-top: -50%;
+  margin-top: -45%;
 }
 
 .mobil {
