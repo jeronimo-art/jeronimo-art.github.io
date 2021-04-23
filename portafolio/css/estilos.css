@@ -8,12 +8,22 @@ body {
   overflow: hidden;
 }
 
+
 .content-view {
   width: 100%;
   height: calc(100vh - 45px);
-  background: url(../img/fondo.png);
-  background-size: cover;
 }
+
+.content-view #fondo {
+  width: 100%;
+  height: calc(100vh - 45px);
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
 
 .content-manager {
   width: 100%;
