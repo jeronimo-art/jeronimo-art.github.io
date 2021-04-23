@@ -16,13 +16,12 @@ body {
 
 .content-view #fondo {
   width: 100%;
-  height: calc(100vh - 45px);
+  min-height: calc(100vh - 45px);
   object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
 }
-
 
 
 .content-manager {
