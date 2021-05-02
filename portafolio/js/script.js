@@ -23,7 +23,7 @@ var suspend = document.getElementById("suspend");
 
 i_off.addEventListener("click", function () {
   ars.classList.toggle("act");
-  sider_bar.classList.add("big_sider_bar");
+  sider_bar.classList.toggle("big_sider_bar_imp");
 });
 
 off.addEventListener("click", function () {
@@ -32,6 +32,7 @@ off.addEventListener("click", function () {
   loader.style.display = "block";
   back_load.style.display = "block";
   ars.classList.toggle("act");
+  sider_bar.classList.remove("big_sider_bar_imp");
   setTimeout(function () {
     location.href = "suspender_apagar/apagar.html";
   }, 3000);
@@ -39,6 +40,7 @@ off.addEventListener("click", function () {
 
 restart.addEventListener("click", function () {
   location.href = location.href;
+  sider_bar.classList.remove("big_sider_bar_imp");
 });
 
 suspend.addEventListener("click", function () {
@@ -47,6 +49,7 @@ suspend.addEventListener("click", function () {
   loader.style.display = "block";
   back_load.style.display = "block";
   ars.classList.remove("act");
+  sider_bar.classList.remove("big_sider_bar_imp");
   setTimeout(function () {
     location.href = "suspender_apagar/suspender.html";
   }, 1500);

@@ -50,6 +50,14 @@
   box-shadow: #00000081 0px 0px 5px 5px;
 }
 
+.big_sider_bar_imp {
+  width: 250px !important;
+  transition: all 0.2s !important;
+  z-index: 23 !important;
+  background: #252525 !important;
+  box-shadow: #00000081 0px 0px 5px 5px !important;
+}
+
 .padd {
   padding-right: 250px !important;
   transition: all 0.2s;

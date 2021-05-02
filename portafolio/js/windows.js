@@ -8,8 +8,10 @@ var i_off = document.getElementById("i_off");
 var portafolio_icon_short = document.getElementById("portafolio_icon_short");
 var ars = document.getElementById("ars");
 
+
 btn_windows.addEventListener("click", function () {
   windows_open.classList.toggle("win-open");
+  sider_bar.classList.remove("big_sider_bar_imp");
   ars.classList.remove("act");
   sider_bar.addEventListener("mouseover", function () {
     sider_bar.classList.add("big_sider_bar");
@@ -38,5 +40,11 @@ btn_windows.addEventListener("click", function () {
     contacto_windows.style.zIndex = "10";
     portafolio_windows.style.transition = "0.2s";
     ars.classList.remove("act");
+    sider_bar.classList.remove("big_sider_bar_imp");
   });
 });
+
+i_bars.addEventListener("click", function(){
+  sider_bar.classList.toggle("big_sider_bar_imp");
+  ars.classList.remove("act");
+})

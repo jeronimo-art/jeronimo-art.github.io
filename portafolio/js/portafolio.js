@@ -10,6 +10,7 @@ var mini_port = document.getElementById("mini-port");
 var d_hab = document.getElementById("d-hab");
 var d_cont = document.getElementById("d_cont");
 var ars = document.getElementById("ars");
+var sider_bar = document.getElementById("sider_bar");
 
 portafolio_windows.addEventListener("click", function () {
   d_port.style.background = "#ffffff65";
@@ -20,6 +21,7 @@ portafolio_windows.addEventListener("click", function () {
   contacto_windows.style.zIndex = "10";
   portafolio_windows.style.transition = "0.2s";
   ars.classList.remove("act");
+  sider_bar.classList.remove("big_sider_bar_imp");
 });
 
 max_port.addEventListener("click", function () {
@@ -27,6 +29,7 @@ max_port.addEventListener("click", function () {
   windows_open.classList.remove("win-open");
   portafolio_windows.style.transition = "0.2s";
   ars.classList.remove("act");
+  sider_bar.classList.remove("big_sider_bar_imp");
 });
 
 mini_port.addEventListener("click", function () {
@@ -35,6 +38,7 @@ mini_port.addEventListener("click", function () {
   windows_open.classList.remove("win-open");
   portafolio_windows.style.transition = "0.2s";
   ars.classList.remove("act");
+  sider_bar.classList.remove("big_sider_bar_imp");
 });
 
 close_port.addEventListener("click", function () {
@@ -44,6 +48,7 @@ close_port.addEventListener("click", function () {
   windows_open.classList.remove("win-open");
   portafolio_windows.style.transition = "0.2s";
   ars.classList.remove("act");
+  sider_bar.classList.remove("big_sider_bar_imp");
 });
 
 portafolio_icon.addEventListener("click", function () {
@@ -59,6 +64,7 @@ portafolio_icon.addEventListener("click", function () {
   contacto_windows.style.zIndex = "10";
   portafolio_windows.style.transition = "0.2s";
   ars.classList.remove("act");
+  sider_bar.classList.remove("big_sider_bar_imp");
 });
 
 d_port.addEventListener("click", function () {
@@ -72,6 +78,7 @@ d_port.addEventListener("click", function () {
   contacto_windows.style.zIndex = "10";
   portafolio_windows.style.transition = "0.2s";
   ars.classList.remove("act");
+  sider_bar.classList.remove("big_sider_bar_imp");
 });
 
 // Make the DIV element draggable:
