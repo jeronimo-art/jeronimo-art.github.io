@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #242426;
+}
+
+.left-bar {
+  width: 30%;
+  height: 100vh;
+  box-shadow: #161616 5px 5px 5px 5px;
+}
+
+.main {
+  width: 70%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.tareas {
+  width: 100%;
+  height: 82%;
+  overflow-y: scroll;
+  position: absolute;
+  right: 0;
+  top: 10%;
+}
+
+.tareas::-webkit-scrollbar-thumb {
+  background: #ffffffcb;
+  border-radius: 4px;
+  position: absolute;
+}
+
+.tareas::-webkit-scrollbar {
+  width: 2px; /* Tamaño del scroll en vertical */
+  height: 8px; /* Tamaño del scroll en horizontal */
+  display: block; /* Ocultar scroll */
+  transition: all 0.2s;
+  background: transparent;
+  position: absolute;
+}
+
+.main .tareas .todo {
+  width: 90%;
+  height: 9%;
+  margin: 0.4% 5% 0px 5%;
+  background: #242426;
+  border-radius: 3px;
+  color: white;
+}
+
+.main .tareas .todo p {
+  display: flex;
+}
+
+.main .tareas .todo .check {
+  width: 15px;
+  height: 15px;
+  background: red;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+.top-title {
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.main .background img {
+  height: 100%;
+}
+
+.add {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 8%;
+  margin-top: 10px;
+}
+
+.btn-add {
+  height: 70%;
+  width: 5%;
+  background: #242426cc;
+  position: absolute;
+  bottom: calc(30% - 10px);
+  left: 35%;
+  color: white;
+  text-align: center;
+}
+
+.btn-add i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.add input {
+  width: 55%;
+  height: 70%;
+  margin: 0% 5% 0% 40%;
+  border: none;
+  outline: none;
+  color: white;
+  background: #242426cc;
+  margin-top: 10px;
+}
+
+.add input::placeholder {
+  height: 100%;
+  color: white;
+  margin: 10px;
+}
+
+.add input:focus::placeholder {
+  height: 100%;
+  color: #ffffff00;
+  margin: 10px;
+}

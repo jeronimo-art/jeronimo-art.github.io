@@ -92,7 +92,7 @@
 }
 
 .midle_bar::-webkit-scrollbar {
-  width: 2px; /* Tamaño del scroll en vertical */
+  width: 20px; /* Tamaño del scroll en vertical */
   height: 8px; /* Tamaño del scroll en horizontal */
   display: none;
   transition: all 0.2s;
@@ -115,8 +115,12 @@
   position: absolute;
 }
 
-.midle_bar::-webkit-scrollbar-track {
-  background: #df0c0c00;
+.midle_bar:hover::-webkit-scrollbar:hover {
+  width: 5px; /* Tamaño del scroll en vertical */
+  height: 8px; /* Tamaño del scroll en horizontal */
+  display: none;
+  transition: all 0.2s;
+  background: red;
   position: absolute;
 }
 
@@ -127,7 +131,6 @@
   height: 40%;
   margin: 5% 2.5% 10% 5%;
   width: 42.5%;
-  background: red;
   z-index: 22;
 }
 
@@ -138,7 +141,6 @@
   height: 40%;
   margin: 5% 5% 10% 2.5%;
   width: 42.5%;
-  background: red;
   z-index: 22;
 }
 
@@ -147,9 +149,8 @@
   bottom: 0px;
   left: 0px;
   height: 40%;
-  margin: 10% 2.5% 10% 5%;
+  margin: 10% 5% 10% 5%;
   width: 42.5%;
-  background: red;
   z-index: 22;
 }
 
@@ -160,7 +161,6 @@
   height: 40%;
   margin: 10% 5% 10% 2.5%;
   width: 42.5%;
-  background: red;
   z-index: 22;
 }
 
@@ -182,14 +182,79 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
 }
 
-
-.grid_short{
+.grid_short {
   height: 100%;
   width: 100%;
-  border: 1px solid white;
   background: #444;
+  text-align: center;
+}
+
+.grid_short:hover {
+  height: 100%;
+  width: 100%;
+  border: 2px solid white;
+}
+
+.grid_short:hover > p {
+  margin-top: calc(85% - 9px);
+}
+
+.grid_short i {
+  height: 50%;
+  width: 50%;
+  font-size: 80px;
+  position: absolute;
+  top: 10px;
+  transform: translateX(-50%);
+}
+
+.grid_short p {
+  color: white;
+  margin-top: calc(85% - 10px);
+}
+
+#ars {
+  width: 250px;
+  z-index: 1000;
+  height: 130px;
+  display: block;
+  background: #303030;
+  position: absolute;
+  left: 0;
+  bottom: calc(55px + 45px);
+  display: grid;
+  grid-column: 1;
+  grid-row: 3;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#ars i {
+  width: 100%;
+  font-size: auto;
+  margin-left: 10px;
+}
+
+#ars i:hover {
+  width: 100%;
+}
+
+.act {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.back_turn {
+  width: 100%;
+  height: 33.3%;
+}
+.back_turn:hover {
+  width: 100%;
+  height: 100%;
+  background: #494949;
 }

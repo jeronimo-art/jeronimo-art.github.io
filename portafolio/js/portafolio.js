@@ -9,6 +9,7 @@ var port = document.getElementById("port");
 var mini_port = document.getElementById("mini-port");
 var d_hab = document.getElementById("d-hab");
 var d_cont = document.getElementById("d_cont");
+var ars = document.getElementById("ars");
 
 portafolio_windows.addEventListener("click", function () {
   d_port.style.background = "#ffffff65";
@@ -18,12 +19,14 @@ portafolio_windows.addEventListener("click", function () {
   habilidades_windows.style.zIndex = "10";
   contacto_windows.style.zIndex = "10";
   portafolio_windows.style.transition = "0.2s";
+  ars.classList.remove("act");
 });
 
 max_port.addEventListener("click", function () {
   portafolio_windows.classList.toggle("maxed-port");
   windows_open.classList.remove("win-open");
   portafolio_windows.style.transition = "0.2s";
+  ars.classList.remove("act");
 });
 
 mini_port.addEventListener("click", function () {
@@ -31,6 +34,7 @@ mini_port.addEventListener("click", function () {
   portafolio_windows.classList.remove("visible");
   windows_open.classList.remove("win-open");
   portafolio_windows.style.transition = "0.2s";
+  ars.classList.remove("act");
 });
 
 close_port.addEventListener("click", function () {
@@ -39,6 +43,7 @@ close_port.addEventListener("click", function () {
   port.style.display = "none";
   windows_open.classList.remove("win-open");
   portafolio_windows.style.transition = "0.2s";
+  ars.classList.remove("act");
 });
 
 portafolio_icon.addEventListener("click", function () {
@@ -53,6 +58,7 @@ portafolio_icon.addEventListener("click", function () {
   habilidades_windows.style.zIndex = "10";
   contacto_windows.style.zIndex = "10";
   portafolio_windows.style.transition = "0.2s";
+  ars.classList.remove("act");
 });
 
 d_port.addEventListener("click", function () {
@@ -65,6 +71,7 @@ d_port.addEventListener("click", function () {
   habilidades_windows.style.zIndex = "10";
   contacto_windows.style.zIndex = "10";
   portafolio_windows.style.transition = "0.2s";
+  ars.classList.remove("act");
 });
 
 // Make the DIV element draggable:

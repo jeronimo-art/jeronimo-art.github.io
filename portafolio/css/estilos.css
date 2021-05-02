@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI';
 }
 
 body {
@@ -207,16 +208,21 @@ i {
 }
 
 .content-port {
-  margin: 35px 0px 0px 0px;
-  overflow-y: scroll;
+  margin: 30px 0px 0px 0px;
   height: calc(100% - 35px);
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
 }
 
 .content-port p {
   margin: 0px 10px 0px 10px;
+}
+
+.content-port iframe {
+  width: 100%;
+  height: 100%;
 }
 
 .portafolio {

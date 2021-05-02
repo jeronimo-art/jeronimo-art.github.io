@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  background: red;
+}
+
+.video {
+  width: 100%;
+}
+
+.bar {
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+  transform: translateY(-110%);
+  transition: all 0.5s;
+}
+.bar i {
+  color: #ffffff;
+}
+
+#play {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#set, #full-screen, #screen_full {
+  float: right;
+  margin-right: 10px;
+}
+
+.display {
+  display: none;
+  transform: translateY(100%);
+  transition: all 0.5s;
+}
+

@@ -9,6 +9,7 @@ var hab = document.getElementById("hab");
 var mini_hab = document.getElementById("mini-hab");
 var d_port = document.getElementById("d_port");
 var d_cont = document.getElementById("d_cont");
+var ars = document.getElementById("ars");
 
 habilidades_windows.addEventListener("click", function () {
   d_hab.style.background = "#ffffff65";
@@ -18,12 +19,14 @@ habilidades_windows.addEventListener("click", function () {
   portafolio_windows.style.zIndex = "10";
   contacto_windows.style.zIndex = "10";
   habilidades_windows.style.transition = "0.2s";
+  ars.classList.remove("act");
 });
 
 max_hab.addEventListener("click", function () {
   habilidades_windows.classList.toggle("maxed-hab");
   windows_open.classList.remove("win-open");
   habilidades_windows.style.transition = "0.2s";
+  ars.classList.remove("act");
 });
 
 mini_hab.addEventListener("click", function () {
@@ -31,6 +34,7 @@ mini_hab.addEventListener("click", function () {
   habilidades_windows.classList.remove("visible_hab");
   windows_open.classList.remove("win-open");
   habilidades_windows.style.transition = "0.2s";
+  ars.classList.remove("act");
 });
 
 close_hab.addEventListener("click", function () {
@@ -39,6 +43,7 @@ close_hab.addEventListener("click", function () {
   hab.style.display = "none";
   windows_open.classList.remove("win-open");
   habilidades_windows.style.transition = "0.2s";
+  ars.classList.remove("act");
 });
 
 habilidades_icon.addEventListener("click", function () {
@@ -53,6 +58,7 @@ habilidades_icon.addEventListener("click", function () {
   portafolio_windows.style.zIndex = "10";
   contacto_windows.style.zIndex = "10";
   habilidades_windows.style.transition = "0.2s";
+  ars.classList.remove("act");
 });
 
 d_hab.addEventListener("click", function () {
@@ -65,6 +71,7 @@ d_hab.addEventListener("click", function () {
   portafolio_windows.style.zIndex = "10";
   contacto_windows.style.zIndex = "10";
   habilidades_windows.style.transition = "0.2s";
+  ars.classList.remove("act");
 });
 
 // Make the DIV element draggable:
