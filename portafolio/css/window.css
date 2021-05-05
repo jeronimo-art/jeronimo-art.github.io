@@ -132,55 +132,52 @@
   position: absolute;
 }
 
+.shortcuts {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  grid-template-rows: repeat(1, 2fr);
+  height: calc(100% - 45px);
+  position: absolute;
+  right: 0;
+  top: 50;
+  width: calc(70% - 46px);
+  z-index: 22;
+  transition: all 0.2s;
+  overflow-y: scroll;
+  grid-column-gap: 5%;
+  grid-row-gap: 5%;
+}
+
 .shortcuts .s_1 {
   position: absolute;
   top: 0px;
   left: 0px;
-  height: 40%;
-  margin: 5% 2.5% 10% 5%;
-  width: 42.5%;
   z-index: 22;
+  margin: 5% 0% 0% 5%;
 }
 
 .shortcuts .s_2 {
   position: absolute;
   top: 0px;
   right: 0px;
-  height: 40%;
-  margin: 5% 5% 10% 2.5%;
-  width: 42.5%;
   z-index: 22;
+  margin: 5% 5% 0% 0%;
 }
 
 .shortcuts .s_3 {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  height: 40%;
-  margin: 10% 5% 10% 5%;
-  width: 42.5%;
   z-index: 22;
+  margin: 0% 0% 5% 5%;
 }
 
 .shortcuts .s_4 {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  height: 40%;
-  margin: 10% 5% 10% 2.5%;
-  width: 42.5%;
   z-index: 22;
-}
-
-.shortcuts {
-  height: 95vh;
-  width: calc(70% - 46px);
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: 22;
-  transition: all 0.2s;
-  overflow: hidden;
+  margin: 0% 5% 5% 0%;
 }
 
 .s_1,
@@ -192,6 +189,8 @@
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 5px;
   grid-row-gap: 5px;
+  min-width: 40%;
+  min-height: 40%;
 }
 
 .grid_short {
@@ -201,28 +200,38 @@
   text-align: center;
 }
 
-.grid_short:hover {
-  height: 100%;
-  width: 100%;
-  border: 2px solid white;
-}
-
-.grid_short:hover > p {
-  margin-top: calc(85% - 9px);
-}
-
-.grid_short i {
-  height: 50%;
-  width: 50%;
-  font-size: 80px;
-  position: absolute;
-  top: 10px;
-  transform: translateX(-50%);
-}
-
 .grid_short p {
   color: white;
-  margin-top: calc(85% - 10px);
+  margin-top: calc(20% - 10px);
+}
+
+.i_short_1 {
+  font-size: 60px;
+  margin-top: 15px;
+}
+
+.i_short_2 {
+  font-size: 60px;
+  margin-top: 15px;
+}
+
+@media screen and (max-height: 640px) {
+  .grid i {
+    width: 70%;
+    height: 70%;
+    font-size: 35px;
+    margin-top: 40%;
+    transform: translateY(-50%);
+  }
+  .portafolio {
+    height: 70vh;
+  }
+  .habilidades {
+    height: 70vh;
+  }
+  .contacto {
+    height: 70vh;
+  }
 }
 
 #ars {

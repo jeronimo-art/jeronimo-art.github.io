@@ -63,6 +63,7 @@ i {
   color: white;
 }
 
+
 .desktop {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
