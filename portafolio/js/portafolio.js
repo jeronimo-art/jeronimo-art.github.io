@@ -1,16 +1,69 @@
+/*==================================Variables==================================*/
+
+/*======================Variables de ventana (Portafolio)======================*/
+
 var portafolio_icon = document.getElementById("portafolio_icon");
 var portafolio_windows = document.getElementById("portafolio");
 var habilidades_windows = document.getElementById("habilidades");
-var contacto_windows = document.getElementById("contacto");
+var d_port = document.getElementById("d-port");
 var close_port = document.getElementById("close-port");
 var max_port = document.getElementById("max-port");
-var d_port = document.getElementById("d-port");
-var port = document.getElementById("port");
 var mini_port = document.getElementById("mini-port");
+var port = document.getElementById("port");
+
+/*======================Variables de ventana (Contacto)======================*/
+
+var contacto_windows = document.getElementById("contacto");
+
+/*======================Variables de ventana (Windows)======================*/
+
+var sider_bar = document.getElementById("sider_bar");
+
+/*======================Variables de iconos de la barra======================*/
+
 var d_hab = document.getElementById("d-hab");
 var d_cont = document.getElementById("d_cont");
+
+/*=====================Variables de control de encendido=====================*/
+
 var ars = document.getElementById("ars");
-var sider_bar = document.getElementById("sider_bar");
+
+/*=======================Variables para acortar codigo=======================*/
+
+var portafolio_invisible = function () {
+  portafolio_windows.classList.add("visible");
+};
+var d_port_block = function () {
+  d_port.style.display = "block";
+};
+var portafolio_invisible = function () {
+  portafolio_windows.classList.add("visible");
+};
+var portafolio_invisible = function () {
+  portafolio_windows.classList.add("visible");
+};
+var portafolio_invisible = function () {
+  portafolio_windows.classList.add("visible");
+};
+var portafolio_invisible = function () {
+  portafolio_windows.classList.add("visible");
+};
+
+portafolio_icon.addEventListener("click", function () {
+  portafolio_invisible();
+  d_port_block();
+  port.style.display = "block";
+  d_port.style.background = "#ffffff65";
+  d_hab.style.background = "transparent";
+  d_cont.style.background = "transparent";
+  windows_open.classList.remove("win-open");
+  portafolio_windows.style.zIndex = "15";
+  habilidades_windows.style.zIndex = "10";
+  contacto_windows.style.zIndex = "10";
+  portafolio_windows.style.transition = "0.2s";
+  ars.classList.remove("act");
+  sider_bar.classList.remove("big_sider_bar_imp");
+});
 
 portafolio_windows.addEventListener("click", function () {
   d_port.style.background = "#ffffff65";
@@ -43,6 +96,7 @@ mini_port.addEventListener("click", function () {
 
 close_port.addEventListener("click", function () {
   portafolio_windows.classList.remove("visible");
+  portafolio_windows.classList.add("close");
   d_port.style.display = "none";
   port.style.display = "none";
   windows_open.classList.remove("win-open");
@@ -51,24 +105,8 @@ close_port.addEventListener("click", function () {
   sider_bar.classList.remove("big_sider_bar_imp");
 });
 
-portafolio_icon.addEventListener("click", function () {
-  portafolio_windows.classList.add("visible");
-  d_port.style.display = "block";
-  port.style.display = "block";
-  d_port.style.background = "#ffffff65";
-  d_hab.style.background = "transparent";
-  d_cont.style.background = "transparent";
-  windows_open.classList.remove("win-open");
-  portafolio_windows.style.zIndex = "15";
-  habilidades_windows.style.zIndex = "10";
-  contacto_windows.style.zIndex = "10";
-  portafolio_windows.style.transition = "0.2s";
-  ars.classList.remove("act");
-  sider_bar.classList.remove("big_sider_bar_imp");
-});
-
 d_port.addEventListener("click", function () {
-  portafolio_windows.classList.add("visible");
+  portafolio_invisible();
   d_port.style.background = "#ffffff65";
   d_hab.style.background = "transparent";
   d_cont.style.background = "transparent";
@@ -91,9 +129,8 @@ function dragElement(elmnt_port) {
     pos4_p = 0;
   if (document.getElementById(elmnt_port.id + "header")) {
     // if present, the header is where you move the DIV from:
-    document.getElementById(
-      elmnt_port.id + "header"
-    ).onmousedown = dragMouseDown;
+    document.getElementById(elmnt_port.id + "header").onmousedown =
+      dragMouseDown;
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elmnt_port.onmousedown = dragMouseDown;
